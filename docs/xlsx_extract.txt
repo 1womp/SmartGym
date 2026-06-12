@@ -1,0 +1,31 @@
+sheets	Hoja 1
+
+--- Hoja 1 rows=28 cols=26 ---
+Musculo			Pecho			Bíceps		Triceps		Espalda		Hombro			Piernas										
+Submusculo			Pecho superior	Pecho medio	Pecho inferior	cabez-larga	cabez-corta	cabez-lateral	cabez-larga	Dorsal	Espald-medi-y trapecio medio	Deltoide anterior	Deltoide lateral	Deltoide posterior / trapecio medio	Cuádriceps y glúteo	Gemelos	Cuadriceps	Isquiotibiales 	Aductores	Abductores					
+Maquina Foto																									
+Ejercicio			Press inclinado	press de banc-plano	cruces en polea	Curl inclinado con poleas	curl predicador	jalón en pole-pushdown	Extensión de tríceps por encim-de l-cabeza	Jalón al pecho	Remo en pole-sentado	press militar	elevaciones laterales con polea	face pull	Leg Press	Elevación de talones 	Extensión de pierna	Curl femoral sentado	Cerrar las piernas 	abrir las piernas 					
+	hipertrofia	reps	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10	8 -12 → 10					
+		series	3 -4 → 4	3 -4 → 4	3 -4 → 3	3 -4 → 4	3 -4 → 4	3 -4 → 4	3 -4 → 3	3 -4 → 4	3 -4 → 4	3 -4 → 4	3 -4 → 4	3 -4 → 3	3 -4 → 4	3 -4 → 3	3 -4 → 4	4 -4 → 4	3 -4 → 3	3 -4 → 3					
+		descanso (minutos)	2.0	02:30:00	01:30:00	01:30:00	01:30:00	01:30:00	1.0	2.0	2.0	2.0	1.0	1.0	01:30:00	1.0	01:30:00	01:30:00	1.0	1.0					
+		%1RM	0.19	0.17	0.32	0.22	0.22	0.22	0.22	0.4	0.51	0.19	0.32	0.3	0.21	0.4	0.35	0.35	0.4	0.4					
+		%30-40RM calibracion con carga ligera(kg) y movimeinto >1.20-1.25	12.5	12.5	7.5	7.5	7.5	10.0	7.5	20.0	22.0	13.6	2.26796	15.0	50.0	30.0	20.0	20.0	25.0	25.0					
+		V recomendada concéntrico	0.5 – 0.7	0.5 – 0.7	0.6 – 0.8	0.5 – 0.7	0.5 – 0.7	0.6 – 0.8	0.6 – 0.8	0.5 – 0.7	0.5 – 0.7	0.5 – 0.7	0.6 – 0.9	0.6 – 0.9	0.5 – 0.7	0.6 – 0.9	0.5 – 0.7	0.5 – 0.7	0.6 – 0.9	0.6 – 0.9					
+		V recomendada excéntrico 	0.2 – 0.3	0.2 – 0.3	0.2 – 0.4	0.2 – 0.3	0.2 – 0.3	0.2 – 0.4	0.2 – 0.4	0.2 – 0.3	0.2 – 0.3	0.2 – 0.3	0.3 – 0.5	0.3 – 0.5	0.2 – 0.3	0.3 – 0.5	0.2 – 0.3	0.2 – 0.3	0.3 – 0.5	0.3 – 0.5					
+		V recomendada Segundos 	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4					
+	Fuerza	reps	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6	4 -6					
+		series	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5	4 -5					
+		descanso	3.0	03:30:00	2.0	02:30:00	02:30:00	02:30:00	02:30:00	3.0	3.0	3.0	02:30:00	2.0	3.0	2.0	2.0	2.0	2.0	2.0					
+		%1RM	0.19	0.17	0.32	0.22	0.22	0.22	0.22	0.4	0.51	0.19	0.32	0.3	0.21	0.4	0.35	0.35	0.4	0.4					
+		%30-40RM calibracion con carga ligera(kg) y movimeinto >1.20-1.25	12.5	12.5	7.5	7.5	7.5	10.0	7.5	20.0	22.0	13.6	2.26796	15.0	50.0	30.0	20.0	20.0	25.0	25.0					
+		V recomendada concéntrico	0.3-0.5	0.3-0.5	0.4–0.6	0.4 – 0.6	0.4 – 0.6	0.4 – 0.6	0.4 – 0.6	0.3-0.5	0.3-0.5	0.3-0.5	0.5 – 0.7	0.5 – 0.7	0.3-0.5	0.5 – 0.7	0.4–0.6	0.4–0.6	0.5 – 0.7	0.5 – 0.7					
+		V recomendada excéntrico 	0.2-0.3	0.2-0.3	0.2–0.3	0.2 – 0.3	0.2 – 0.3	0.2 – 0.3	0.2 – 0.3	0.2-0.3	0.2-0.3	0.2-0.3	0.3 – 0.4	0.3 – 0.4	0.2-0.3	0.3 – 0.4	0.2–0.3	0.2–0.3	0.3 – 0.4	0.3 – 0.4					
+		V recomendada Segundos 	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0					
+	Resistencia	reps	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15	12 -15					
+		series	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3	2 -3					
+		descanso	1.0	01:30:00	00:40:00	00:45:00	00:45:00	00:45:00	00:45:00	1.0	1.0	00:45:00	00:40:00	00:40:00	1.0	00:40:00	00:40:00	00:40:00	00:40:00	00:40:00					
+		%1RM	0.19	0.17	0.32	0.22	0.22	0.22	0.22	0.4	0.51	0.19	0.32	0.3	0.21	0.4	0.35	0.35	0.4	0.4					
+		%30-40RM calibracion con carga ligera(kg) y movimeinto >1.20-1.25	12.5	12.5	7.5	7.5	7.5	10.0	7.5	20.0	22.0	13.6	2.26796	15.0	50.0	30.0	20.0	20.0	25.0	25.0					
+		V recomendada concéntrico	0.6 – 0.8	0.6 – 0.8	0.7 – 0.9	0.7 – 0.9	0.7 – 0.9	0.7 – 0.9	0.7 – 0.9	0.6 – 0.8	0.6 – 0.8	0.6 – 0.8	0.8 – 1.0	0.8 – 1.0	0.6 – 0.8	0.8 – 1.0	0.7–0.9	0.7–0.9	0.8 – 1.0	0.8 – 1.0					
+		V recomendada excéntrico 	0.2 – 0.3	0.2 – 0.3	0.3 – 0.5	0.3 – 0.5	0.3 – 0.5	0.3 – 0.5	0.3 – 0.5	0.2 – 0.3	0.2 – 0.3	0.2 – 0.3	0.4 – 0.6	0.4 – 0.6	0.2 – 0.3	0.4 – 0.6	0.3–0.5	0.3–0.5	0.4 – 0.6	0.4 – 0.6					
+		V recomendada Segundos 	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15	0.15					

@@ -1,0 +1,570 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1792 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(SMARTGYM USER MANUAL) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(This manual explains how to use the SmartGym Adaptive Training System as an evaluator,) Tj
+T*
+(athlete, or demo user.) Tj
+T*
+() Tj
+T*
+(1. Turning On the Device) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Connect power to the ESP32-S3 display.) Tj
+T*
+(2. Wait for the main screen to appear.) Tj
+T*
+(3. Allow the device to connect to Wi-Fi, Firebase, RFID, and time services.) Tj
+T*
+(4. Do not start a workout until the device reaches the ready state.) Tj
+T*
+() Tj
+T*
+(2. RFID Login) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Place the RFID card near the reader.) Tj
+T*
+(2. The screen shows a loading popup.) Tj
+T*
+(3. Keep waiting until the popup closes.) Tj
+T*
+() Tj
+T*
+(The popup remains visible while the device loads:) Tj
+T*
+() Tj
+T*
+(- User profile.) Tj
+T*
+(- User calibration for the active machine.) Tj
+T*
+(- Recommendation for the active user and machine.) Tj
+T*
+(- Calibrated ROM mapping.) Tj
+T*
+() Tj
+T*
+(The user should not press START or CALIBRATE while the loading popup is active.) Tj
+T*
+() Tj
+T*
+(3. Main Screen) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The main screen shows the current session state, live motion graph, pin load,) Tj
+T*
+(recommendation, reps, sets, and action buttons.) Tj
+T*
+() Tj
+T*
+(Important terms:) Tj
+T*
+() Tj
+T*
+(- Pin load: the physical weight pin position on the machine.) Tj
+T*
+(- Recommended load: the load suggested by SmartGym for the active user.) Tj
+T*
+() Tj
+T*
+(The pin load belongs to the machine, not the user. It does not automatically change) Tj
+T*
+(when a different user scans an RFID card. The recommendation is user-specific advice.) Tj
+T*
+() Tj
+T*
+(4. Pin Load vs Recommended Load) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The system never physically moves the weight pin. If the screen recommends 25.0 kg but) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1529 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(the machine pin is at 20.0 kg, the device shows both values separately:) Tj
+T*
+() Tj
+T*
+(- Pin load: 20.0 kg) Tj
+T*
+(- Recommended: 25.0 kg) Tj
+T*
+() Tj
+T*
+(If the user wants to follow the recommendation, they must physically move the pin and) Tj
+T*
+(then update the displayed pin load with the touchscreen buttons.) Tj
+T*
+() Tj
+T*
+(5. Changing Pin Load) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Use the four weight buttons:) Tj
+T*
+() Tj
+T*
+(- `-5`) Tj
+T*
+(- `-2.5`) Tj
+T*
+(- `+2.5`) Tj
+T*
+(- `+5`) Tj
+T*
+() Tj
+T*
+(These buttons update the displayed machine pin load. They do not change the) Tj
+T*
+(recommendation.) Tj
+T*
+() Tj
+T*
+(Pin load can be changed before training or during training. If it changes during) Tj
+T*
+(training, later reps are recorded with the new load.) Tj
+T*
+() Tj
+T*
+(6. Starting a Workout) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Scan RFID and wait for loading to finish.) Tj
+T*
+(2. Check the pin load.) Tj
+T*
+(3. Physically set the machine pin if needed.) Tj
+T*
+(4. Adjust the on-screen pin load to match the physical pin.) Tj
+T*
+(5. Press START.) Tj
+T*
+() Tj
+T*
+(The session starts using the displayed pin load exactly as shown.) Tj
+T*
+() Tj
+T*
+(7. Following the Graph) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The graph shows motion through the exercise range. The firmware uses ROM, or range of) Tj
+T*
+(motion, to detect repetitions.) Tj
+T*
+() Tj
+T*
+(The user-facing cues focus on timing, for example:) Tj
+T*
+() Tj
+T*
+(- Rise time.) Tj
+T*
+(- Lower time.) Tj
+T*
+(- Top hold.) Tj
+T*
+(- Bottom hold.) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1555 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(The system avoids showing raw technical values such as `%ROM/s` in the main user) Tj
+T*
+(interface.) Tj
+T*
+() Tj
+T*
+(8. Reps and Sets) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The firmware detects reps from the ROM signal. A rep must move through enough range) Tj
+T*
+(and pass the internal validation rules.) Tj
+T*
+() Tj
+T*
+(The screen shows:) Tj
+T*
+() Tj
+T*
+(- Current reps in the set.) Tj
+T*
+(- Current set.) Tj
+T*
+(- Training state.) Tj
+T*
+(- Timer or progress where available.) Tj
+T*
+() Tj
+T*
+(If a rep is not counted, possible causes include short range of motion, noisy) Tj
+T*
+(movement, or not reaching the top/bottom thresholds.) Tj
+T*
+() Tj
+T*
+(9. Rest and Finishing) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(When the target reps for a set are completed, the system marks the set complete.) Tj
+T*
+(Depending on the target set count, the session may auto-finish or continue to the next) Tj
+T*
+(set.) Tj
+T*
+() Tj
+T*
+(The user can also finish manually by pressing FINISH.) Tj
+T*
+() Tj
+T*
+(10. Summary Screen and Sync) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(After finishing, the summary screen appears. It may show:) Tj
+T*
+() Tj
+T*
+(- Session complete.) Tj
+T*
+(- Pin load used.) Tj
+T*
+(- New recommendation.) Tj
+T*
+(- Save/upload status.) Tj
+T*
+() Tj
+T*
+(Typical save states:) Tj
+T*
+() Tj
+T*
+(- Saving session...) Tj
+T*
+(- Uploading core...) Tj
+T*
+(- Uploading details...) Tj
+T*
+(- Uploading reps...) Tj
+T*
+(- Session saved.) Tj
+T*
+(- Saving in background.) Tj
+T*
+() Tj
+T*
+(If sync is still running, the device can continue saving in the background. Do not) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1635 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(power off immediately after a workout if the screen still indicates saving.) Tj
+T*
+() Tj
+T*
+(11. Calibration) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Calibration should be used when:) Tj
+T*
+() Tj
+T*
+(- A new user uses the machine.) Tj
+T*
+(- ROM looks incorrect.) Tj
+T*
+(- Recommendations are missing.) Tj
+T*
+(- The system says to calibrate first.) Tj
+T*
+(- The exercise setup has changed.) Tj
+T*
+() Tj
+T*
+(Calibration Steps) Tj
+T*
+() Tj
+T*
+(1. Press CALIBRATE.) Tj
+T*
+(2. Read the step title and instruction.) Tj
+T*
+(3. Move the physical pin to the suggested load if appropriate.) Tj
+T*
+(4. Use the calibration screen's four pin-load buttons if the displayed pin does not match) Tj
+T*
+(   the physical pin.) Tj
+T*
+(5. Tap LOAD SET.) Tj
+T*
+(6. Perform 3 to 5 smooth reps.) Tj
+T*
+(7. Follow any next-load instruction.) Tj
+T*
+(8. Save the result when complete.) Tj
+T*
+() Tj
+T*
+(The calibration screen shows:) Tj
+T*
+() Tj
+T*
+(- Pin load.) Tj
+T*
+(- Suggested load.) Tj
+T*
+(- Weight adjustment buttons.) Tj
+T*
+(- Rep feedback.) Tj
+T*
+(- Save/cancel actions.) Tj
+T*
+() Tj
+T*
+(If the pin load differs from the suggested load, the user may still continue, but the) Tj
+T*
+(device logs that the user chose a different physical pin.) Tj
+T*
+() Tj
+T*
+(12. Recommendations) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Recommendations are generated from calibration and session history. They are advice) Tj
+T*
+(only. The system does not automatically change the physical pin load.) Tj
+T*
+() Tj
+T*
+(Recommendation sources may include:) Tj
+T*
+() Tj
+T*
+(- Calibration.) Tj
+T*
+(- Last session.) Tj
+T*
+(- Machine default.) Tj
+T*
+(- No recommendation.) Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1392 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(13. Troubleshooting) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(RFID Not Detected) Tj
+T*
+() Tj
+T*
+(- Hold the card closer to the RFID reader.) Tj
+T*
+(- Wait for upload/sync to finish.) Tj
+T*
+(- Try scanning again.) Tj
+T*
+() Tj
+T*
+(User Still Loading) Tj
+T*
+() Tj
+T*
+(- Wait for the loading popup to close.) Tj
+T*
+(- If cloud read fails, the device should fall back safely.) Tj
+T*
+() Tj
+T*
+(Rep Not Counted) Tj
+T*
+() Tj
+T*
+(- Use full range of motion.) Tj
+T*
+(- Move smoothly.) Tj
+T*
+(- Reach the top and bottom positions.) Tj
+T*
+(- Recalibrate if ROM mapping looks wrong.) Tj
+T*
+() Tj
+T*
+(Graph Looks Wrong) Tj
+T*
+() Tj
+T*
+(- Recalibrate ROM.) Tj
+T*
+(- Check the motion sensor connection.) Tj
+T*
+(- Confirm the exercise machine setup did not change.) Tj
+T*
+() Tj
+T*
+(Sync Still Running) Tj
+T*
+() Tj
+T*
+(- Keep the device powered.) Tj
+T*
+(- Wait for "Session saved" if possible.) Tj
+T*
+(- The device may continue saving in the background.) Tj
+T*
+() Tj
+T*
+(Recommendation Does Not Change Pin Load) Tj
+T*
+() Tj
+T*
+(This is expected. The pin load is the physical machine state. The user must move the) Tj
+T*
+(pin and update the display manually.) Tj
+T*
+() Tj
+T*
+(Wi-Fi or Firebase Issues) Tj
+T*
+() Tj
+T*
+(- Check Wi-Fi credentials.) Tj
+T*
+(- Check Firebase RTDB URL/auth configuration.) Tj
+T*
+(- Confirm internet connectivity.) Tj
+T*
+(- Use serial logs for details.) Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R ] /Count 5 >>
+endobj
+13 0 obj
+<< /Type /Catalog /Pages 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001923 00000 n
+0000002050 00000 n
+0000003631 00000 n
+0000003758 00000 n
+0000005365 00000 n
+0000005492 00000 n
+0000007179 00000 n
+0000007306 00000 n
+0000008751 00000 n
+0000008880 00000 n
+0000008965 00000 n
+trailer
+<< /Size 14 /Root 13 0 R >>
+startxref
+9016
+%%EOF

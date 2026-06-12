@@ -1,0 +1,225 @@
+pages	5
+
+--- page 1 ---
+Fórmulas     𝑅𝑂𝑀  = 𝑋
+𝑝𝑖𝑙𝑎
+− 𝑥
+0
+ 
+%
+𝑅𝑂𝑀
+=
+ 𝑋
+(
+𝑡
+)
+− 𝑥
+0
+𝑅𝑂𝑀
+* 100  
+𝑣
+%
+(
+𝑡
+)
+=
+ 𝑑 ( % 𝑅𝑂𝑀 )
+𝑑𝑡
+ 
+𝑣
+%
+,
+𝑘
+=
+ % 𝑅𝑂 𝑀
+𝑘
+− % 𝑅𝑂 𝑀
+𝑘
+−
+1
+△
+𝑡
+K  =  muestra   =  0.02t  △ 𝑡  𝑣
+%
+= 𝑎
+%
++ 𝑏
+%
+* 𝐿
+ 
+𝑀𝑉𝑇
+%
+=
+ 𝑀𝑉𝑇𝑚 / 𝑠  
+𝑅𝑂𝑀
+* 100 Pasos  1)  Obtener  tabla  de  medidas,  con  rep  concéntrica  Tabla  de  una  sola  muestra   %  
+𝑣
+%
+,
+1
+=
+ 10 − 0
+0
+.
+1
+=  100
+%  
+𝑣
+%
+,
+2
+=
+ 25 − 10
+0
+.
+1
+= 150
+%  
+𝑣
+%
+,
+3
+=
+ 45 − 25
+0
+.
+1
+= 200
+%  
+𝑣
+%
+,
+4
+=
+ 70 − 45
+0
+.
+1
+= 250
+%  
+𝑣
+%
+,
+5
+=
+ 100 − 70
+0
+.
+1
+= 300      2)  Sacar  el  velocidad  promedio  (se  repite  por  n  veces  de  calibracion)  %/s  𝑣
+1
+=
+ Σ 𝑣
+𝑛
+= 200
+ 𝐿
+=
+ Σ 𝐿
+𝑛 
+ 
+(k)  Tiempo  
+(%ROM)  
+0  0.00  s  0%  
+1  0.10  s  10%  
+2  0.20  s  25%  
+3  0.30  s  45%  
+4  0.40  s  70%  
+5  0.50  s  100%
+
+--- page 2 ---
+3)  Obtener  tabla  con  las  velocidades  promedio  y  las  cargas  usadas  en  cada  una   Tabla  de  4  muestras  con  sus  resultados  Carga  (L)  (kg)  
+Velocidad  %/s  
+10  100  
+15  150  
+20  200  
+25  250    Σ 𝐿
+𝑖
+= 10 + 15 + 20 + 25 = 70   Σ 𝑣
+𝑖
+= 220 + 170 + 125 + 90  = 605  Σ 𝐿
+𝑖
+𝑣
+𝑖
+= ( 10×220 ) + ( 15×170 ) + ( 20×125 ) + ( 25×90 ) = 2200 + 2550 + 2500 + 2250 = 9500
+ 
+Σ
+𝐿
+𝑖
+ 2
+=
+100
++
+225
++
+400
++
+625
+=
+1350 4)  Calcular  “a”  y  “b”,  para  predecir  1RM   
+𝑏
+=
+ 𝑛 ( Σ 𝐿
+𝑖
+𝑣
+𝑖
+) − Σ 𝐿
+𝑖
+( Σ 𝑣
+𝑖
+)
+𝑛
+(
+Σ
+𝐿
+𝑖
+2
+)
+−
+(
+Σ
+𝐿
+𝑖
+)
+2
+ 
+ 
+𝑎
+=
+ Σ 𝑣
+𝑖
+− ( 𝑏 ) ( Σ 𝐿
+𝑖
+)
+𝑛
+ 5)  Predecir  1RM    
+%
+𝑀𝑉𝑇
+ 
+=
+ 
+ 𝑀𝑉𝑇
+𝑅𝑂𝑀
+* 100MVT  =  Velocidad  mínima  estimada  ( 0.3)  ≈ 
+1
+𝑅𝑀
+ 
+=
+ 
+ 𝑀𝑉𝑇 % − 𝑎
+𝑏
+ 6)  proponer  peso  semi  moderado  (60%)   
+𝐿
+=
+ 𝑣 − 𝑎
+𝑏
+ Que  tanto  subir  el  peso  para  la  calibración  ●  muy  liviano    subir  40%    170  %/s  > ≈●  liviano   subir  25%   110  %/s   > ≈●  moderado  subir  15%   70  %/s   > ≈  Pasos  de  calibración   ●  Calibrar  posición  inicial  y  posición  final  del  usuario
+
+--- page 3 ---
+●  Pedirle  al  usuario  que  levante  el  peso  propuesto  de  la  máquina   ●  *4  (Pedirle  al  usuario  que  aumente  el  peso  entre  un  40,  25  o  15  por  ciento)    Hoja  de  cálculos  https://docs.google.com/spreadsheets/d/1wXBXGftTdfEDKNMLRRKvnt0VgpcwYEB
+bmRjzCdBxMeA/edit?usp=sharing
+
+--- page 4 ---
+
+
+--- page 5 ---
+

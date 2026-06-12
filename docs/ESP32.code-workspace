@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../ESP32"
+		},
+		{
+			"name": "SERIALTEST1",
+			"path": "../../SERIALTEST1"
+		},
+		{
+			"name": "SmartGym",
+			"path": "../../SmartGym"
+		}
+	],
+	"settings": {}
+}

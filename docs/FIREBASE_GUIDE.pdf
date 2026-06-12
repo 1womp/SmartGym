@@ -1,0 +1,482 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1671 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(SMARTGYM FIREBASE GUIDE) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(SmartGym uses Firebase Realtime Database as the backend for user profiles, calibration) Tj
+T*
+(data, session history, summaries, dashboard charts, and device heartbeat.) Tj
+T*
+() Tj
+T*
+(Safety Warning) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Do not import a full JSON file at the Firebase root unless you intentionally want to) Tj
+T*
+(replace the entire database.) Tj
+T*
+() Tj
+T*
+(Do not commit database secrets, service account files, private auth tokens, Wi-Fi) Tj
+T*
+(passwords, or local `.env` files. Public Firebase web config should still be) Tj
+T*
+(restricted with proper Firebase rules and domain/app restrictions.) Tj
+T*
+() Tj
+T*
+(Safer import pattern:) Tj
+T*
+() Tj
+T*
+(- Import user JSON at `usersByRfid`.) Tj
+T*
+(- Import calibration JSON at `calibrations`.) Tj
+T*
+(- Import machine config JSON at `machineConfigs`.) Tj
+T*
+(- Import session data at the matching `athleteWeeklySessions/{uid}/{weekKey}` node.) Tj
+T*
+() Tj
+T*
+(Main RTDB Nodes) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(usersByRfid) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(usersByRfid/{uid}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Stores RFID-linked user profile data such as display name, age, height, weight,) Tj
+T*
+(gender, and preferred goal.) Tj
+T*
+() Tj
+T*
+(Profile reads happen during RFID user sync. Profile writes should only happen for) Tj
+T*
+(explicit profile edits or intentional compatibility fields.) Tj
+T*
+() Tj
+T*
+(calibrations) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(calibrations/{uid}/{machineTypeId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Stores user-machine calibration data:) Tj
+T*
+() Tj
+T*
+(- Has calibration flag.) Tj
+T*
+(- Suggested/recommended load.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1395 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- User ROM bottom/top/range.) Tj
+T*
+(- Confidence.) Tj
+T*
+(- Action.) Tj
+T*
+(- Reason.) Tj
+T*
+(- Goal-specific recommendations.) Tj
+T*
+(- Motion target snapshot.) Tj
+T*
+(- Calibration set snapshots.) Tj
+T*
+(- Next recommended weight fields.) Tj
+T*
+() Tj
+T*
+(machineConfigs) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(machineConfigs/{machineId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Stores cloud machine configuration where available. The firmware also contains an) Tj
+T*
+(embedded machine catalog so it can boot offline.) Tj
+T*
+() Tj
+T*
+(athleteWeeklySessions) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(This is the main workout history node for dashboard analysis.) Tj
+T*
+() Tj
+T*
+(Typical structure:) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/sessions/{sessionId}) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/daySummary) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/timeline/{timelineKey}) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/weekSummary) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(devices) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(devices/{deviceId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Stores heartbeat and device identity/status data.) Tj
+T*
+() Tj
+T*
+(Session Root) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The session root contains the main record for a completed workout:) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1337 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- Session ID.) Tj
+T*
+(- User UID.) Tj
+T*
+(- Machine ID/type.) Tj
+T*
+(- Goal.) Tj
+T*
+(- Started/ended time.) Tj
+T*
+(- Duration.) Tj
+T*
+(- Selected/pin load.) Tj
+T*
+(- Recommended load.) Tj
+T*
+(- Set/repetition totals.) Tj
+T*
+(- Valid/invalid rep counts.) Tj
+T*
+(- ROM and velocity metrics.) Tj
+T*
+(- Quality score/tier.) Tj
+T*
+(- Links to heavy details.) Tj
+T*
+() Tj
+T*
+(daySummary) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Daily aggregate summary for fast dashboard reads. It avoids requiring the dashboard to) Tj
+T*
+(scan every session for common day-level metrics.) Tj
+T*
+() Tj
+T*
+(weekSummary) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Weekly aggregate summary for the active user/week. It includes summary counters and) Tj
+T*
+(recent training signal information.) Tj
+T*
+() Tj
+T*
+(timeline) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Timeline entries are lightweight ordered cards for the dashboard. The timeline key) Tj
+T*
+(also acts as an idempotency marker so retries do not double-count summaries.) Tj
+T*
+() Tj
+T*
+(representativeReps) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Stores selected representative reps, such as:) Tj
+T*
+() Tj
+T*
+(- Best ROM rep.) Tj
+T*
+(- Best velocity rep.) Tj
+T*
+(- First valid rep.) Tj
+T*
+(- Last valid rep.) Tj
+T*
+() Tj
+T*
+(setDetails) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Stores per-set summary information:) Tj
+T*
+() Tj
+T*
+(- Set number.) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1321 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- Target reps.) Tj
+T*
+(- Valid reps.) Tj
+T*
+(- Invalid reps.) Tj
+T*
+(- Start/end selected load.) Tj
+T*
+(- Whether weight changed during set.) Tj
+T*
+(- ROM/velocity summaries.) Tj
+T*
+() Tj
+T*
+(repSets) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Stores deeper per-rep data by set:) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(repSets/set1/reps/0) Tj
+T*
+(repSets/set1/reps/1) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(The firmware may upload these details in smaller PATCH payloads, but the final) Tj
+T*
+(Firebase shape remains unchanged.) Tj
+T*
+() Tj
+T*
+(Upload Phases) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Root session/core data.) Tj
+T*
+(2. Day metadata.) Tj
+T*
+(3. Timeline.) Tj
+T*
+(4. Day summary.) Tj
+T*
+(5. Week summary.) Tj
+T*
+(6. Representative reps.) Tj
+T*
+(7. Set details.) Tj
+T*
+(8. Rep sets.) Tj
+T*
+() Tj
+T*
+(Memory-Safe Upload) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The firmware uses NVS queueing and memory-aware payload splitting. Under constrained) Tj
+T*
+(heap, repSets are split into smaller patches to avoid Firebase/TLS blocking.) Tj
+T*
+() Tj
+T*
+(Dashboard Compatibility) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The dashboard currently reads:) Tj
+T*
+() Tj
+T*
+(- `usersByRfid/{rfid}`) Tj
+T*
+(- `athleteWeeklySessions/{rfid}`) Tj
+T*
+(- `athleteWeeklySessions/{rfid}/{week}/days`) Tj
+T*
+(- `recommendedRoutineProgress/{rfid}/{selectedDate}`) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 104 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(Do not rename the firmware paths without updating the dashboard.) Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R ] /Count 5 >>
+endobj
+13 0 obj
+<< /Type /Catalog /Pages 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001802 00000 n
+0000001929 00000 n
+0000003376 00000 n
+0000003503 00000 n
+0000004892 00000 n
+0000005019 00000 n
+0000006392 00000 n
+0000006519 00000 n
+0000006675 00000 n
+0000006804 00000 n
+0000006889 00000 n
+trailer
+<< /Size 14 /Root 13 0 R >>
+startxref
+6940
+%%EOF

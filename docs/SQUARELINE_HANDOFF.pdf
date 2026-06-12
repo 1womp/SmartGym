@@ -1,0 +1,615 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2101 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(SMARTGYM UI HANDOFF \(SQUARELINE\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Hey! You have full design freedom.) Tj
+T*
+(Don?t worry about matching current LVGL layout, I?ll adapt code to your IDs.) Tj
+T*
+() Tj
+T*
+(What this app does) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Gym machine UI with:) Tj
+T*
+(- live coaching while training) Tj
+T*
+(- rest countdown between sets) Tj
+T*
+(- session summary at the end) Tj
+T*
+() Tj
+T*
+(Screens we need) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Idle) Tj
+T*
+(2. Main Training) Tj
+T*
+(3. Rest Overlay \(modal on top of Main\)) Tj
+T*
+(4. Summary) Tj
+T*
+(5. Calibration Gate) Tj
+T*
+(6. Profile) Tj
+T*
+(7. Debug/Service \(can be basic\)) Tj
+T*
+() Tj
+T*
+(Important: only one start/finish control in Main \(`START` / `FINISH` toggle\).) Tj
+T*
+() Tj
+T*
+(Data you can use on UI \(descriptive\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Live) Tj
+T*
+(- **Selected weight \(kg\)**: current load chosen for the set.) Tj
+T*
+(- **Suggested load seed \(kg\)**: baseline recommended weight before live adjustments.) Tj
+T*
+(- **Weight factor**: multiplier used to scale suggested load for user/goal context.) Tj
+T*
+(- **Current set / target sets**: progress through the workout plan \(example `2 / 4`\).) Tj
+T*
+(- **Reps in set / target reps**: progress inside the active set \(example `7 / 10`\).) Tj
+T*
+(- **ROM %**: current range of motion depth as a percent \(0-100\).) Tj
+T*
+(- **User ROM bounds**: personalized range limits \(`userBottomPct` to `userTopPct`\).) Tj
+T*
+(- **Velocity \(%/s\)**: movement speed normalized as percent per second.) Tj
+T*
+(- **Rep phase**: live phase label \(`LIFT`, `LOWER`, `HOLD`, `REST`\).) Tj
+T*
+(- **Quality state**: fast coaching state \(`READY`, `SLOW`, `SPEED OK`, `TOO FAST`,) Tj
+T*
+(  etc.\).) Tj
+T*
+(- **Session timer**: elapsed workout time in the active session.) Tj
+T*
+(- **Rest countdown**: seconds remaining before the next set.) Tj
+T*
+(- **Rest target \(`restSeconds`\)**: planned rest time for the current exercise/goal.) Tj
+T*
+(- **Rep timing \(ms\)**:) Tj
+T*
+(  - `riseMs`: concentric/lift duration) Tj
+T*
+(  - `lowerMs`: eccentric/lower duration) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 2517 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(  - `topPauseMs`: pause near top position) Tj
+T*
+(  - `bottomPauseMs`: pause near bottom position) Tj
+T*
+() Tj
+T*
+(Motion guide \(important\)) Tj
+T*
+(- **Ideal motion curve**: target path for a good rep over time.) Tj
+T*
+(- **Live dot position**: athlete?s current movement point plotted on that graph.) Tj
+T*
+(- **Live halo**: visual emphasis around the live dot so it?s easy to follow quickly.) Tj
+T*
+(- **On-path state**: whether live movement is close enough to the ideal path.) Tj
+T*
+(- **ROM target band**: highlighted target ROM zone \(single fixed chart mode, no expanded) Tj
+T*
+(  graph\).) Tj
+T*
+() Tj
+T*
+(Session end / summary) Tj
+T*
+(- **Quality score + tier**: overall session quality \(0-100\) and readable tier label.) Tj
+T*
+(- **Sets completed**: completed sets vs planned sets.) Tj
+T*
+(- **Valid / invalid reps + valid rate**: accepted reps, rejected reps, and success) Tj
+T*
+(  percentage.) Tj
+T*
+(- **Average ROM %**: average ROM on valid reps.) Tj
+T*
+(- **Average velocity \(%/s\)**: average rep speed on valid reps.) Tj
+T*
+(- **Volume load \(kg\)**: total effective load \(`selected weight * valid reps`\).) Tj
+T*
+(- **Duration**: total session time \(`mm:ss` or similar\).) Tj
+T*
+(- **Sync/storage status**: whether saved locally, queued, or synced.) Tj
+T*
+() Tj
+T*
+(Extra useful values you can show \(already available\)) Tj
+T*
+(- **Best ROM %**: best rep ROM reached in the session.) Tj
+T*
+(- **Average eccentric velocity \(%/s\)**: lowering-phase speed quality signal.) Tj
+T*
+(- **Fast eccentric warnings**: count of reps lowered too quickly.) Tj
+T*
+(- **Total rest time**: total rest accumulated in session.) Tj
+T*
+(- **Average rest per set**: pacing indicator.) Tj
+T*
+(- **Rep quality trend**: first sets vs last sets quality change.) Tj
+T*
+(- **Fatigue ROM drop**: ROM loss from early to late sets.) Tj
+T*
+(- **Fatigue velocity drop**: speed loss from early to late sets.) Tj
+T*
+(- **ROM compliance rate**: percent of valid reps that met user ROM target.) Tj
+T*
+(- **Ideal ROM hit rate**: percent of valid reps that met machine ideal ROM target.) Tj
+T*
+(- **Invalid reason breakdown**:) Tj
+T*
+(  - short ROM) Tj
+T*
+(  - too fast) Tj
+T*
+(  - top not reached) Tj
+T*
+(  - no concentric phase) Tj
+T*
+() Tj
+T*
+(Data keys to include in UI mapping \(important\)) Tj
+T*
+(- `restSeconds`) Tj
+T*
+(- `riseMs`) Tj
+T*
+(- `lowerMs`) Tj
+T*
+(- `topPauseMs`) Tj
+T*
+(- `bottomPauseMs`) Tj
+T*
+(- `suggestedLoadSeedKg`) Tj
+T*
+(- `weightFactor`) Tj
+T*
+(- `userBottomPct`) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1742 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- `userTopPct`) Tj
+T*
+() Tj
+T*
+(Extra coaching metrics available) Tj
+T*
+(- **ROM compliance rate**: percent of valid reps that reached user ROM target.) Tj
+T*
+(- **Ideal ROM hit rate**: percent of valid reps that reached machine ideal ROM target.) Tj
+T*
+(- **Fatigue ROM drop**: how much ROM decreased from early sets to late sets.) Tj
+T*
+(- **Fatigue velocity drop**: how much speed decreased from early sets to late sets.) Tj
+T*
+(- **Invalid reason counts**: rejection reason totals \(`short ROM`, `too fast`, `top not) Tj
+T*
+(  reached`, etc.\).) Tj
+T*
+() Tj
+T*
+(Update rhythm \(so layout expectations are clear\)) Tj
+T*
+(- Live values \(ROM, velocity, phase, quality, timers, rep counters\): update continuously) Tj
+T*
+(  during training.) Tj
+T*
+(- Rest values: update each second during rest countdown.) Tj
+T*
+(- Summary values: update once at session finish, then remain stable on summary screen.) Tj
+T*
+() Tj
+T*
+(Profile screen \(show + edit\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Show) Tj
+T*
+(- Card UID) Tj
+T*
+(- Name) Tj
+T*
+(- Age) Tj
+T*
+(- Weight \(kg\)) Tj
+T*
+(- Height \(cm\)) Tj
+T*
+(- Goal) Tj
+T*
+(- Gender) Tj
+T*
+() Tj
+T*
+(Editable) Tj
+T*
+(- Name \(text input + keyboard\)) Tj
+T*
+(- Age \(`- / +`\)) Tj
+T*
+(- Weight \(`- / +`, 0.5 kg step\)) Tj
+T*
+(- Height \(`- / +`, 1 cm step\)) Tj
+T*
+(- Goal \(prev/next\)) Tj
+T*
+(- Gender \(prev/next\)) Tj
+T*
+() Tj
+T*
+(Save/Cancel behavior) Tj
+T*
+(- `Save`: keep changes and return) Tj
+T*
+(- `Cancel`: discard changes and return) Tj
+T*
+() Tj
+T*
+(Validation ranges) Tj
+T*
+(- Age: 12 to 90) Tj
+T*
+(- Weight: 35.0 to 220.0 kg) Tj
+T*
+(- Height: 120 to 230 cm) Tj
+T*
+() Tj
+T*
+(Profile UX note) Tj
+T*
+(- Goal and Gender can be dropdown menus \(preferred\).) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1316 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(Debug/Service screen requirements) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Keep it practical and fast to use. Styling can be simple.) Tj
+T*
+() Tj
+T*
+(Must show) Tj
+T*
+(- Debug status text block) Tj
+T*
+(- Hardware status text block) Tj
+T*
+() Tj
+T*
+(Must include controls) Tj
+T*
+(- Machine selector \(dropdown\)) Tj
+T*
+(- ROM injector slider) Tj
+T*
+(- Auto rep button) Tj
+T*
+(  - short press: one cycle) Tj
+T*
+(  - long press/hold: continuous) Tj
+T*
+(  - release: stop continuous mode) Tj
+T*
+(- Motion reset button) Tj
+T*
+(- Jump ROM to top button) Tj
+T*
+(- Jump ROM to bottom button) Tj
+T*
+(- Cloud sync button) Tj
+T*
+(- Sensor mode toggle button) Tj
+T*
+(- Log level button) Tj
+T*
+(- Encoder buttons:) Tj
+T*
+(  - set 0cm) Tj
+T*
+(  - set 100cm) Tj
+T*
+(  - apply) Tj
+T*
+(  - reset) Tj
+T*
+(- Quick user buttons:) Tj
+T*
+(  - user 1) Tj
+T*
+(  - user 2) Tj
+T*
+(  - new user) Tj
+T*
+(  - anonymous) Tj
+T*
+(- Close button) Tj
+T*
+() Tj
+T*
+(Debug screen intent) Tj
+T*
+(- quick hardware checks) Tj
+T*
+(- simulation for demos/testing) Tj
+T*
+(- calibration and cloud verification) Tj
+T*
+(- user/session test shortcuts) Tj
+T*
+() Tj
+T*
+(What to send me back) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. `.slp` project) Tj
+T*
+(2. exported LVGL files) Tj
+T*
+(3. fonts/images/icons used) Tj
+T*
+(4. small mapping table:) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1666 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(| screen | widget_id | meaning |) Tj
+T*
+(|---|---|---|) Tj
+T*
+(| Main | btn_start_finish | start_or_finish |) Tj
+T*
+(| Main | lbl_velocity | live velocity |) Tj
+T*
+(| Summary | lbl_summary_main | summary metrics block |) Tj
+T*
+() Tj
+T*
+(That?s it. I?ll handle the integration.) Tj
+T*
+() Tj
+T*
+(Quick event list \(so wiring is easy\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Please include widgets for these actions:) Tj
+T*
+() Tj
+T*
+(- `start_or_finish`) Tj
+T*
+(- `weight_minus_large` \(`-5`\)) Tj
+T*
+(- `weight_minus` \(`-2.5`\)) Tj
+T*
+(- `weight_plus` \(`+2.5`\)) Tj
+T*
+(- `weight_plus_large` \(`+5`\)) Tj
+T*
+(- `start_calibration`) Tj
+T*
+(- `rest_skip`) Tj
+T*
+(- `open_profile`) Tj
+T*
+(- `open_service`) Tj
+T*
+(- `profile_save`) Tj
+T*
+(- `profile_cancel`) Tj
+T*
+(- `calibration_gate_calibrate`) Tj
+T*
+(- `calibration_gate_skip`) Tj
+T*
+() Tj
+T*
+(When each screen appears) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- `Idle`: no active workout / waiting for user) Tj
+T*
+(- `Main Training`: active training flow) Tj
+T*
+(- `Rest Overlay`: between sets during rest countdown) Tj
+T*
+(- `Summary`: right after finishing session) Tj
+T*
+(- `Calibration Gate`: when user needs calibration decision) Tj
+T*
+(- `Profile`: when user edits profile) Tj
+T*
+(- `Debug/Service`: service/testing tools) Tj
+T*
+() Tj
+T*
+(Fill-this template \(copy/paste\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(| screen | widget_id | type | meaning |) Tj
+T*
+(|---|---|---|---|) Tj
+T*
+(| Main |  | button | start_or_finish |) Tj
+T*
+(| Main |  | button | weight_minus_large |) Tj
+T*
+(| Main |  | button | weight_minus |) Tj
+T*
+(| Main |  | button | weight_plus |) Tj
+T*
+(| Main |  | button | weight_plus_large |) Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 633 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(| Main |  | label | live_rom |) Tj
+T*
+(| Main |  | label | live_velocity |) Tj
+T*
+(| Main |  | chart | ideal_curve + live_dot |) Tj
+T*
+(| Rest Overlay |  | button | rest_skip |) Tj
+T*
+(| Summary |  | label | summary_main_metrics |) Tj
+T*
+(| Summary |  | label | summary_detail |) Tj
+T*
+(| Calibration Gate |  | button | calibration_gate_calibrate |) Tj
+T*
+(| Calibration Gate |  | button | calibration_gate_skip |) Tj
+T*
+(| Profile |  | dropdown | goal |) Tj
+T*
+(| Profile |  | dropdown | gender |) Tj
+T*
+(| Profile |  | button | profile_save |) Tj
+T*
+(| Profile |  | button | profile_cancel |) Tj
+T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R ] /Count 6 >>
+endobj
+15 0 obj
+<< /Type /Catalog /Pages 14 0 R >>
+endobj
+xref
+0 16
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000002232 00000 n
+0000002359 00000 n
+0000004928 00000 n
+0000005055 00000 n
+0000006849 00000 n
+0000006976 00000 n
+0000008344 00000 n
+0000008471 00000 n
+0000010190 00000 n
+0000010319 00000 n
+0000011004 00000 n
+0000011133 00000 n
+0000011225 00000 n
+trailer
+<< /Size 16 /Root 15 0 R >>
+startxref
+11276
+%%EOF

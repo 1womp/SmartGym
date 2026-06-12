@@ -1,0 +1,1838 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1640 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(FIREBASE SCHEMA FOR WEB APP) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(This document defines a teammate-friendly Firebase Realtime Database schema for) Tj
+T*
+(the SmartGym web app.) Tj
+T*
+() Tj
+T*
+(The goal is simple:) Tj
+T*
+() Tj
+T*
+(- easy to understand in Firebase Console) Tj
+T*
+(- easy to explain to a frontend teammate) Tj
+T*
+(- still rich enough for session analysis) Tj
+T*
+(- preserves rep-level detail) Tj
+T*
+() Tj
+T*
+(Product Goal) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The web app should help staff, coaches, and athletes:) Tj
+T*
+() Tj
+T*
+(- see which user trained on which day) Tj
+T*
+(- see what exercises they did) Tj
+T*
+(- track weekly and daily progress) Tj
+T*
+(- inspect machine-specific trends) Tj
+T*
+(- open one session and analyze sets and reps in detail) Tj
+T*
+() Tj
+T*
+(Design Decision) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(We keep sessions inside the week tree.) Tj
+T*
+() Tj
+T*
+(This is the best tradeoff for the current stage of the project because:) Tj
+T*
+() Tj
+T*
+(- it is easier to understand quickly) Tj
+T*
+(- all workouts for a user live under the correct week/day) Tj
+T*
+(- your teammate does not have to jump between summary and detail roots) Tj
+T*
+(- rep-level detail can still be preserved) Tj
+T*
+() Tj
+T*
+(The important part is not splitting data into many roots. The important part is) Tj
+T*
+(organizing each session clearly.) Tj
+T*
+() Tj
+T*
+(Recommended Top-Level Nodes) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Use these roots:) Tj
+T*
+() Tj
+T*
+(- `usersByRfid/{uid}`) Tj
+T*
+(- `calibrations/{uid}/{machineTypeId}`) Tj
+T*
+(- `calibrationHistory/{uid}/{machineTypeId}/{epoch}` optional) Tj
+T*
+(- `machineConfigs/{machineId}`) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1252 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- `devices/{deviceId}`) Tj
+T*
+(- `bodyMetricsHistory/{uid}/{dateKey}` web-app owned) Tj
+T*
+(- `sessionFeedback/{uid}/{sessionId}` web-app owned) Tj
+T*
+(- `athleteWeeklySessions/{uid}/{weekKey}`) Tj
+T*
+() Tj
+T*
+(Main Rule) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Everything about a user's workout week lives under:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Inside that week:) Tj
+T*
+() Tj
+T*
+(- `weekSummary` is for weekly overview) Tj
+T*
+(- `days/{dayKey}/daySummary` is for daily overview) Tj
+T*
+(- `days/{dayKey}/timeline` is for chronological session cards) Tj
+T*
+(- `days/{dayKey}/sessions/{sessionId}` is the full session record) Tj
+T*
+() Tj
+T*
+(This keeps one intuitive location for the entire workout history.) Tj
+T*
+() Tj
+T*
+(Top-Level Nodes) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Users) Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(usersByRfid/{uid}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- athlete identity) Tj
+T*
+(- body stats) Tj
+T*
+(- current goal) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "rfidUid": "D6-FA-A5-05",) Tj
+T*
+(  "displayName": "Usuario1",) Tj
+T*
+(  "hasBasicData": true,) Tj
+T*
+(  "weightKg": 78.0,) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1122 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(  "age": 22,) Tj
+T*
+(  "heightCm": 175.0,) Tj
+T*
+(  "goal": "hypertrophy",) Tj
+T*
+(  "updatedAtEpoch": 1776691800,) Tj
+T*
+(  "updatedAtIso": "2026-04-20T08:30:00-0500") Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(2. Current Calibrations) Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(calibrations/{uid}/{machineTypeId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- current effective calibration) Tj
+T*
+(- current suggested load) Tj
+T*
+(- current user ROM threshold) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "machineTypeId": "leg_ext",) Tj
+T*
+(  "hasCalibration": true,) Tj
+T*
+(  "suggestedWeightKg": 22.0,) Tj
+T*
+(  "userRomPercent": 91.0,) Tj
+T*
+(  "updatedAtEpoch": 1776691800,) Tj
+T*
+(  "updatedAtIso": "2026-04-20T08:30:00-0500") Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(3. Calibration History) Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(calibrationHistory/{uid}/{machineTypeId}/{epoch}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- historical trend) Tj
+T*
+(- auditing changes) Tj
+T*
+(- calibration evolution charts) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1299 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(This is optional for the first web app version. If the tree feels too cluttered,) Tj
+T*
+(this is the first node that can be postponed.) Tj
+T*
+() Tj
+T*
+(4. Machine Configs) Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(machineConfigs/{machineId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- machine metadata) Tj
+T*
+(- ROM targets) Tj
+T*
+(- recommendation presets) Tj
+T*
+(- encoder calibration values for wire/linear motion sensors) Tj
+T*
+() Tj
+T*
+(Frontend can use this for:) Tj
+T*
+() Tj
+T*
+(- machine labels) Tj
+T*
+(- admin/config screens) Tj
+T*
+(- thresholds for progress views) Tj
+T*
+(- calibration tools for draw-wire encoders) Tj
+T*
+(- exercise grouping and muscle-group dashboards) Tj
+T*
+() Tj
+T*
+(Recommended taxonomy fields:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "exerciseCategory": "strength_machine",) Tj
+T*
+(  "primaryMuscleGroup": "quadriceps",) Tj
+T*
+(  "secondaryMuscleGroup": "knees") Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Recommended encoder fields:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "encoderCalibrationValid": true,) Tj
+T*
+(  "encoderZeroRaw": 1240,) Tj
+T*
+(  "encoderFullRaw": 2875,) Tj
+T*
+(  "encoderReferenceDistanceMm": 1000.0,) Tj
+T*
+(  "encoderInvertDirection": false) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1223 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(Recommended calibration flow:) Tj
+T*
+() Tj
+T*
+(- move the carriage to the zero point) Tj
+T*
+(- capture the raw reading as `encoderZeroRaw`) Tj
+T*
+(- move the carriage a known distance, usually `1000 mm`) Tj
+T*
+(- capture the raw reading as `encoderFullRaw`) Tj
+T*
+(- save the actual distance in `encoderReferenceDistanceMm`) Tj
+T*
+(- set `encoderInvertDirection` if the reading moves opposite to the motion) Tj
+T*
+() Tj
+T*
+(5. Devices) Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(devices/{deviceId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- machine display status) Tj
+T*
+(- online/offline info) Tj
+T*
+(- active user / active machine state) Tj
+T*
+() Tj
+T*
+(Useful for:) Tj
+T*
+() Tj
+T*
+(- operations dashboard) Tj
+T*
+(- gym floor monitoring) Tj
+T*
+(- live machine occupancy) Tj
+T*
+(- device-health checks) Tj
+T*
+() Tj
+T*
+(6. Body Metric History) Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(bodyMetricsHistory/{uid}/{dateKey}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- bodyweight trend charts) Tj
+T*
+(- transformation dashboards) Tj
+T*
+(- weekly compliance and check-in flows) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 1220 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+({) Tj
+T*
+(  "dateKey": "2026-04-20",) Tj
+T*
+(  "weightKg": 77.4,) Tj
+T*
+(  "bodyFatPercent": 15.8,) Tj
+T*
+(  "skeletalMusclePercent": 41.2,) Tj
+T*
+(  "waistCm": 81.0,) Tj
+T*
+(  "sleepHours": 7.4,) Tj
+T*
+(  "energyScore": 4,) Tj
+T*
+(  "notes": "Felt fresh and recovered",) Tj
+T*
+(  "updatedAtEpoch": 1776691800,) Tj
+T*
+(  "updatedAtIso": "2026-04-20T08:30:00-0500") Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(7. Session Feedback) Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(sessionFeedback/{uid}/{sessionId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- athlete-entered RPE) Tj
+T*
+(- pain / soreness flags) Tj
+T*
+(- post-session notes) Tj
+T*
+(- dashboard overlays without changing device firmware) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "sessionId": "session_1776146400_1",) Tj
+T*
+(  "rpe": 8,) Tj
+T*
+(  "energyScore": 4,) Tj
+T*
+(  "sorenessScore": 2,) Tj
+T*
+(  "painScore": 0,) Tj
+T*
+(  "readinessScore": 4,) Tj
+T*
+(  "notes": "Strong set quality, last set slowed down",) Tj
+T*
+(  "updatedAtEpoch": 1776147700,) Tj
+T*
+(  "updatedAtIso": "2026-04-13T07:21:40-0500") Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Weekly Tree) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 929 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- weekly browsing) Tj
+T*
+(- daily browsing) Tj
+T*
+(- session detail) Tj
+T*
+(- progress analytics) Tj
+T*
+() Tj
+T*
+(Recommended shape:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "weekSummary": {},) Tj
+T*
+(  "days": {) Tj
+T*
+(    "2026-04-13": {) Tj
+T*
+(      "meta": {},) Tj
+T*
+(      "daySummary": {},) Tj
+T*
+(      "timeline": {},) Tj
+T*
+(      "sessions": {}) Tj
+T*
+(    }) Tj
+T*
+(  }) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Week Summary) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/weekSummary) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- fast weekly dashboard) Tj
+T*
+(- weekly charts) Tj
+T*
+(- counts and totals) Tj
+T*
+() Tj
+T*
+(Recommended fields:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 1325 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(  "scope": "week",) Tj
+T*
+(  "lastSessionId": "session_1776146400_1",) Tj
+T*
+(  "lastStartedAtEpoch": 1776146400,) Tj
+T*
+(  "lastStartedAtIso": "2026-04-13T07:00:00-0500",) Tj
+T*
+(  "totalSessions": 7,) Tj
+T*
+(  "totalValidReps": 238,) Tj
+T*
+(  "totalInvalidReps": 9,) Tj
+T*
+(  "totalSetsCompleted": 26,) Tj
+T*
+(  "totalDurationMs": 4235000,) Tj
+T*
+(  "totalRestMs": 811000,) Tj
+T*
+(  "totalFastEccentricWarnings": 12,) Tj
+T*
+(  "totalVolumeLoadKg": 6128.5,) Tj
+T*
+(  "avgRomPercent": 86.4,) Tj
+T*
+(  "avgPeakVelocityPctPerSec": 62.8,) Tj
+T*
+(  "machineTypeCounts": {) Tj
+T*
+(    "leg_ext": 3,) Tj
+T*
+(    "lat_pull": 2,) Tj
+T*
+(    "chest_press": 2) Tj
+T*
+(  },) Tj
+T*
+(  "goalCounts": {) Tj
+T*
+(    "hypertrophy": 7) Tj
+T*
+(  }) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Day Node) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Inside a day:) Tj
+T*
+() Tj
+T*
+(- `meta`) Tj
+T*
+(  - latest session metadata for that day) Tj
+T*
+(- `daySummary`) Tj
+T*
+(  - aggregate day metrics) Tj
+T*
+(- `timeline`) Tj
+T*
+(  - chronological session cards) Tj
+T*
+(- `sessions`) Tj
+T*
+(  - full sessions for that day) Tj
+T*
+() Tj
+T*
+(This makes it easy to answer:) Tj
+T*
+() Tj
+T*
+(- what did this user do today?) Tj
+T*
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 1407 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- in what order?) Tj
+T*
+(- how many sets / reps?) Tj
+T*
+(- how well did they perform?) Tj
+T*
+() Tj
+T*
+(Timeline) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/timeline/{timelineKey}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- lightweight session card list) Tj
+T*
+(- chronological rendering) Tj
+T*
+() Tj
+T*
+(Recommended fields:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "sessionId": "session_1776146400_1",) Tj
+T*
+(  "dayKey": "2026-04-13",) Tj
+T*
+(  "weekKey": "2026-W16",) Tj
+T*
+(  "identity": {) Tj
+T*
+(    "userUid": "D6-FA-A5-05",) Tj
+T*
+(    "userDisplayName": "Usuario1") Tj
+T*
+(  },) Tj
+T*
+(  "ordering": {) Tj
+T*
+(    "startedAtEpoch": 1776146400,) Tj
+T*
+(    "endedAtEpoch": 1776147668,) Tj
+T*
+(    "startedAtIso": "2026-04-13T07:00:00-0500",) Tj
+T*
+(    "endedAtIso": "2026-04-13T07:21:08-0500") Tj
+T*
+(  },) Tj
+T*
+(  "machine": {) Tj
+T*
+(    "machineId": "leg_ext_1",) Tj
+T*
+(    "machineTypeId": "leg_ext",) Tj
+T*
+(    "machineDisplayName": "Leg Extension",) Tj
+T*
+(    "exerciseCategory": "strength_machine",) Tj
+T*
+(    "primaryMuscleGroup": "quadriceps",) Tj
+T*
+(    "secondaryMuscleGroup": "knees") Tj
+T*
+(  },) Tj
+T*
+(  "plan": {) Tj
+T*
+(    "goal": "hypertrophy",) Tj
+T*
+(    "selectedWeightKg": 23.0,) Tj
+T*
+(    "targetSets": 4,) Tj
+T*
+(    "targetRepsMin": 10,) Tj
+T*
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 1162 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(    "targetRepsMax": 15) Tj
+T*
+(  },) Tj
+T*
+(  "summary": {) Tj
+T*
+(    "setsCompleted": 4,) Tj
+T*
+(    "validReps": 46,) Tj
+T*
+(    "invalidReps": 1,) Tj
+T*
+(    "avgRomPercent": 88.3,) Tj
+T*
+(    "durationMs": 1268000) Tj
+T*
+(  }) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Sessions) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Path:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/sessions/{sessionId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(This is the session record your teammate should open when they need detailed) Tj
+T*
+(analysis.) Tj
+T*
+() Tj
+T*
+(Recommended internal structure:) Tj
+T*
+() Tj
+T*
+(- `identity`) Tj
+T*
+(- `machine`) Tj
+T*
+(- `timing`) Tj
+T*
+(- `plan`) Tj
+T*
+(- `summary`) Tj
+T*
+(- `analysis`) Tj
+T*
+(- `setOverview`) Tj
+T*
+(- `setDetails`) Tj
+T*
+(- `repSets`) Tj
+T*
+() Tj
+T*
+(This keeps one intuitive path while still separating the session into logical) Tj
+T*
+(subsections.) Tj
+T*
+() Tj
+T*
+(Recommended Session Shape) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "sessionId": "session_1776146400_1",) Tj
+T*
+(  "identity": {},) Tj
+T*
+(  "machine": {},) Tj
+T*
+(  "timing": {},) Tj
+T*
+(  "plan": {},) Tj
+T*
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 1029 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(  "summary": {},) Tj
+T*
+(  "analysis": {},) Tj
+T*
+(  "setOverview": [],) Tj
+T*
+(  "paths": {) Tj
+T*
+(    "setDetails": "setDetails",) Tj
+T*
+(    "repSets": "repSets") Tj
+T*
+(  },) Tj
+T*
+(  "representativeReps": {},) Tj
+T*
+(  "setDetails": {) Tj
+T*
+(    "sessionId": "session_1776146400_1",) Tj
+T*
+(    "setCount": 4,) Tj
+T*
+(    "sets": {}) Tj
+T*
+(  },) Tj
+T*
+(  "repSets": {) Tj
+T*
+(    "set1": {},) Tj
+T*
+(    "set2": {},) Tj
+T*
+(    "set3": {},) Tj
+T*
+(    "set4": {}) Tj
+T*
+(  }) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(What Each Session Section Is For) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(`identity`) Tj
+T*
+() Tj
+T*
+(Who performed the session.) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "userUid": "D6-FA-A5-05",) Tj
+T*
+(  "userDisplayName": "Usuario1",) Tj
+T*
+(  "anonymous": false) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(`machine`) Tj
+T*
+() Tj
+T*
+(Which machine was used.) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "machineId": "leg_ext_1",) Tj
+T*
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 1258 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(  "machineTypeId": "leg_ext",) Tj
+T*
+(  "machineDisplayName": "Leg Extension",) Tj
+T*
+(  "exerciseCategory": "strength_machine",) Tj
+T*
+(  "primaryMuscleGroup": "quadriceps",) Tj
+T*
+(  "secondaryMuscleGroup": "knees",) Tj
+T*
+(  "machineIdealRomPercent": 90.0) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(`timing`) Tj
+T*
+() Tj
+T*
+(When the session happened.) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "startedAtEpoch": 1776146400,) Tj
+T*
+(  "endedAtEpoch": 1776147668,) Tj
+T*
+(  "startedAtIso": "2026-04-13T07:00:00-0500",) Tj
+T*
+(  "endedAtIso": "2026-04-13T07:21:08-0500",) Tj
+T*
+(  "startMs": 1776146400000,) Tj
+T*
+(  "endMs": 1776147668000,) Tj
+T*
+(  "durationMs": 1268000,) Tj
+T*
+(  "totalRestMs": 188000) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(`plan`) Tj
+T*
+() Tj
+T*
+(What the workout intended to do.) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "goal": "hypertrophy",) Tj
+T*
+(  "calibrationBased": true,) Tj
+T*
+(  "selectedWeightKg": 23.0,) Tj
+T*
+(  "suggestedWeightKg": 22.0,) Tj
+T*
+(  "userRomPercent": 91.0,) Tj
+T*
+(  "targetSets": 4,) Tj
+T*
+(  "targetRepsMin": 10,) Tj
+T*
+(  "targetRepsMax": 15,) Tj
+T*
+(  "plannedRestSeconds": 60) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 1311 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(`summary`) Tj
+T*
+() Tj
+T*
+(Fast high-level results.) Tj
+T*
+() Tj
+T*
+(Example:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+({) Tj
+T*
+(  "setsCompleted": 4,) Tj
+T*
+(  "setCount": 4,) Tj
+T*
+(  "repCount": 47,) Tj
+T*
+(  "validReps": 46,) Tj
+T*
+(  "invalidReps": 1,) Tj
+T*
+(  "fastEccentricWarnings": 2,) Tj
+T*
+(  "validRepRate": 97.87,) Tj
+T*
+(  "volumeLoadKg": 1058.0,) Tj
+T*
+(  "avgRomPercent": 88.3,) Tj
+T*
+(  "bestRomPercent": 93.5,) Tj
+T*
+(  "avgConcentricTimeMs": 1018.4,) Tj
+T*
+(  "avgPeakVelocityPctPerSec": 64.7,) Tj
+T*
+(  "avgPeakEccentricVelocityPctPerSec": 71.2) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(`analysis`) Tj
+T*
+() Tj
+T*
+(Derived metrics for progress tracking.) Tj
+T*
+() Tj
+T*
+(This is where your richer coaching logic belongs.) Tj
+T*
+() Tj
+T*
+(Recommended metrics:) Tj
+T*
+() Tj
+T*
+(- `firstSetAvgRomPercent`) Tj
+T*
+(- `lastSetAvgRomPercent`) Tj
+T*
+(- `firstSetAvgPeakVelocityPctPerSec`) Tj
+T*
+(- `lastSetAvgPeakVelocityPctPerSec`) Tj
+T*
+(- `validAtOrAboveUserRomCount`) Tj
+T*
+(- `validBelowUserRomCount`) Tj
+T*
+(- `validAtOrAboveIdealRomCount`) Tj
+T*
+(- `romComplianceRate`) Tj
+T*
+(- `idealRomHitRate`) Tj
+T*
+(- `avgRestSecondsPerSet`) Tj
+T*
+(- `fatigueRomDrop`) Tj
+T*
+(- `fatigueVelocityDrop`) Tj
+T*
+(- invalid reason counters) Tj
+T*
+() Tj
+T*
+(`setOverview`) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Length 1279 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(Quick per-set table.) Tj
+T*
+() Tj
+T*
+(Useful for:) Tj
+T*
+() Tj
+T*
+(- set comparison cards) Tj
+T*
+(- fatigue progression chart) Tj
+T*
+(- simple coach review) Tj
+T*
+() Tj
+T*
+(`setDetails`) Tj
+T*
+() Tj
+T*
+(More explicit set-by-set detail.) Tj
+T*
+() Tj
+T*
+(Useful when the frontend wants:) Tj
+T*
+() Tj
+T*
+(- dedicated set pages) Tj
+T*
+(- richer tables) Tj
+T*
+(- breakdown by set without scanning all reps) Tj
+T*
+() Tj
+T*
+(`repSets`) Tj
+T*
+() Tj
+T*
+(This is where rep-level detail lives.) Tj
+T*
+() Tj
+T*
+(Purpose:) Tj
+T*
+() Tj
+T*
+(- preserve every rep) Tj
+T*
+(- support deep session analysis) Tj
+T*
+(- support future charts and coaching tools) Tj
+T*
+() Tj
+T*
+(Recommended shape:) Tj
+T*
+() Tj
+T*
+(```json) Tj
+T*
+("repSets": {) Tj
+T*
+(  "set1": {) Tj
+T*
+(    "sessionId": "session_1776146400_1",) Tj
+T*
+(    "setNumber": 1,) Tj
+T*
+(    "count": 12,) Tj
+T*
+(    "setSummary": {},) Tj
+T*
+(    "reps": [) Tj
+T*
+(      {) Tj
+T*
+(        "index": 0,) Tj
+T*
+(        "setNumber": 1,) Tj
+T*
+(        "repNumberInSet": 1,) Tj
+T*
+(        "valid": true,) Tj
+T*
+(        "warningFastEccentric": false,) Tj
+T*
+(        "selectedWeightKg": 23.0,) Tj
+T*
+(        "romPercent": 91.4,) Tj
+T*
+(        "durationMs": 2580,) Tj
+T*
+(        "concentricTimeMs": 980,) Tj
+T*
+ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 28 0 R >>
+endobj
+30 0 obj
+<< /Length 1263 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(        "peakVelocityPctPerSec": 67.1,) Tj
+T*
+(        "peakEccentricVelocityPctPerSec": 73.0,) Tj
+T*
+(        "invalidFlags": 0,) Tj
+T*
+(        "offsetMs": 0) Tj
+T*
+(      }) Tj
+T*
+(    ]) Tj
+T*
+(  }) Tj
+T*
+(}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(This is the section to keep if analysis quality matters.) Tj
+T*
+() Tj
+T*
+(What To Remove If Firebase Feels Cluttered) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(If you want to simplify without losing useful analysis, remove in this order:) Tj
+T*
+() Tj
+T*
+(1. `calibrationHistory`) Tj
+T*
+(2. extra cosmetic fields in `representativeReps`) Tj
+T*
+(3. analytics fields you are not showing in the web app yet) Tj
+T*
+() Tj
+T*
+(Do not remove these if analysis matters:) Tj
+T*
+() Tj
+T*
+(- `summary`) Tj
+T*
+(- `analysis`) Tj
+T*
+(- `setOverview`) Tj
+T*
+(- `setDetails`) Tj
+T*
+(- `repSets`) Tj
+T*
+() Tj
+T*
+(What The Web App Should Read) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Dashboard) Tj
+T*
+() Tj
+T*
+(Use:) Tj
+T*
+() Tj
+T*
+(- `usersByRfid`) Tj
+T*
+(- `athleteWeeklySessions/{uid}/{currentWeek}/weekSummary`) Tj
+T*
+(- `devices`) Tj
+T*
+() Tj
+T*
+(User Progress Page) Tj
+T*
+() Tj
+T*
+(Use:) Tj
+T*
+() Tj
+T*
+(- `usersByRfid/{uid}`) Tj
+T*
+(- `calibrations/{uid}`) Tj
+T*
+(- `bodyMetricsHistory/{uid}`) Tj
+T*
+(- `sessionFeedback/{uid}`) Tj
+T*
+ET
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 30 0 R >>
+endobj
+32 0 obj
+<< /Length 1406 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- `athleteWeeklySessions/{uid}`) Tj
+T*
+() Tj
+T*
+(Optionally:) Tj
+T*
+() Tj
+T*
+(- `calibrationHistory/{uid}`) Tj
+T*
+() Tj
+T*
+(Weekly View) Tj
+T*
+() Tj
+T*
+(Use:) Tj
+T*
+() Tj
+T*
+(- `athleteWeeklySessions/{uid}/{weekKey}/weekSummary`) Tj
+T*
+(- `athleteWeeklySessions/{uid}/{weekKey}/days`) Tj
+T*
+() Tj
+T*
+(Day View) Tj
+T*
+() Tj
+T*
+(Use:) Tj
+T*
+() Tj
+T*
+(- `athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/daySummary`) Tj
+T*
+(- `athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/timeline`) Tj
+T*
+() Tj
+T*
+(This is enough to answer:) Tj
+T*
+() Tj
+T*
+(- what exercises did the user do today?) Tj
+T*
+(- at what times?) Tj
+T*
+(- how many sessions?) Tj
+T*
+() Tj
+T*
+(Session Detail View) Tj
+T*
+() Tj
+T*
+(Use:) Tj
+T*
+() Tj
+T*
+(- `athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/sessions/{sessionId}`) Tj
+T*
+() Tj
+T*
+(This gives the full analysis without needing another root.) Tj
+T*
+() Tj
+T*
+(Team Contract) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(If your teammate remembers one rule, it should be:) Tj
+T*
+() Tj
+T*
+(- profiles live in `usersByRfid`) Tj
+T*
+(- current machine personalization lives in `calibrations`) Tj
+T*
+(- weekly and daily browsing lives in `athleteWeeklySessions`) Tj
+T*
+(- deep session analysis also lives inside that session node) Tj
+T*
+() Tj
+T*
+(In other words:) Tj
+T*
+() Tj
+T*
+(- one week tree for browsing) Tj
+T*
+(- one session node inside that tree for detail) Tj
+T*
+ET
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 32 0 R >>
+endobj
+34 0 obj
+<< /Length 484 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(Recommended Next Step) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The best next practical move is:) Tj
+T*
+() Tj
+T*
+(1. keep the single-tree design) Tj
+T*
+(2. clean the session node into clear sections) Tj
+T*
+(3. update the sample Firebase seed to match this cleaner format) Tj
+T*
+(4. only remove optional nodes, not analysis detail) Tj
+T*
+() Tj
+T*
+(That gives you a schema that is easy to explain and still good enough for real) Tj
+T*
+(session analysis.) Tj
+T*
+ET
+endstream
+endobj
+35 0 obj
+<< /Type /Page /Parent 36 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 34 0 R >>
+endobj
+36 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R ] /Count 17 >>
+endobj
+37 0 obj
+<< /Type /Catalog /Pages 36 0 R >>
+endobj
+xref
+0 38
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001771 00000 n
+0000001898 00000 n
+0000003202 00000 n
+0000003329 00000 n
+0000004503 00000 n
+0000004630 00000 n
+0000005981 00000 n
+0000006108 00000 n
+0000007384 00000 n
+0000007513 00000 n
+0000008786 00000 n
+0000008915 00000 n
+0000009896 00000 n
+0000010025 00000 n
+0000011403 00000 n
+0000011532 00000 n
+0000012992 00000 n
+0000013121 00000 n
+0000014336 00000 n
+0000014465 00000 n
+0000015547 00000 n
+0000015676 00000 n
+0000016987 00000 n
+0000017116 00000 n
+0000018480 00000 n
+0000018609 00000 n
+0000019941 00000 n
+0000020070 00000 n
+0000021386 00000 n
+0000021515 00000 n
+0000022974 00000 n
+0000023103 00000 n
+0000023639 00000 n
+0000023768 00000 n
+0000023938 00000 n
+trailer
+<< /Size 38 /Root 37 0 R >>
+startxref
+23989
+%%EOF

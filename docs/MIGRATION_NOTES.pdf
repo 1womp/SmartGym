@@ -1,0 +1,187 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1463 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(SMARTGYM DISPLAY BRING-UP) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(This project is intentionally separate from `SmartGym`.) Tj
+T*
+() Tj
+T*
+(Purpose) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Use this repo-sized sandbox to validate the new VIEWE 7-inch ESP32-S3 board:) Tj
+T*
+() Tj
+T*
+(- upload flow) Tj
+T*
+(- serial over USB) Tj
+T*
+(- flash / PSRAM assumptions) Tj
+T*
+(- panel initialization) Tj
+T*
+(- GT911 touch) Tj
+T*
+(- LVGL rendering) Tj
+T*
+() Tj
+T*
+(Why Separate) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The new display board changes too many things at once:) Tj
+T*
+() Tj
+T*
+(- ESP32 -> ESP32-S3) Tj
+T*
+(- GPIO map) Tj
+T*
+(- display stack) Tj
+T*
+(- touch stack) Tj
+T*
+(- USB/serial behavior) Tj
+T*
+(- memory profile) Tj
+T*
+() Tj
+T*
+(Keeping bring-up separate makes debugging much easier and avoids contaminating) Tj
+T*
+(the working SmartGym MVP while hardware setup is still unstable.) Tj
+T*
+() Tj
+T*
+(Migration Strategy) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Get this project stable with basic panel/touch/LVGL tests.) Tj
+T*
+(2. Keep SmartGym unchanged while testing.) Tj
+T*
+(3. Once stable, migrate the display knowledge back into SmartGym as a proper HMI layer.) Tj
+T*
+(4. Reuse existing SmartGym domain modules later:) Tj
+T*
+(   - `AppController`) Tj
+T*
+(   - `RepDetector`) Tj
+T*
+(   - `CalibrationService`) Tj
+T*
+(   - `SessionRecorder`) Tj
+T*
+(   - `FirebaseService`) Tj
+T*
+(   - `UserRegistry`) Tj
+T*
+(   - `MachineRegistry`) Tj
+T*
+() Tj
+T*
+(Next Implementation Step) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1005 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+() Tj
+T*
+(After confirming this project flashes and reports PSRAM correctly, the next) Tj
+T*
+(task should be a minimal panel-on + touch test screen.) Tj
+T*
+() Tj
+T*
+(Cloud Reconciliation Policy \(Current Firmware\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(When an RFID card is scanned and cloud is enabled, the device runs a) Tj
+T*
+(reconciliation pass before training:) Tj
+T*
+() Tj
+T*
+(1. Pull latest user profile \(`usersByRfid/{uid}`\).) Tj
+T*
+(2. Pull latest calibration \(`calibrations/{uid}/{machineTypeId}`\).) Tj
+T*
+(3. Pull latest machine config \(`machineConfigs/{machineId}`\) during poll cycle.) Tj
+T*
+(4. Merge conflict rule:) Tj
+T*
+(   - If cloud timestamp is newer, local profile/calibration is updated.) Tj
+T*
+(   - If local timestamp is newer, local data is pushed back to cloud.) Tj
+T*
+(5. Session uploads are idempotent:) Tj
+T*
+(   - deterministic paths by `sessionId` and timeline key) Tj
+T*
+(   - payloads include `schemaVersion` and `idempotencyKey`.) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R ] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001594 00000 n
+0000001720 00000 n
+0000002777 00000 n
+0000002903 00000 n
+0000002968 00000 n
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+3017
+%%EOF

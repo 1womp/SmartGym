@@ -1,0 +1,738 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1484 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(SMARTGYM DEVELOPER GUIDE) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Development Environment) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The firmware is a PlatformIO Arduino project for an ESP32-S3 VIEWE display board.) Tj
+T*
+() Tj
+T*
+(Required environment:) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(BOARD_VIEWE_UEDX80480070E_WB_A) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Build:) Tj
+T*
+() Tj
+T*
+(```powershell) Tj
+T*
+(python -m platformio run --environment BOARD_VIEWE_UEDX80480070E_WB_A) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(For local hardware builds, provide private Wi-Fi and Firebase values through) Tj
+T*
+(PlatformIO build flags or a local untracked config. Do not commit real SSIDs,) Tj
+T*
+(passwords, Firebase tokens, or private project configuration.) Tj
+T*
+() Tj
+T*
+(Upload and monitor:) Tj
+T*
+() Tj
+T*
+(```powershell) Tj
+T*
+(python -m platformio run --target upload --target monitor --environment) Tj
+T*
+(BOARD_VIEWE_UEDX80480070E_WB_A) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Repository Layout) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The firmware remains at repository root to preserve existing PlatformIO build) Tj
+T*
+(behavior:) Tj
+T*
+() Tj
+T*
+(- `src/`: application code.) Tj
+T*
+(- `lib/`: firmware modules.) Tj
+T*
+(- `boards/`: board configuration.) Tj
+T*
+(- `dashboard/`: React dashboard.) Tj
+T*
+(- `weight_detection/`: standalone VL53L0X prototype.) Tj
+T*
+(- `docs/`: project documentation.) Tj
+T*
+(- `hardware/`: wiring notes.) Tj
+T*
+(- `screenshots/`: demo images.) Tj
+T*
+() Tj
+T*
+(Main Firmware Architecture) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1263 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(`SmartGymTouchApp` is the application orchestrator. It owns the UI state, training) Tj
+T*
+(state, calibration flow, user sync, Firebase queueing, and memory guards.) Tj
+T*
+() Tj
+T*
+(Main state categories:) Tj
+T*
+() Tj
+T*
+(- Idle/Ready.) Tj
+T*
+(- Calibration.) Tj
+T*
+(- Training.) Tj
+T*
+(- Summary.) Tj
+T*
+() Tj
+T*
+(Main UI screen modes include:) Tj
+T*
+() Tj
+T*
+(- Main.) Tj
+T*
+(- Summary.) Tj
+T*
+(- Idle.) Tj
+T*
+(- Calibration.) Tj
+T*
+(- Calibration gate.) Tj
+T*
+(- Debug.) Tj
+T*
+(- Profile.) Tj
+T*
+() Tj
+T*
+(Main Modules) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(SmartGymTouchApp) Tj
+T*
+() Tj
+T*
+(Coordinates:) Tj
+T*
+() Tj
+T*
+(- LVGL UI creation and refresh.) Tj
+T*
+(- RFID scan flow.) Tj
+T*
+(- User profile/calibration sync.) Tj
+T*
+(- ROM normalization.) Tj
+T*
+(- Rep handling.) Tj
+T*
+(- Calibration state machine.) Tj
+T*
+(- Session start/finish.) Tj
+T*
+(- Firebase upload scheduling.) Tj
+T*
+(- Memory-aware upload chunking.) Tj
+T*
+() Tj
+T*
+(SensorManager) Tj
+T*
+() Tj
+T*
+(Reads the analog motion sensor and converts it into a filtered ROM percentage. The) Tj
+T*
+(firmware configures sampling at 5 ms, approximately 200 Hz.) Tj
+T*
+() Tj
+T*
+(RepDetector) Tj
+T*
+() Tj
+T*
+(Uses a ROM-based state machine:) Tj
+T*
+() Tj
+T*
+(- Bottom.) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1366 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- Ascending.) Tj
+T*
+(- Top.) Tj
+T*
+(- Descending.) Tj
+T*
+() Tj
+T*
+(It computes rep duration, ROM range, velocities, warnings, and invalid flags.) Tj
+T*
+() Tj
+T*
+(SessionRecorder) Tj
+T*
+() Tj
+T*
+(Stores the active session, sets, reps, per-rep load, timing, ROM, quality metrics, and) Tj
+T*
+(JSON payloads for Firebase.) Tj
+T*
+() Tj
+T*
+(Current limits:) Tj
+T*
+() Tj
+T*
+(- Maximum sets per session: 8.) Tj
+T*
+(- Maximum reps per session: 80.) Tj
+T*
+() Tj
+T*
+(FirebaseService) Tj
+T*
+() Tj
+T*
+(Handles Firebase RTDB paths, JSON construction, reads, writes, and FirebaseClient) Tj
+T*
+(queued transport.) Tj
+T*
+() Tj
+T*
+(MachineRegistry) Tj
+T*
+() Tj
+T*
+(Stores the embedded machine catalog and motion target templates for goals:) Tj
+T*
+() Tj
+T*
+(- `hypertrophy`) Tj
+T*
+(- `strength`) Tj
+T*
+(- `endurance`) Tj
+T*
+(- `test`) Tj
+T*
+() Tj
+T*
+(The `test` goal is retained for internal/debug round-trip validation.) Tj
+T*
+() Tj
+T*
+(UserRegistry) Tj
+T*
+() Tj
+T*
+(Stores local user profiles and user-machine calibration data.) Tj
+T*
+() Tj
+T*
+(Current limits:) Tj
+T*
+() Tj
+T*
+(- Maximum local profiles: 8.) Tj
+T*
+(- Maximum machine calibrations per profile: 8.) Tj
+T*
+() Tj
+T*
+(LocalPersistenceStore) Tj
+T*
+() Tj
+T*
+(Uses NVS/Preferences for:) Tj
+T*
+() Tj
+T*
+(- Local user cache.) Tj
+T*
+(- Local session cache.) Tj
+T*
+(- Pending upload queue.) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1597 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(The upload queue is used for retry/offline resilience.) Tj
+T*
+() Tj
+T*
+(RfidService) Tj
+T*
+() Tj
+T*
+(Reads MFRC522 cards and formats UIDs as uppercase hex groups separated by `-`.) Tj
+T*
+() Tj
+T*
+(UI Architecture) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The firmware uses LVGL. UI refresh is intentionally split into different rates to) Tj
+T*
+(reduce CPU and memory pressure:) Tj
+T*
+() Tj
+T*
+(- Main app tick: 4 ms.) Tj
+T*
+(- Chart refresh: about 16 ms.) Tj
+T*
+(- Slow UI refresh: about 140 ms.) Tj
+T*
+(- Debug UI refresh: about 160 ms.) Tj
+T*
+() Tj
+T*
+(Screen-specific LVGL objects must be reset to `nullptr` when their parent screen/modal) Tj
+T*
+(is deleted. This prevents stale pointer crashes.) Tj
+T*
+() Tj
+T*
+(Calibration Architecture) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Calibration is user-specific and machine-type-specific. The flow includes:) Tj
+T*
+() Tj
+T*
+(- Start load confirmation.) Tj
+T*
+(- Physical pin-load controls.) Tj
+T*
+(- Rep collection.) Tj
+T*
+(- Set analysis.) Tj
+T*
+(- Optional next load.) Tj
+T*
+(- Result and save.) Tj
+T*
+() Tj
+T*
+(Calibration records valid/rejected reps, ROM, velocity, load, confidence, action, and) Tj
+T*
+(recommendation data. Calibration is saved under:) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(calibrations/{uid}/{machineTypeId}) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Recommendation Logic) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Recommendation is separate from physical pin load.) Tj
+T*
+() Tj
+T*
+(- Pin load is machine-level physical state.) Tj
+T*
+(- Recommendation is user-specific advice.) Tj
+T*
+(- Recommendation must not automatically overwrite pin load.) Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1415 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(The firmware resolves recommendation from the latest valid user-machine data,) Tj
+T*
+(including session summary or calibration data where available.) Tj
+T*
+() Tj
+T*
+(Firebase Sync Pipeline) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Session finish does not perform heavy Firebase work directly. It schedules a queued) Tj
+T*
+(upload.) Tj
+T*
+() Tj
+T*
+(Upload phases:) Tj
+T*
+() Tj
+T*
+(1. Session root/core.) Tj
+T*
+(2. Day metadata.) Tj
+T*
+(3. Day timeline.) Tj
+T*
+(4. Day summary.) Tj
+T*
+(5. Week summary.) Tj
+T*
+(6. Representative reps.) Tj
+T*
+(7. Set details.) Tj
+T*
+(8. Rep sets.) Tj
+T*
+() Tj
+T*
+(The firmware preserves final Firebase shape while splitting payloads when memory is) Tj
+T*
+(low.) Tj
+T*
+() Tj
+T*
+(Queue and Chunking Behavior) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The firmware uses memory modes:) Tj
+T*
+() Tj
+T*
+(- Normal.) Tj
+T*
+(- Constrained.) Tj
+T*
+(- Critical.) Tj
+T*
+() Tj
+T*
+(RepSet upload limits:) Tj
+T*
+() Tj
+T*
+(- Normal: target 1900 bytes, hard max 2100 bytes, up to 6 reps per patch.) Tj
+T*
+(- Constrained: target 900 bytes, hard max 1100 bytes, up to 3 reps per patch.) Tj
+T*
+(- Critical: target 650 bytes, hard max 850 bytes, up to 2 reps per patch.) Tj
+T*
+() Tj
+T*
+(The final Firebase structure remains:) Tj
+T*
+() Tj
+T*
+(```text) Tj
+T*
+(repSets/set1/reps/0) Tj
+T*
+(repSets/set1/reps/1) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(No chunk nodes are added to the final schema.) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 1569 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(Adding a New Machine) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Add a machine seed in `MachineRegistry`.) Tj
+T*
+(2. Define machine ID, machine type ID, display name, category, muscles, stroke length,) Tj
+T*
+(   min/max/increment, and default calibration weight.) Tj
+T*
+(3. Confirm goal templates and timing targets.) Tj
+T*
+(4. Rebuild firmware.) Tj
+T*
+(5. Verify Firebase machine config compatibility if cloud overrides are used.) Tj
+T*
+() Tj
+T*
+(Editing Goals) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Public goals:) Tj
+T*
+() Tj
+T*
+(- `hypertrophy`) Tj
+T*
+(- `strength`) Tj
+T*
+(- `endurance`) Tj
+T*
+() Tj
+T*
+(Internal/debug goal:) Tj
+T*
+() Tj
+T*
+(- `test`) Tj
+T*
+() Tj
+T*
+(Legacy compatibility:) Tj
+T*
+() Tj
+T*
+(- `general`, normalized for new runtime behavior.) Tj
+T*
+() Tj
+T*
+(Do not remove `test`; it is used for device/Firebase testing.) Tj
+T*
+() Tj
+T*
+(Common Serial Log Tags) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- `[BOOT]`: startup.) Tj
+T*
+(- `[BOOTMEM]`: memory checkpoints.) Tj
+T*
+(- `[RFID]`: card scans and user load.) Tj
+T*
+(- `[USER_SYNC]`: profile/calibration/recommendation load.) Tj
+T*
+(- `[UI_LOADING]`: loading popup.) Tj
+T*
+(- `[WEIGHT]`: pin load and recommendation decisions.) Tj
+T*
+(- `[SESSION]`: session start, reps, sets, finish.) Tj
+T*
+(- `[CAL]`: calibration logic.) Tj
+T*
+(- `[CAL_UI]`: calibration screen updates.) Tj
+T*
+(- `[SYNC]`: upload and queue behavior.) Tj
+T*
+(- `[SYNCGATE]`: cloud sync scheduling.) Tj
+T*
+(- `[CloudWrite]`: Firebase writes.) Tj
+T*
+(- `[GRAPH]`: graph/timing display.) Tj
+T*
+() Tj
+T*
+(Memory Considerations) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 697 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(Firebase/TLS can be memory-sensitive on ESP32. The firmware:) Tj
+T*
+() Tj
+T*
+(- Frees optional UI before training/upload.) Tj
+T*
+(- Uses NVS queueing.) Tj
+T*
+(- Limits payload sizes.) Tj
+T*
+(- Splits repSet patches under low memory.) Tj
+T*
+(- Avoids upload workers.) Tj
+T*
+(- Avoids direct heavy upload inside `finishTraining`.) Tj
+T*
+() Tj
+T*
+(Known Limitations) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Physical pin load is manual in the main firmware.) Tj
+T*
+(- Weight detection is a separate prototype.) Tj
+T*
+(- Firebase dashboard config is environment-based; local `.env` files must remain) Tj
+T*
+(  untracked.) Tj
+T*
+(- Automated test coverage is limited.) Tj
+T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R ] /Count 7 >>
+endobj
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
+endobj
+xref
+0 18
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001615 00000 n
+0000001742 00000 n
+0000003057 00000 n
+0000003184 00000 n
+0000004602 00000 n
+0000004729 00000 n
+0000006378 00000 n
+0000006505 00000 n
+0000007973 00000 n
+0000008102 00000 n
+0000009724 00000 n
+0000009853 00000 n
+0000010602 00000 n
+0000010731 00000 n
+0000010830 00000 n
+trailer
+<< /Size 18 /Root 17 0 R >>
+startxref
+10881
+%%EOF

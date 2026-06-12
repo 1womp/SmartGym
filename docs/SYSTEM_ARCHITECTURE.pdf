@@ -1,0 +1,342 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1696 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(SMARTGYM SYSTEM ARCHITECTURE) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(High-Level Architecture) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(```mermaid) Tj
+T*
+(flowchart LR) Tj
+T*
+(  Motion[Motion Sensor] --> SensorManager) Tj
+T*
+(  SensorManager --> ROM[ROM Normalization]) Tj
+T*
+(  ROM --> RepDetector) Tj
+T*
+(  RepDetector --> SessionRecorder) Tj
+T*
+(  RFID[RFID Reader] --> UserSync[User Sync]) Tj
+T*
+(  UserSync --> Recommendation) Tj
+T*
+(  Recommendation --> UI[LVGL UI]) Tj
+T*
+(  SessionRecorder --> UploadQueue[NVS Upload Queue]) Tj
+T*
+(  UploadQueue --> Firebase[Firebase RTDB]) Tj
+T*
+(  Firebase --> Dashboard[React Dashboard]) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(The system is split into embedded firmware, Firebase RTDB, and dashboard) Tj
+T*
+(visualization.) Tj
+T*
+() Tj
+T*
+(Data Flow) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1. Sensor is sampled every 5 ms.) Tj
+T*
+(2. SensorManager filters the analog value.) Tj
+T*
+(3. Firmware converts sensor reading to ROM percentage.) Tj
+T*
+(4. User calibration maps raw ROM into user-normalized ROM.) Tj
+T*
+(5. RepDetector identifies rep phases and completed reps.) Tj
+T*
+(6. SessionRecorder stores reps, sets, weight, ROM, timing, and quality.) Tj
+T*
+(7. SmartGymTouchApp computes summary/recommendation updates.) Tj
+T*
+(8. Upload queue stores Firebase payloads.) Tj
+T*
+(9. FirebaseService sends memory-safe writes to RTDB.) Tj
+T*
+(10. Dashboard reads Firebase for charts and summaries.) Tj
+T*
+() Tj
+T*
+(User Login Flow) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(```mermaid) Tj
+T*
+(sequenceDiagram) Tj
+T*
+(  participant U as User) Tj
+T*
+(  participant R as RFID) Tj
+T*
+(  participant D as Device) Tj
+T*
+(  participant F as Firebase) Tj
+T*
+(  U->>R: Scan card) Tj
+T*
+(  R->>D: UID) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1697 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(  D->>D: Show loading popup) Tj
+T*
+(  D->>F: Fetch usersByRfid/{uid}) Tj
+T*
+(  F-->>D: Profile) Tj
+T*
+(  D->>F: Fetch calibrations/{uid}/{machineTypeId}) Tj
+T*
+(  F-->>D: Calibration or missing) Tj
+T*
+(  D->>D: Resolve recommendation) Tj
+T*
+(  D->>D: Apply ROM mapping) Tj
+T*
+(  D->>D: Hide loading popup) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Inputs are blocked until sync completes or falls back safely.) Tj
+T*
+() Tj
+T*
+(Workout Flow) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(```mermaid) Tj
+T*
+(sequenceDiagram) Tj
+T*
+(  participant U as User) Tj
+T*
+(  participant D as Device) Tj
+T*
+(  participant S as SessionRecorder) Tj
+T*
+(  participant Q as Upload Queue) Tj
+T*
+(  participant F as Firebase) Tj
+T*
+(  U->>D: Press START) Tj
+T*
+(  D->>S: Start session with machine pin load) Tj
+T*
+(  U->>D: Perform reps) Tj
+T*
+(  D->>S: Record reps and sets) Tj
+T*
+(  U->>D: Finish or auto-finish) Tj
+T*
+(  D->>S: Finish session) Tj
+T*
+(  D->>Q: Queue upload) Tj
+T*
+(  Q->>F: Upload in phases) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Manual Pin Load vs Recommendation) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Pin load is physical machine state. It stays with the machine across users.) Tj
+T*
+(Recommendation is user-specific advice.) Tj
+T*
+() Tj
+T*
+(The firmware never changes pin load because of recommendation. The user physically) Tj
+T*
+(changes the machine pin and updates the UI with weight buttons.) Tj
+T*
+() Tj
+T*
+(Calibration Flow) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Calibration uses the current machine pin load and suggested loads. The user confirms) Tj
+T*
+(the physical load before collecting reps. The firmware analyzes smooth reps, estimates) Tj
+T*
+(load suitability, and saves user-machine calibration data.) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1429 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(Sync Flow) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Session finish schedules sync. Heavy Firebase work is not performed inside the) Tj
+T*
+(immediate finish path.) Tj
+T*
+() Tj
+T*
+(Sync writes:) Tj
+T*
+() Tj
+T*
+(- Core session.) Tj
+T*
+(- Metadata.) Tj
+T*
+(- Timeline.) Tj
+T*
+(- Summaries.) Tj
+T*
+(- Details.) Tj
+T*
+(- Rep sets.) Tj
+T*
+() Tj
+T*
+(The NVS queue allows retry and prevents data loss when Firebase or Wi-Fi is) Tj
+T*
+(temporarily unavailable.) Tj
+T*
+() Tj
+T*
+(Sampling and Refresh Rates) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Main app tick: 4 ms.) Tj
+T*
+(- Sensor sample interval: 5 ms, approximately 200 Hz.) Tj
+T*
+(- Graph refresh: 16 ms, approximately 60 Hz.) Tj
+T*
+(- Slow UI refresh: 140 ms.) Tj
+T*
+(- Debug UI refresh: 160 ms.) Tj
+T*
+(- Normal cloud service cadence: 5000 ms.) Tj
+T*
+(- Summary/cloud finish cadence: approximately 1200 ms.) Tj
+T*
+(- Device heartbeat interval: 60000 ms.) Tj
+T*
+(- User sync timeout: 12000 ms.) Tj
+T*
+() Tj
+T*
+(Memory Strategy) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The ESP32 is memory-constrained during TLS/Firebase writes. The firmware tracks) Tj
+T*
+(internal heap and largest internal block, then selects upload behavior:) Tj
+T*
+() Tj
+T*
+(- Normal: larger payloads.) Tj
+T*
+(- Constrained: smaller payloads and chunked repSets.) Tj
+T*
+(- Critical: very small payloads or backoff.) Tj
+T*
+() Tj
+T*
+(Optional LVGL UI objects are freed before training/upload to improve available heap.) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R ] /Count 3 >>
+endobj
+9 0 obj
+<< /Type /Catalog /Pages 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001827 00000 n
+0000001953 00000 n
+0000003702 00000 n
+0000003828 00000 n
+0000005309 00000 n
+0000005435 00000 n
+0000005506 00000 n
+trailer
+<< /Size 10 /Root 9 0 R >>
+startxref
+5555
+%%EOF

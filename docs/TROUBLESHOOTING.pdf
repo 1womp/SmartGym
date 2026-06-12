@@ -1,0 +1,377 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1221 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(SMARTGYM TROUBLESHOOTING GUIDE) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Build Fails) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Run:) Tj
+T*
+() Tj
+T*
+(```powershell) Tj
+T*
+(python -m platformio run --environment BOARD_VIEWE_UEDX80480070E_WB_A) Tj
+T*
+(```) Tj
+T*
+() Tj
+T*
+(Check:) Tj
+T*
+() Tj
+T*
+(- PlatformIO is installed.) Tj
+T*
+(- Board environment name is correct.) Tj
+T*
+(- Dependencies downloaded correctly.) Tj
+T*
+(- No local syntax changes are incomplete.) Tj
+T*
+() Tj
+T*
+(COM Port Busy) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Symptoms:) Tj
+T*
+() Tj
+T*
+(- Upload fails with access denied.) Tj
+T*
+(- Monitor cannot open serial port.) Tj
+T*
+() Tj
+T*
+(Fix:) Tj
+T*
+() Tj
+T*
+(- Close any open serial monitor.) Tj
+T*
+(- Close Arduino IDE or other terminal using the port.) Tj
+T*
+(- Unplug/replug the ESP32.) Tj
+T*
+(- Retry upload.) Tj
+T*
+() Tj
+T*
+(Upload Fails) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Confirm USB cable supports data.) Tj
+T*
+(- Confirm correct board/port.) Tj
+T*
+(- Try holding BOOT if required by the board.) Tj
+T*
+(- Lower upload speed if needed.) Tj
+T*
+() Tj
+T*
+(Touch Not Responding) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Confirm LVGL/display initialization succeeded.) Tj
+T*
+(- Check serial boot logs.) Tj
+T*
+(- Reboot the device.) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1337 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+() Tj
+T*
+(RFID Not Detected) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Confirm MFRC522 wiring.) Tj
+T*
+(- Check RFID SPI pins.) Tj
+T*
+(- Hold card close to the reader.) Tj
+T*
+(- Avoid scanning during active upload if firmware is blocking RFID for safety.) Tj
+T*
+() Tj
+T*
+(Wi-Fi Not Connected) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Check configured SSID/password build flags.) Tj
+T*
+(- Confirm network is 2.4 GHz.) Tj
+T*
+(- Check serial Wi-Fi logs.) Tj
+T*
+() Tj
+T*
+(Firebase Read/Write Fails) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Confirm database URL and token/config.) Tj
+T*
+(- Confirm Wi-Fi is connected.) Tj
+T*
+(- Check Firebase RTDB rules.) Tj
+T*
+(- Check serial tags `[CloudWrite]`, `[SYNC]`, and `[USER_SYNC]`.) Tj
+T*
+() Tj
+T*
+(Sync Queue Stuck) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Look for:) Tj
+T*
+() Tj
+T*
+(- `[SYNC] queue upload delayed`) Tj
+T*
+(- `[SYNC] upload memory mode=critical`) Tj
+T*
+(- NVS queue count logs.) Tj
+T*
+() Tj
+T*
+(Keep the device powered until it drains the queue.) Tj
+T*
+() Tj
+T*
+(NVS NOT_ENOUGH_SPACE) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Cause:) Tj
+T*
+() Tj
+T*
+(- Too many queued writes or payloads.) Tj
+T*
+() Tj
+T*
+(Mitigation:) Tj
+T*
+() Tj
+T*
+(- Firmware uses queue capacity checks and chunking.) Tj
+T*
+(- Avoid repeatedly skipping summary during active upload if testing older builds.) Tj
+T*
+(- Let the queue drain.) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1296 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(repSets Upload Delayed by Heap Guard) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Cause:) Tj
+T*
+() Tj
+T*
+(- Firebase/TLS memory pressure.) Tj
+T*
+(- Large repSet PATCH payload.) Tj
+T*
+() Tj
+T*
+(Expected behavior:) Tj
+T*
+() Tj
+T*
+(- Firmware should split repSets into smaller chunks under constrained memory.) Tj
+T*
+(- Upload should eventually reach `webapp upload phase=complete`.) Tj
+T*
+() Tj
+T*
+(Graph Clipping or Wrong ROM) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(- Recalibrate ROM.) Tj
+T*
+(- Check sensor wiring.) Tj
+T*
+(- Confirm sensor direction/inversion.) Tj
+T*
+(- Check whether user calibration was loaded.) Tj
+T*
+() Tj
+T*
+(Rep Not Counted) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Possible causes:) Tj
+T*
+() Tj
+T*
+(- ROM too short.) Tj
+T*
+(- Top/bottom not reached.) Tj
+T*
+(- Motion too fast/noisy.) Tj
+T*
+(- Calibration mismatch.) Tj
+T*
+() Tj
+T*
+(Try smooth reps through full range.) Tj
+T*
+() Tj
+T*
+(Calibration Cancel Freeze) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(If calibration does not return safely:) Tj
+T*
+() Tj
+T*
+(- Check serial logs around `[CAL]`, `[CAL_UI]`, and UI destroy paths.) Tj
+T*
+(- Reboot device if needed.) Tj
+T*
+(- Verify no stale LVGL pointer accesses were introduced.) Tj
+T*
+() Tj
+T*
+(Dashboard Missing Data) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Check:) Tj
+T*
+() Tj
+T*
+(- Correct RFID UID selected.) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 271 >>
+stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(- Firebase path exists under `athleteWeeklySessions/{uid}`.) Tj
+T*
+(- Session upload reached `phase=complete`.) Tj
+T*
+(- Browser console for Firebase permission errors.) Tj
+T*
+(- Dashboard Firebase config matches firmware database.) Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R ] /Count 4 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000001352 00000 n
+0000001479 00000 n
+0000002868 00000 n
+0000002995 00000 n
+0000004343 00000 n
+0000004470 00000 n
+0000004792 00000 n
+0000004919 00000 n
+0000004997 00000 n
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+5048
+%%EOF

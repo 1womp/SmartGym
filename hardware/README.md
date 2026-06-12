@@ -20,6 +20,11 @@ Current firmware constants:
 - RFID MOSI: GPIO 11.
 - RFID reset is not used as a dedicated pin.
 
+## CAD and 3D Printing Files
+
+Editable SolidWorks parts and STL exports for the prototype mounts and display
+enclosure are available in [`hardware/cad`](cad/).
+
 ## Weight Detection Prototype
 
 The separate `weight_detection/` module uses a VL53L0X sensor:

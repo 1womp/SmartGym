@@ -26,10 +26,7 @@ DOC_META = {
     "FIREBASE_GUIDE": ("Firebase Guide", "Realtime Database paths, upload phases, and safe import guidance."),
     "SYSTEM_ARCHITECTURE": ("System Architecture", "Device, firmware, Firebase, and dashboard data flow."),
     "TROUBLESHOOTING": ("Troubleshooting Guide", "Common firmware, sync, UI, and dashboard issues."),
-    "FIREBASE_WEBAPP_SCHEMA": ("Firebase Webapp Schema", "Dashboard-compatible Firebase session and summary structure."),
     "FIREBASE_DASHBOARD_SEED_GUIDE": ("Firebase Dashboard Seed Guide", "Seed data structure and safe dashboard test imports."),
-    "MIGRATION_NOTES": ("Migration Notes", "Notes for schema, sync, and prototype migration work."),
-    "SQUARELINE_HANDOFF": ("SquareLine Handoff", "UI handoff notes for SquareLine/LVGL assets."),
 }
 
 

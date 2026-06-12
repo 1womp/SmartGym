@@ -15,10 +15,7 @@ This folder contains the documentation package for the SmartGym v1.0 prototype. 
 
 | Document | Markdown | PDF |
 | --- | --- | --- |
-| Firebase Webapp Schema | [Open](FIREBASE_WEBAPP_SCHEMA.md) | [PDF](FIREBASE_WEBAPP_SCHEMA.pdf) |
 | Firebase Dashboard Seed Guide | [Open](FIREBASE_DASHBOARD_SEED_GUIDE.md) | [PDF](FIREBASE_DASHBOARD_SEED_GUIDE.pdf) |
-| Migration Notes | [Open](MIGRATION_NOTES.md) | [PDF](MIGRATION_NOTES.pdf) |
-| SquareLine Handoff | [Open](SQUARELINE_HANDOFF.md) | [PDF](SQUARELINE_HANDOFF.pdf) |
 
 ## Recommended Reading Order
 

@@ -3,613 +3,2455 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 2101 >>
-stream
-BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(SMARTGYM UI HANDOFF \(SQUARELINE\)) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Hey! You have full design freedom.) Tj
-T*
-(Don?t worry about matching current LVGL layout, I?ll adapt code to your IDs.) Tj
-T*
-() Tj
-T*
-(What this app does) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Gym machine UI with:) Tj
-T*
-(- live coaching while training) Tj
-T*
-(- rest countdown between sets) Tj
-T*
-(- session summary at the end) Tj
-T*
-() Tj
-T*
-(Screens we need) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(1. Idle) Tj
-T*
-(2. Main Training) Tj
-T*
-(3. Rest Overlay \(modal on top of Main\)) Tj
-T*
-(4. Summary) Tj
-T*
-(5. Calibration Gate) Tj
-T*
-(6. Profile) Tj
-T*
-(7. Debug/Service \(can be basic\)) Tj
-T*
-() Tj
-T*
-(Important: only one start/finish control in Main \(`START` / `FINISH` toggle\).) Tj
-T*
-() Tj
-T*
-(Data you can use on UI \(descriptive\)) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Live) Tj
-T*
-(- **Selected weight \(kg\)**: current load chosen for the set.) Tj
-T*
-(- **Suggested load seed \(kg\)**: baseline recommended weight before live adjustments.) Tj
-T*
-(- **Weight factor**: multiplier used to scale suggested load for user/goal context.) Tj
-T*
-(- **Current set / target sets**: progress through the workout plan \(example `2 / 4`\).) Tj
-T*
-(- **Reps in set / target reps**: progress inside the active set \(example `7 / 10`\).) Tj
-T*
-(- **ROM %**: current range of motion depth as a percent \(0-100\).) Tj
-T*
-(- **User ROM bounds**: personalized range limits \(`userBottomPct` to `userTopPct`\).) Tj
-T*
-(- **Velocity \(%/s\)**: movement speed normalized as percent per second.) Tj
-T*
-(- **Rep phase**: live phase label \(`LIFT`, `LOWER`, `HOLD`, `REST`\).) Tj
-T*
-(- **Quality state**: fast coaching state \(`READY`, `SLOW`, `SPEED OK`, `TOO FAST`,) Tj
-T*
-(  etc.\).) Tj
-T*
-(- **Session timer**: elapsed workout time in the active session.) Tj
-T*
-(- **Rest countdown**: seconds remaining before the next set.) Tj
-T*
-(- **Rest target \(`restSeconds`\)**: planned rest time for the current exercise/goal.) Tj
-T*
-(- **Rep timing \(ms\)**:) Tj
-T*
-(  - `riseMs`: concentric/lift duration) Tj
-T*
-(  - `lowerMs`: eccentric/lower duration) Tj
-T*
-ET
-endstream
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 2517 >>
+<< /Length 717 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(  - `topPauseMs`: pause near top position) Tj
-T*
-(  - `bottomPauseMs`: pause near bottom position) Tj
-T*
-() Tj
-T*
-(Motion guide \(important\)) Tj
-T*
-(- **Ideal motion curve**: target path for a good rep over time.) Tj
-T*
-(- **Live dot position**: athlete?s current movement point plotted on that graph.) Tj
-T*
-(- **Live halo**: visual emphasis around the live dot so it?s easy to follow quickly.) Tj
-T*
-(- **On-path state**: whether live movement is close enough to the ideal path.) Tj
-T*
-(- **ROM target band**: highlighted target ROM zone \(single fixed chart mode, no expanded) Tj
-T*
-(  graph\).) Tj
-T*
-() Tj
-T*
-(Session end / summary) Tj
-T*
-(- **Quality score + tier**: overall session quality \(0-100\) and readable tier label.) Tj
-T*
-(- **Sets completed**: completed sets vs planned sets.) Tj
-T*
-(- **Valid / invalid reps + valid rate**: accepted reps, rejected reps, and success) Tj
-T*
-(  percentage.) Tj
-T*
-(- **Average ROM %**: average ROM on valid reps.) Tj
-T*
-(- **Average velocity \(%/s\)**: average rep speed on valid reps.) Tj
-T*
-(- **Volume load \(kg\)**: total effective load \(`selected weight * valid reps`\).) Tj
-T*
-(- **Duration**: total session time \(`mm:ss` or similar\).) Tj
-T*
-(- **Sync/storage status**: whether saved locally, queued, or synced.) Tj
-T*
-() Tj
-T*
-(Extra useful values you can show \(already available\)) Tj
-T*
-(- **Best ROM %**: best rep ROM reached in the session.) Tj
-T*
-(- **Average eccentric velocity \(%/s\)**: lowering-phase speed quality signal.) Tj
-T*
-(- **Fast eccentric warnings**: count of reps lowered too quickly.) Tj
-T*
-(- **Total rest time**: total rest accumulated in session.) Tj
-T*
-(- **Average rest per set**: pacing indicator.) Tj
-T*
-(- **Rep quality trend**: first sets vs last sets quality change.) Tj
-T*
-(- **Fatigue ROM drop**: ROM loss from early to late sets.) Tj
-T*
-(- **Fatigue velocity drop**: speed loss from early to late sets.) Tj
-T*
-(- **ROM compliance rate**: percent of valid reps that met user ROM target.) Tj
-T*
-(- **Ideal ROM hit rate**: percent of valid reps that met machine ideal ROM target.) Tj
-T*
-(- **Invalid reason breakdown**:) Tj
-T*
-(  - short ROM) Tj
-T*
-(  - too fast) Tj
-T*
-(  - top not reached) Tj
-T*
-(  - no concentric phase) Tj
-T*
-() Tj
-T*
-(Data keys to include in UI mapping \(important\)) Tj
-T*
-(- `restSeconds`) Tj
-T*
-(- `riseMs`) Tj
-T*
-(- `lowerMs`) Tj
-T*
-(- `topPauseMs`) Tj
-T*
-(- `bottomPauseMs`) Tj
-T*
-(- `suggestedLoadSeedKg`) Tj
-T*
-(- `weightFactor`) Tj
-T*
-(- `userBottomPct`) Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(UI handoff notes for SquareLine/LVGL assets.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 1742 >>
+<< /Length 717 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(- `userTopPct`) Tj
-T*
-() Tj
-T*
-(Extra coaching metrics available) Tj
-T*
-(- **ROM compliance rate**: percent of valid reps that reached user ROM target.) Tj
-T*
-(- **Ideal ROM hit rate**: percent of valid reps that reached machine ideal ROM target.) Tj
-T*
-(- **Fatigue ROM drop**: how much ROM decreased from early sets to late sets.) Tj
-T*
-(- **Fatigue velocity drop**: how much speed decreased from early sets to late sets.) Tj
-T*
-(- **Invalid reason counts**: rejection reason totals \(`short ROM`, `too fast`, `top not) Tj
-T*
-(  reached`, etc.\).) Tj
-T*
-() Tj
-T*
-(Update rhythm \(so layout expectations are clear\)) Tj
-T*
-(- Live values \(ROM, velocity, phase, quality, timers, rep counters\): update continuously) Tj
-T*
-(  during training.) Tj
-T*
-(- Rest values: update each second during rest countdown.) Tj
-T*
-(- Summary values: update once at session finish, then remain stable on summary screen.) Tj
-T*
-() Tj
-T*
-(Profile screen \(show + edit\)) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Show) Tj
-T*
-(- Card UID) Tj
-T*
-(- Name) Tj
-T*
-(- Age) Tj
-T*
-(- Weight \(kg\)) Tj
-T*
-(- Height \(cm\)) Tj
-T*
-(- Goal) Tj
-T*
-(- Gender) Tj
-T*
-() Tj
-T*
-(Editable) Tj
-T*
-(- Name \(text input + keyboard\)) Tj
-T*
-(- Age \(`- / +`\)) Tj
-T*
-(- Weight \(`- / +`, 0.5 kg step\)) Tj
-T*
-(- Height \(`- / +`, 1 cm step\)) Tj
-T*
-(- Goal \(prev/next\)) Tj
-T*
-(- Gender \(prev/next\)) Tj
-T*
-() Tj
-T*
-(Save/Cancel behavior) Tj
-T*
-(- `Save`: keep changes and return) Tj
-T*
-(- `Cancel`: discard changes and return) Tj
-T*
-() Tj
-T*
-(Validation ranges) Tj
-T*
-(- Age: 12 to 90) Tj
-T*
-(- Weight: 35.0 to 220.0 kg) Tj
-T*
-(- Height: 120 to 230 cm) Tj
-T*
-() Tj
-T*
-(Profile UX note) Tj
-T*
-(- Goal and Gender can be dropdown menus \(preferred\).) Tj
-T*
-() Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(UI handoff notes for SquareLine/LVGL assets.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 1316 >>
+<< /Length 5229 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(Debug/Service screen requirements) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Keep it practical and fast to use. Styling can be simple.) Tj
-T*
-() Tj
-T*
-(Must show) Tj
-T*
-(- Debug status text block) Tj
-T*
-(- Hardware status text block) Tj
-T*
-() Tj
-T*
-(Must include controls) Tj
-T*
-(- Machine selector \(dropdown\)) Tj
-T*
-(- ROM injector slider) Tj
-T*
-(- Auto rep button) Tj
-T*
-(  - short press: one cycle) Tj
-T*
-(  - long press/hold: continuous) Tj
-T*
-(  - release: stop continuous mode) Tj
-T*
-(- Motion reset button) Tj
-T*
-(- Jump ROM to top button) Tj
-T*
-(- Jump ROM to bottom button) Tj
-T*
-(- Cloud sync button) Tj
-T*
-(- Sensor mode toggle button) Tj
-T*
-(- Log level button) Tj
-T*
-(- Encoder buttons:) Tj
-T*
-(  - set 0cm) Tj
-T*
-(  - set 100cm) Tj
-T*
-(  - apply) Tj
-T*
-(  - reset) Tj
-T*
-(- Quick user buttons:) Tj
-T*
-(  - user 1) Tj
-T*
-(  - user 2) Tj
-T*
-(  - new user) Tj
-T*
-(  - anonymous) Tj
-T*
-(- Close button) Tj
-T*
-() Tj
-T*
-(Debug screen intent) Tj
-T*
-(- quick hardware checks) Tj
-T*
-(- simulation for demos/testing) Tj
-T*
-(- calibration and cloud verification) Tj
-T*
-(- user/session test shortcuts) Tj
-T*
-() Tj
-T*
-(What to send me back) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(1. `.slp` project) Tj
-T*
-(2. exported LVGL files) Tj
-T*
-(3. fonts/images/icons used) Tj
-T*
-(4. small mapping table:) Tj
-T*
-() Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 2) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 19.0 Tf
+58.0 714.0 Td
+(SmartGym UI Handoff \(SquareLine\)) Tj
+ET
+0.0000 0.6118 0.8078 RG
+2.0 w
+58.0 704.0 m 233.0 704.0 l S
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 683.0 Td
+(Hey! You have full design freedom.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 661.0 Td
+(Don?t worry about matching current LVGL layout, I?ll adapt code to your IDs.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 631.0 Td
+(What this app does) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 607.0 Td
+(Gym machine UI with:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 585.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 585.0 Td
+(live coaching while training) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 567.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 567.0 Td
+(rest countdown between sets) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 549.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 549.0 Td
+(session summary at the end) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 523.0 Td
+(Screens we need) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 499.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 499.0 Td
+(Idle) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 481.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 481.0 Td
+(Main Training) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 463.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 463.0 Td
+(Rest Overlay \(modal on top of Main\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 445.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 445.0 Td
+(Summary) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 427.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 427.0 Td
+(Calibration Gate) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 409.0 Td
+(6.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 409.0 Td
+(Profile) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 391.0 Td
+(7.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 391.0 Td
+(Debug/Service \(can be basic\)) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 370.0 Td
+(Important: only one start/finish control in Main \(`START` / `FINISH` toggle\).) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 340.0 Td
+(Data you can use on UI \(descriptive\)) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 316.0 Td
+(Live) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 298.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 298.0 Td
+(**Selected weight \(kg\)**: current load chosen for the set.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 280.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 280.0 Td
+(**Suggested load seed \(kg\)**: baseline recommended weight before live adjustments.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 262.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 262.0 Td
+(**Weight factor**: multiplier used to scale suggested load for user/goal context.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 244.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 244.0 Td
+(**Current set / target sets**: progress through the workout plan \(example `2 / 4`\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 226.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 226.0 Td
+(**Reps in set / target reps**: progress inside the active set \(example `7 / 10`\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 208.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 208.0 Td
+(**ROM %**: current range of motion depth as a percent \(0-100\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 190.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 190.0 Td
+(**User ROM bounds**: personalized range limits \(`userBottomPct` to `userTopPct`\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 172.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 172.0 Td
+(**Velocity \(%/s\)**: movement speed normalized as percent per second.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 154.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 154.0 Td
+(**Rep phase**: live phase label \(`LIFT`, `LOWER`, `HOLD`, `REST`\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 136.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 136.0 Td
+(**Quality state**: fast coaching state \(`READY`, `SLOW`, `SPEED OK`, `TOO FAST`,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 122.0 Td
+(etc.\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 104.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 104.0 Td
+(**Session timer**: elapsed workout time in the active session.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 86.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 86.0 Td
+(**Rest countdown**: seconds remaining before the next set.) Tj
 ET
 endstream
 endobj
 9 0 obj
-<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 1666 >>
+<< /Length 6148 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(| screen | widget_id | meaning |) Tj
-T*
-(|---|---|---|) Tj
-T*
-(| Main | btn_start_finish | start_or_finish |) Tj
-T*
-(| Main | lbl_velocity | live velocity |) Tj
-T*
-(| Summary | lbl_summary_main | summary metrics block |) Tj
-T*
-() Tj
-T*
-(That?s it. I?ll handle the integration.) Tj
-T*
-() Tj
-T*
-(Quick event list \(so wiring is easy\)) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Please include widgets for these actions:) Tj
-T*
-() Tj
-T*
-(- `start_or_finish`) Tj
-T*
-(- `weight_minus_large` \(`-5`\)) Tj
-T*
-(- `weight_minus` \(`-2.5`\)) Tj
-T*
-(- `weight_plus` \(`+2.5`\)) Tj
-T*
-(- `weight_plus_large` \(`+5`\)) Tj
-T*
-(- `start_calibration`) Tj
-T*
-(- `rest_skip`) Tj
-T*
-(- `open_profile`) Tj
-T*
-(- `open_service`) Tj
-T*
-(- `profile_save`) Tj
-T*
-(- `profile_cancel`) Tj
-T*
-(- `calibration_gate_calibrate`) Tj
-T*
-(- `calibration_gate_skip`) Tj
-T*
-() Tj
-T*
-(When each screen appears) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- `Idle`: no active workout / waiting for user) Tj
-T*
-(- `Main Training`: active training flow) Tj
-T*
-(- `Rest Overlay`: between sets during rest countdown) Tj
-T*
-(- `Summary`: right after finishing session) Tj
-T*
-(- `Calibration Gate`: when user needs calibration decision) Tj
-T*
-(- `Profile`: when user edits profile) Tj
-T*
-(- `Debug/Service`: service/testing tools) Tj
-T*
-() Tj
-T*
-(Fill-this template \(copy/paste\)) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(| screen | widget_id | type | meaning |) Tj
-T*
-(|---|---|---|---|) Tj
-T*
-(| Main |  | button | start_or_finish |) Tj
-T*
-(| Main |  | button | weight_minus_large |) Tj
-T*
-(| Main |  | button | weight_minus |) Tj
-T*
-(| Main |  | button | weight_plus |) Tj
-T*
-(| Main |  | button | weight_plus_large |) Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 3) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(**Rest target \(`restSeconds`\)**: planned rest time for the current exercise/goal.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(**Rep timing \(ms\)**:) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 686.0 Td
+(  - `riseMs`: concentric/lift duration) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 664.0 Td
+(  - `lowerMs`: eccentric/lower duration) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 642.0 Td
+(  - `topPauseMs`: pause near top position) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 620.0 Td
+(  - `bottomPauseMs`: pause near bottom position) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 595.0 Td
+(Motion guide \(important\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 577.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 577.0 Td
+(**Ideal motion curve**: target path for a good rep over time.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 559.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 559.0 Td
+(**Live dot position**: athlete?s current movement point plotted on that graph.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 541.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 541.0 Td
+(**Live halo**: visual emphasis around the live dot so it?s easy to follow quickly.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 523.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 523.0 Td
+(**On-path state**: whether live movement is close enough to the ideal path.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 505.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 505.0 Td
+(**ROM target band**: highlighted target ROM zone \(single fixed chart mode, no) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 491.0 Td
+(expanded graph\).) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 470.0 Td
+(Session end / summary) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 452.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 452.0 Td
+(**Quality score + tier**: overall session quality \(0-100\) and readable tier label.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 434.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 434.0 Td
+(**Sets completed**: completed sets vs planned sets.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 416.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 416.0 Td
+(**Valid / invalid reps + valid rate**: accepted reps, rejected reps, and success) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 402.0 Td
+(percentage.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 384.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 384.0 Td
+(**Average ROM %**: average ROM on valid reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 366.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 366.0 Td
+(**Average velocity \(%/s\)**: average rep speed on valid reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 348.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 348.0 Td
+(**Volume load \(kg\)**: total effective load \(`selected weight * valid reps`\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 330.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 330.0 Td
+(**Duration**: total session time \(`mm:ss` or similar\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 312.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 312.0 Td
+(**Sync/storage status**: whether saved locally, queued, or synced.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 291.0 Td
+(Extra useful values you can show \(already available\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 273.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 273.0 Td
+(**Best ROM %**: best rep ROM reached in the session.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 255.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 255.0 Td
+(**Average eccentric velocity \(%/s\)**: lowering-phase speed quality signal.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 237.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 237.0 Td
+(**Fast eccentric warnings**: count of reps lowered too quickly.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 219.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 219.0 Td
+(**Total rest time**: total rest accumulated in session.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 201.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 201.0 Td
+(**Average rest per set**: pacing indicator.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 183.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 183.0 Td
+(**Rep quality trend**: first sets vs last sets quality change.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 165.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 165.0 Td
+(**Fatigue ROM drop**: ROM loss from early to late sets.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 147.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 147.0 Td
+(**Fatigue velocity drop**: speed loss from early to late sets.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 129.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 129.0 Td
+(**ROM compliance rate**: percent of valid reps that met user ROM target.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 111.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 111.0 Td
+(**Ideal ROM hit rate**: percent of valid reps that met machine ideal ROM target.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 93.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 93.0 Td
+(**Invalid reason breakdown**:) Tj
 ET
 endstream
 endobj
 11 0 obj
-<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Length 633 >>
+<< /Length 4999 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(| Main |  | label | live_rom |) Tj
-T*
-(| Main |  | label | live_velocity |) Tj
-T*
-(| Main |  | chart | ideal_curve + live_dot |) Tj
-T*
-(| Rest Overlay |  | button | rest_skip |) Tj
-T*
-(| Summary |  | label | summary_main_metrics |) Tj
-T*
-(| Summary |  | label | summary_detail |) Tj
-T*
-(| Calibration Gate |  | button | calibration_gate_calibrate |) Tj
-T*
-(| Calibration Gate |  | button | calibration_gate_skip |) Tj
-T*
-(| Profile |  | dropdown | goal |) Tj
-T*
-(| Profile |  | dropdown | gender |) Tj
-T*
-(| Profile |  | button | profile_save |) Tj
-T*
-(| Profile |  | button | profile_cancel |) Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 4) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 722.0 Td
+(  - short ROM) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 700.0 Td
+(  - too fast) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 678.0 Td
+(  - top not reached) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 656.0 Td
+(  - no concentric phase) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 631.0 Td
+(Data keys to include in UI mapping \(important\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 613.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 613.0 Td
+(`restSeconds`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 595.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 595.0 Td
+(`riseMs`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 577.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 577.0 Td
+(`lowerMs`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 559.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 559.0 Td
+(`topPauseMs`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 541.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 541.0 Td
+(`bottomPauseMs`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 523.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 523.0 Td
+(`suggestedLoadSeedKg`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 505.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 505.0 Td
+(`weightFactor`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 487.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 487.0 Td
+(`userBottomPct`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 469.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 469.0 Td
+(`userTopPct`) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 448.0 Td
+(Extra coaching metrics available) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 430.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 430.0 Td
+(**ROM compliance rate**: percent of valid reps that reached user ROM target.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 412.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 412.0 Td
+(**Ideal ROM hit rate**: percent of valid reps that reached machine ideal ROM) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 398.0 Td
+(target.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 380.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 380.0 Td
+(**Fatigue ROM drop**: how much ROM decreased from early sets to late sets.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 362.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 362.0 Td
+(**Fatigue velocity drop**: how much speed decreased from early sets to late sets.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 344.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 344.0 Td
+(**Invalid reason counts**: rejection reason totals \(`short ROM`, `too fast`, `top) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 330.0 Td
+(not reached`, etc.\).) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 309.0 Td
+(Update rhythm \(so layout expectations are clear\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 291.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 291.0 Td
+(Live values \(ROM, velocity, phase, quality, timers, rep counters\): update) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 277.0 Td
+(continuously during training.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 259.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 259.0 Td
+(Rest values: update each second during rest countdown.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 241.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 241.0 Td
+(Summary values: update once at session finish, then remain stable on summary) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 227.0 Td
+(screen.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 201.0 Td
+(Profile screen \(show + edit\)) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 177.0 Td
+(Show) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 159.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 159.0 Td
+(Card UID) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 141.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 141.0 Td
+(Name) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 123.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 123.0 Td
+(Age) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 105.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 105.0 Td
+(Weight \(kg\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 87.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 87.0 Td
+(Height \(cm\)) Tj
 ET
 endstream
 endobj
 13 0 obj
-<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 12 0 R >>
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
 endobj
 14 0 obj
-<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R ] /Count 6 >>
+<< /Length 4604 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 5) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(Goal) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(Gender) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 683.0 Td
+(Editable) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 665.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 665.0 Td
+(Name \(text input + keyboard\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 647.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 647.0 Td
+(Age \(`- / +`\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 629.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 629.0 Td
+(Weight \(`- / +`, 0.5 kg step\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 611.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 611.0 Td
+(Height \(`- / +`, 1 cm step\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 593.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 593.0 Td
+(Goal \(prev/next\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 575.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 575.0 Td
+(Gender \(prev/next\)) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 554.0 Td
+(Save/Cancel behavior) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 536.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 536.0 Td
+(`Save`: keep changes and return) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 518.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 518.0 Td
+(`Cancel`: discard changes and return) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 497.0 Td
+(Validation ranges) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 479.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 479.0 Td
+(Age: 12 to 90) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 461.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 461.0 Td
+(Weight: 35.0 to 220.0 kg) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 443.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 443.0 Td
+(Height: 120 to 230 cm) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 422.0 Td
+(Profile UX note) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 404.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 404.0 Td
+(Goal and Gender can be dropdown menus \(preferred\).) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 378.0 Td
+(Debug/Service screen requirements) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 354.0 Td
+(Keep it practical and fast to use. Styling can be simple.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 329.0 Td
+(Must show) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 311.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 311.0 Td
+(Debug status text block) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 293.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 293.0 Td
+(Hardware status text block) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 272.0 Td
+(Must include controls) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 254.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 254.0 Td
+(Machine selector \(dropdown\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 236.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 236.0 Td
+(ROM injector slider) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 218.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 218.0 Td
+(Auto rep button) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 200.0 Td
+(  - short press: one cycle) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 178.0 Td
+(  - long press/hold: continuous) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 156.0 Td
+(  - release: stop continuous mode) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 134.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 134.0 Td
+(Motion reset button) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 116.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 116.0 Td
+(Jump ROM to top button) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 98.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 98.0 Td
+(Jump ROM to bottom button) Tj
+ET
+endstream
 endobj
 15 0 obj
-<< /Type /Catalog /Pages 14 0 R >>
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 3860 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 6) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(Cloud sync button) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(Sensor mode toggle button) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(Log level button) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 668.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 668.0 Td
+(Encoder buttons:) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 650.0 Td
+(  - set 0cm) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 628.0 Td
+(  - set 100cm) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 606.0 Td
+(  - apply) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 584.0 Td
+(  - reset) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 562.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 562.0 Td
+(Quick user buttons:) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 544.0 Td
+(  - user 1) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 522.0 Td
+(  - user 2) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 500.0 Td
+(  - new user) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 478.0 Td
+(  - anonymous) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 456.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 456.0 Td
+(Close button) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 435.0 Td
+(Debug screen intent) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 417.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 417.0 Td
+(quick hardware checks) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 399.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 399.0 Td
+(simulation for demos/testing) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 381.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 381.0 Td
+(calibration and cloud verification) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 363.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 363.0 Td
+(user/session test shortcuts) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 337.0 Td
+(What to send me back) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 313.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 313.0 Td
+(`.slp` project) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 295.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 295.0 Td
+(exported LVGL files) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 277.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 277.0 Td
+(fonts/images/icons used) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 259.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 259.0 Td
+(small mapping table:) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 214.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 226.0 Td
+(| screen | widget_id | meaning |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 176.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 188.0 Td
+(|---|---|---|) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 138.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 150.0 Td
+(| Main | btn_start_finish | start_or_finish |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 100.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 112.0 Td
+(| Main | lbl_velocity | live velocity |) Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 4632 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 7) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 698.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 710.0 Td
+(| Summary | lbl_summary_main | summary metrics block |) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 681.0 Td
+(That?s it. I?ll handle the integration.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 651.0 Td
+(Quick event list \(so wiring is easy\)) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 627.0 Td
+(Please include widgets for these actions:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 602.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 602.0 Td
+(`start_or_finish`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 584.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 584.0 Td
+(`weight_minus_large` \(`-5`\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 566.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 566.0 Td
+(`weight_minus` \(`-2.5`\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 548.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 548.0 Td
+(`weight_plus` \(`+2.5`\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 530.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 530.0 Td
+(`weight_plus_large` \(`+5`\)) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 512.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 512.0 Td
+(`start_calibration`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 494.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 494.0 Td
+(`rest_skip`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 476.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 476.0 Td
+(`open_profile`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 458.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 458.0 Td
+(`open_service`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 440.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 440.0 Td
+(`profile_save`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 422.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 422.0 Td
+(`profile_cancel`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 404.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 404.0 Td
+(`calibration_gate_calibrate`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 386.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 386.0 Td
+(`calibration_gate_skip`) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 360.0 Td
+(When each screen appears) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 336.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 336.0 Td
+(`Idle`: no active workout / waiting for user) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 318.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 318.0 Td
+(`Main Training`: active training flow) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 300.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 300.0 Td
+(`Rest Overlay`: between sets during rest countdown) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 282.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 282.0 Td
+(`Summary`: right after finishing session) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 264.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 264.0 Td
+(`Calibration Gate`: when user needs calibration decision) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 246.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 246.0 Td
+(`Profile`: when user edits profile) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 228.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 228.0 Td
+(`Debug/Service`: service/testing tools) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 202.0 Td
+(Fill-this template \(copy/paste\)) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 154.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 166.0 Td
+(| screen | widget_id | type | meaning |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 116.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 128.0 Td
+(|---|---|---|---|) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 78.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 90.0 Td
+(| Main |  | button | start_or_finish |) Tj
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 3216 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(SquareLine Handoff) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 8) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 698.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 710.0 Td
+(| Main |  | button | weight_minus_large |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 660.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 672.0 Td
+(| Main |  | button | weight_minus |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 622.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 634.0 Td
+(| Main |  | button | weight_plus |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 584.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 596.0 Td
+(| Main |  | button | weight_plus_large |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 546.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 558.0 Td
+(| Main |  | label | live_rom |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 508.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 520.0 Td
+(| Main |  | label | live_velocity |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 470.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 482.0 Td
+(| Main |  | chart | ideal_curve + live_dot |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 432.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 444.0 Td
+(| Rest Overlay |  | button | rest_skip |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 394.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 406.0 Td
+(| Summary |  | label | summary_main_metrics |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 356.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 368.0 Td
+(| Summary |  | label | summary_detail |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 318.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 330.0 Td
+(| Calibration Gate |  | button | calibration_gate_calibrate |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 280.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 292.0 Td
+(| Calibration Gate |  | button | calibration_gate_skip |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 242.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 254.0 Td
+(| Profile |  | dropdown | goal |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 204.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 216.0 Td
+(| Profile |  | dropdown | gender |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 166.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 178.0 Td
+(| Profile |  | button | profile_save |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 128.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 140.0 Td
+(| Profile |  | button | profile_cancel |) Tj
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R ] /Count 9 >>
+endobj
+23 0 obj
+<< /Type /Catalog /Pages 22 0 R >>
 endobj
 xref
-0 16
+0 24
 0000000000 65535 f
 0000000009 00000 n
 0000000079 00000 n
-0000002232 00000 n
-0000002359 00000 n
-0000004928 00000 n
-0000005055 00000 n
-0000006849 00000 n
-0000006976 00000 n
-0000008344 00000 n
-0000008471 00000 n
-0000010190 00000 n
-0000010319 00000 n
-0000011004 00000 n
-0000011133 00000 n
-0000011225 00000 n
+0000000154 00000 n
+0000000222 00000 n
+0000000990 00000 n
+0000001137 00000 n
+0000001905 00000 n
+0000002052 00000 n
+0000007333 00000 n
+0000007480 00000 n
+0000013681 00000 n
+0000013830 00000 n
+0000018882 00000 n
+0000019031 00000 n
+0000023688 00000 n
+0000023837 00000 n
+0000027750 00000 n
+0000027899 00000 n
+0000032584 00000 n
+0000032733 00000 n
+0000036002 00000 n
+0000036151 00000 n
+0000036265 00000 n
 trailer
-<< /Size 16 /Root 15 0 R >>
+<< /Size 24 /Root 23 0 R >>
 startxref
-11276
+36316
 %%EOF

@@ -3,568 +3,1731 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1792 >>
-stream
-BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(SMARTGYM USER MANUAL) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(This manual explains how to use the SmartGym Adaptive Training System as an evaluator,) Tj
-T*
-(athlete, or demo user.) Tj
-T*
-() Tj
-T*
-(1. Turning On the Device) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(1. Connect power to the ESP32-S3 display.) Tj
-T*
-(2. Wait for the main screen to appear.) Tj
-T*
-(3. Allow the device to connect to Wi-Fi, Firebase, RFID, and time services.) Tj
-T*
-(4. Do not start a workout until the device reaches the ready state.) Tj
-T*
-() Tj
-T*
-(2. RFID Login) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(1. Place the RFID card near the reader.) Tj
-T*
-(2. The screen shows a loading popup.) Tj
-T*
-(3. Keep waiting until the popup closes.) Tj
-T*
-() Tj
-T*
-(The popup remains visible while the device loads:) Tj
-T*
-() Tj
-T*
-(- User profile.) Tj
-T*
-(- User calibration for the active machine.) Tj
-T*
-(- Recommendation for the active user and machine.) Tj
-T*
-(- Calibrated ROM mapping.) Tj
-T*
-() Tj
-T*
-(The user should not press START or CALIBRATE while the loading popup is active.) Tj
-T*
-() Tj
-T*
-(3. Main Screen) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The main screen shows the current session state, live motion graph, pin load,) Tj
-T*
-(recommendation, reps, sets, and action buttons.) Tj
-T*
-() Tj
-T*
-(Important terms:) Tj
-T*
-() Tj
-T*
-(- Pin load: the physical weight pin position on the machine.) Tj
-T*
-(- Recommended load: the load suggested by SmartGym for the active user.) Tj
-T*
-() Tj
-T*
-(The pin load belongs to the machine, not the user. It does not automatically change) Tj
-T*
-(when a different user scans an RFID card. The recommendation is user-specific advice.) Tj
-T*
-() Tj
-T*
-(4. Pin Load vs Recommended Load) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The system never physically moves the weight pin. If the screen recommends 25.0 kg but) Tj
-T*
-ET
-endstream
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 1529 >>
+<< /Length 794 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(the machine pin is at 20.0 kg, the device shows both values separately:) Tj
-T*
-() Tj
-T*
-(- Pin load: 20.0 kg) Tj
-T*
-(- Recommended: 25.0 kg) Tj
-T*
-() Tj
-T*
-(If the user wants to follow the recommendation, they must physically move the pin and) Tj
-T*
-(then update the displayed pin load with the touchscreen buttons.) Tj
-T*
-() Tj
-T*
-(5. Changing Pin Load) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Use the four weight buttons:) Tj
-T*
-() Tj
-T*
-(- `-5`) Tj
-T*
-(- `-2.5`) Tj
-T*
-(- `+2.5`) Tj
-T*
-(- `+5`) Tj
-T*
-() Tj
-T*
-(These buttons update the displayed machine pin load. They do not change the) Tj
-T*
-(recommendation.) Tj
-T*
-() Tj
-T*
-(Pin load can be changed before training or during training. If it changes during) Tj
-T*
-(training, later reps are recorded with the new load.) Tj
-T*
-() Tj
-T*
-(6. Starting a Workout) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(1. Scan RFID and wait for loading to finish.) Tj
-T*
-(2. Check the pin load.) Tj
-T*
-(3. Physically set the machine pin if needed.) Tj
-T*
-(4. Adjust the on-screen pin load to match the physical pin.) Tj
-T*
-(5. Press START.) Tj
-T*
-() Tj
-T*
-(The session starts using the displayed pin load exactly as shown.) Tj
-T*
-() Tj
-T*
-(7. Following the Graph) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The graph shows motion through the exercise range. The firmware uses ROM, or range of) Tj
-T*
-(motion, to detect repetitions.) Tj
-T*
-() Tj
-T*
-(The user-facing cues focus on timing, for example:) Tj
-T*
-() Tj
-T*
-(- Rise time.) Tj
-T*
-(- Lower time.) Tj
-T*
-(- Top hold.) Tj
-T*
-(- Bottom hold.) Tj
-T*
-() Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(User Manual) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(How to operate, calibrate, and troubleshoot the SmartGym) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 614.0 Td
+(prototype.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 1555 >>
+<< /Length 794 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(The system avoids showing raw technical values such as `%ROM/s` in the main user) Tj
-T*
-(interface.) Tj
-T*
-() Tj
-T*
-(8. Reps and Sets) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The firmware detects reps from the ROM signal. A rep must move through enough range) Tj
-T*
-(and pass the internal validation rules.) Tj
-T*
-() Tj
-T*
-(The screen shows:) Tj
-T*
-() Tj
-T*
-(- Current reps in the set.) Tj
-T*
-(- Current set.) Tj
-T*
-(- Training state.) Tj
-T*
-(- Timer or progress where available.) Tj
-T*
-() Tj
-T*
-(If a rep is not counted, possible causes include short range of motion, noisy) Tj
-T*
-(movement, or not reaching the top/bottom thresholds.) Tj
-T*
-() Tj
-T*
-(9. Rest and Finishing) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(When the target reps for a set are completed, the system marks the set complete.) Tj
-T*
-(Depending on the target set count, the session may auto-finish or continue to the next) Tj
-T*
-(set.) Tj
-T*
-() Tj
-T*
-(The user can also finish manually by pressing FINISH.) Tj
-T*
-() Tj
-T*
-(10. Summary Screen and Sync) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(After finishing, the summary screen appears. It may show:) Tj
-T*
-() Tj
-T*
-(- Session complete.) Tj
-T*
-(- Pin load used.) Tj
-T*
-(- New recommendation.) Tj
-T*
-(- Save/upload status.) Tj
-T*
-() Tj
-T*
-(Typical save states:) Tj
-T*
-() Tj
-T*
-(- Saving session...) Tj
-T*
-(- Uploading core...) Tj
-T*
-(- Uploading details...) Tj
-T*
-(- Uploading reps...) Tj
-T*
-(- Session saved.) Tj
-T*
-(- Saving in background.) Tj
-T*
-() Tj
-T*
-(If sync is still running, the device can continue saving in the background. Do not) Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(User Manual) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(How to operate, calibrate, and troubleshoot the SmartGym) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 614.0 Td
+(prototype.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 1635 >>
+<< /Length 4579 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(power off immediately after a workout if the screen still indicates saving.) Tj
-T*
-() Tj
-T*
-(11. Calibration) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Calibration should be used when:) Tj
-T*
-() Tj
-T*
-(- A new user uses the machine.) Tj
-T*
-(- ROM looks incorrect.) Tj
-T*
-(- Recommendations are missing.) Tj
-T*
-(- The system says to calibrate first.) Tj
-T*
-(- The exercise setup has changed.) Tj
-T*
-() Tj
-T*
-(Calibration Steps) Tj
-T*
-() Tj
-T*
-(1. Press CALIBRATE.) Tj
-T*
-(2. Read the step title and instruction.) Tj
-T*
-(3. Move the physical pin to the suggested load if appropriate.) Tj
-T*
-(4. Use the calibration screen's four pin-load buttons if the displayed pin does not match) Tj
-T*
-(   the physical pin.) Tj
-T*
-(5. Tap LOAD SET.) Tj
-T*
-(6. Perform 3 to 5 smooth reps.) Tj
-T*
-(7. Follow any next-load instruction.) Tj
-T*
-(8. Save the result when complete.) Tj
-T*
-() Tj
-T*
-(The calibration screen shows:) Tj
-T*
-() Tj
-T*
-(- Pin load.) Tj
-T*
-(- Suggested load.) Tj
-T*
-(- Weight adjustment buttons.) Tj
-T*
-(- Rep feedback.) Tj
-T*
-(- Save/cancel actions.) Tj
-T*
-() Tj
-T*
-(If the pin load differs from the suggested load, the user may still continue, but the) Tj
-T*
-(device logs that the user chose a different physical pin.) Tj
-T*
-() Tj
-T*
-(12. Recommendations) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Recommendations are generated from calibration and session history. They are advice) Tj
-T*
-(only. The system does not automatically change the physical pin load.) Tj
-T*
-() Tj
-T*
-(Recommendation sources may include:) Tj
-T*
-() Tj
-T*
-(- Calibration.) Tj
-T*
-(- Last session.) Tj
-T*
-(- Machine default.) Tj
-T*
-(- No recommendation.) Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(User Manual) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 2) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 19.0 Tf
+58.0 714.0 Td
+(SmartGym User Manual) Tj
+ET
+0.0000 0.6118 0.8078 RG
+2.0 w
+58.0 704.0 m 233.0 704.0 l S
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 683.0 Td
+(This manual explains how to use the SmartGym Adaptive Training System as an evaluator,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 668.0 Td
+(athlete, or demo user.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 638.0 Td
+(1. Turning On the Device) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 614.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 614.0 Td
+(Connect power to the ESP32-S3 display.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 596.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 596.0 Td
+(Wait for the main screen to appear.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 578.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 578.0 Td
+(Allow the device to connect to Wi-Fi, Firebase, RFID, and time services.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 560.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 560.0 Td
+(Do not start a workout until the device reaches the ready state.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 534.0 Td
+(2. RFID Login) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 510.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 510.0 Td
+(Place the RFID card near the reader.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 492.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 492.0 Td
+(The screen shows a loading popup.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 474.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 474.0 Td
+(Keep waiting until the popup closes.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 453.0 Td
+(The popup remains visible while the device loads:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 428.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 428.0 Td
+(User profile.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 410.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 410.0 Td
+(User calibration for the active machine.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 392.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 392.0 Td
+(Recommendation for the active user and machine.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 374.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 374.0 Td
+(Calibrated ROM mapping.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 353.0 Td
+(The user should not press START or CALIBRATE while the loading popup is active.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 323.0 Td
+(3. Main Screen) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 299.0 Td
+(The main screen shows the current session state, live motion graph, pin load,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 284.0 Td
+(recommendation, reps, sets, and action buttons.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 259.0 Td
+(Important terms:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 234.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 234.0 Td
+(Pin load: the physical weight pin position on the machine.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 216.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 216.0 Td
+(Recommended load: the load suggested by SmartGym for the active user.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 195.0 Td
+(The pin load belongs to the machine, not the user. It does not automatically change) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 180.0 Td
+(when a different user scans an RFID card. The recommendation is user-specific advice.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 150.0 Td
+(4. Pin Load vs Recommended Load) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 126.0 Td
+(The system never physically moves the weight pin. If the screen recommends 25.0 kg but) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 111.0 Td
+(the machine pin is at 20.0 kg, the device shows both values separately:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 86.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 86.0 Td
+(Pin load: 20.0 kg) Tj
 ET
 endstream
 endobj
 9 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 1392 >>
+<< /Length 4246 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-() Tj
-T*
-(13. Troubleshooting) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(RFID Not Detected) Tj
-T*
-() Tj
-T*
-(- Hold the card closer to the RFID reader.) Tj
-T*
-(- Wait for upload/sync to finish.) Tj
-T*
-(- Try scanning again.) Tj
-T*
-() Tj
-T*
-(User Still Loading) Tj
-T*
-() Tj
-T*
-(- Wait for the loading popup to close.) Tj
-T*
-(- If cloud read fails, the device should fall back safely.) Tj
-T*
-() Tj
-T*
-(Rep Not Counted) Tj
-T*
-() Tj
-T*
-(- Use full range of motion.) Tj
-T*
-(- Move smoothly.) Tj
-T*
-(- Reach the top and bottom positions.) Tj
-T*
-(- Recalibrate if ROM mapping looks wrong.) Tj
-T*
-() Tj
-T*
-(Graph Looks Wrong) Tj
-T*
-() Tj
-T*
-(- Recalibrate ROM.) Tj
-T*
-(- Check the motion sensor connection.) Tj
-T*
-(- Confirm the exercise machine setup did not change.) Tj
-T*
-() Tj
-T*
-(Sync Still Running) Tj
-T*
-() Tj
-T*
-(- Keep the device powered.) Tj
-T*
-(- Wait for "Session saved" if possible.) Tj
-T*
-(- The device may continue saving in the background.) Tj
-T*
-() Tj
-T*
-(Recommendation Does Not Change Pin Load) Tj
-T*
-() Tj
-T*
-(This is expected. The pin load is the physical machine state. The user must move the) Tj
-T*
-(pin and update the display manually.) Tj
-T*
-() Tj
-T*
-(Wi-Fi or Firebase Issues) Tj
-T*
-() Tj
-T*
-(- Check Wi-Fi credentials.) Tj
-T*
-(- Check Firebase RTDB URL/auth configuration.) Tj
-T*
-(- Confirm internet connectivity.) Tj
-T*
-(- Use serial logs for details.) Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(User Manual) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 3) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(Recommended: 25.0 kg) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 701.0 Td
+(If the user wants to follow the recommendation, they must physically move the pin and) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 686.0 Td
+(then update the displayed pin load with the touchscreen buttons.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 656.0 Td
+(5. Changing Pin Load) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 632.0 Td
+(Use the four weight buttons:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 607.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 607.0 Td
+(`-5`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 589.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 589.0 Td
+(`-2.5`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 571.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 571.0 Td
+(`+2.5`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 553.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 553.0 Td
+(`+5`) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 532.0 Td
+(These buttons update the displayed machine pin load. They do not change the) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 517.0 Td
+(recommendation.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 492.0 Td
+(Pin load can be changed before training or during training. If it changes during) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 477.0 Td
+(training, later reps are recorded with the new load.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 447.0 Td
+(6. Starting a Workout) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 423.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 423.0 Td
+(Scan RFID and wait for loading to finish.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 405.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 405.0 Td
+(Check the pin load.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 387.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 387.0 Td
+(Physically set the machine pin if needed.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 369.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 369.0 Td
+(Adjust the on-screen pin load to match the physical pin.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 351.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 351.0 Td
+(Press START.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 330.0 Td
+(The session starts using the displayed pin load exactly as shown.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 300.0 Td
+(7. Following the Graph) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 276.0 Td
+(The graph shows motion through the exercise range. The firmware uses ROM, or range of) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 261.0 Td
+(motion, to detect repetitions.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 236.0 Td
+(The user-facing cues focus on timing, for example:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 211.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 211.0 Td
+(Rise time.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 193.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 193.0 Td
+(Lower time.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 175.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 175.0 Td
+(Top hold.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 157.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 157.0 Td
+(Bottom hold.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 136.0 Td
+(The system avoids showing raw technical values such as `%ROM/s` in the main user) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 121.0 Td
+(interface.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 91.0 Td
+(8. Reps and Sets) Tj
 ET
 endstream
 endobj
 11 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R ] /Count 5 >>
+<< /Length 4272 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(User Manual) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 4) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 722.0 Td
+(The firmware detects reps from the ROM signal. A rep must move through enough range and) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 707.0 Td
+(pass the internal validation rules.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 682.0 Td
+(The screen shows:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 657.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 657.0 Td
+(Current reps in the set.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 639.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 639.0 Td
+(Current set.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 621.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 621.0 Td
+(Training state.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 603.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 603.0 Td
+(Timer or progress where available.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 582.0 Td
+(If a rep is not counted, possible causes include short range of motion, noisy movement,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 567.0 Td
+(or not reaching the top/bottom thresholds.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 537.0 Td
+(9. Rest and Finishing) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 513.0 Td
+(When the target reps for a set are completed, the system marks the set complete.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 498.0 Td
+(Depending on the target set count, the session may auto-finish or continue to the next) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 483.0 Td
+(set.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 458.0 Td
+(The user can also finish manually by pressing FINISH.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 428.0 Td
+(10. Summary Screen and Sync) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 404.0 Td
+(After finishing, the summary screen appears. It may show:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 379.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 379.0 Td
+(Session complete.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 361.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 361.0 Td
+(Pin load used.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 343.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 343.0 Td
+(New recommendation.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 325.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 325.0 Td
+(Save/upload status.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 304.0 Td
+(Typical save states:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 279.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 279.0 Td
+(Saving session...) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 261.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 261.0 Td
+(Uploading core...) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 243.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 243.0 Td
+(Uploading details...) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 225.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 225.0 Td
+(Uploading reps...) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 207.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 207.0 Td
+(Session saved.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 189.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 189.0 Td
+(Saving in background.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 168.0 Td
+(If sync is still running, the device can continue saving in the background. Do not) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 153.0 Td
+(power off immediately after a workout if the screen still indicates saving.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 123.0 Td
+(11. Calibration) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 99.0 Td
+(Calibration should be used when:) Tj
+ET
+endstream
 endobj
 13 0 obj
-<< /Type /Catalog /Pages 12 0 R >>
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4859 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(User Manual) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 5) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(A new user uses the machine.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(ROM looks incorrect.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(Recommendations are missing.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 668.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 668.0 Td
+(The system says to calibrate first.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 650.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 650.0 Td
+(The exercise setup has changed.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 629.0 Td
+(Calibration Steps) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 608.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 608.0 Td
+(Press CALIBRATE.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 590.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 590.0 Td
+(Read the step title and instruction.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 572.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 572.0 Td
+(Move the physical pin to the suggested load if appropriate.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 554.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 554.0 Td
+(Use the calibration screen's four pin-load buttons if the displayed pin does not) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 540.0 Td
+(match the physical pin.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 522.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 522.0 Td
+(Tap LOAD SET.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 504.0 Td
+(6.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 504.0 Td
+(Perform 3 to 5 smooth reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 486.0 Td
+(7.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 486.0 Td
+(Follow any next-load instruction.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 468.0 Td
+(8.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 468.0 Td
+(Save the result when complete.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 447.0 Td
+(The calibration screen shows:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 422.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 422.0 Td
+(Pin load.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 404.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 404.0 Td
+(Suggested load.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 386.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 386.0 Td
+(Weight adjustment buttons.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 368.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 368.0 Td
+(Rep feedback.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 350.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 350.0 Td
+(Save/cancel actions.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 329.0 Td
+(If the pin load differs from the suggested load, the user may still continue, but the) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 314.0 Td
+(device logs that the user chose a different physical pin.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 284.0 Td
+(12. Recommendations) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 260.0 Td
+(Recommendations are generated from calibration and session history. They are advice) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 245.0 Td
+(only. The system does not automatically change the physical pin load.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 220.0 Td
+(Recommendation sources may include:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 195.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 195.0 Td
+(Calibration.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 177.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 177.0 Td
+(Last session.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 159.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 159.0 Td
+(Machine default.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 141.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 141.0 Td
+(No recommendation.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 115.0 Td
+(13. Troubleshooting) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 91.0 Td
+(RFID Not Detected) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 4142 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(User Manual) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 6) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(Hold the card closer to the RFID reader.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(Wait for upload/sync to finish.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(Try scanning again.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 665.0 Td
+(User Still Loading) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 644.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 644.0 Td
+(Wait for the loading popup to close.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 626.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 626.0 Td
+(If cloud read fails, the device should fall back safely.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 605.0 Td
+(Rep Not Counted) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 584.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 584.0 Td
+(Use full range of motion.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 566.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 566.0 Td
+(Move smoothly.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 548.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 548.0 Td
+(Reach the top and bottom positions.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 530.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 530.0 Td
+(Recalibrate if ROM mapping looks wrong.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 509.0 Td
+(Graph Looks Wrong) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 488.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 488.0 Td
+(Recalibrate ROM.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 470.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 470.0 Td
+(Check the motion sensor connection.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 452.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 452.0 Td
+(Confirm the exercise machine setup did not change.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 431.0 Td
+(Sync Still Running) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 410.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 410.0 Td
+(Keep the device powered.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 392.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 392.0 Td
+(Wait for "Session saved" if possible.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 374.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 374.0 Td
+(The device may continue saving in the background.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 353.0 Td
+(Recommendation Does Not Change Pin Load) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 332.0 Td
+(This is expected. The pin load is the physical machine state. The user must move the) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 317.0 Td
+(pin and update the display manually.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 292.0 Td
+(Wi-Fi or Firebase Issues) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 271.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 271.0 Td
+(Check Wi-Fi credentials.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 253.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 253.0 Td
+(Check Firebase RTDB URL/auth configuration.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 235.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 235.0 Td
+(Confirm internet connectivity.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 217.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 217.0 Td
+(Use serial logs for details.) Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R ] /Count 7 >>
+endobj
+19 0 obj
+<< /Type /Catalog /Pages 18 0 R >>
 endobj
 xref
-0 14
+0 20
 0000000000 65535 f
 0000000009 00000 n
 0000000079 00000 n
-0000001923 00000 n
-0000002050 00000 n
-0000003631 00000 n
-0000003758 00000 n
-0000005365 00000 n
-0000005492 00000 n
-0000007179 00000 n
-0000007306 00000 n
-0000008751 00000 n
-0000008880 00000 n
-0000008965 00000 n
+0000000154 00000 n
+0000000222 00000 n
+0000001067 00000 n
+0000001214 00000 n
+0000002059 00000 n
+0000002206 00000 n
+0000006837 00000 n
+0000006984 00000 n
+0000011283 00000 n
+0000011432 00000 n
+0000015757 00000 n
+0000015906 00000 n
+0000020818 00000 n
+0000020967 00000 n
+0000025162 00000 n
+0000025311 00000 n
+0000025411 00000 n
 trailer
-<< /Size 14 /Root 13 0 R >>
+<< /Size 20 /Root 19 0 R >>
 startxref
-9016
+25462
 %%EOF

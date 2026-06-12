@@ -3,340 +3,986 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1696 >>
-stream
-BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(SMARTGYM SYSTEM ARCHITECTURE) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(High-Level Architecture) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(```mermaid) Tj
-T*
-(flowchart LR) Tj
-T*
-(  Motion[Motion Sensor] --> SensorManager) Tj
-T*
-(  SensorManager --> ROM[ROM Normalization]) Tj
-T*
-(  ROM --> RepDetector) Tj
-T*
-(  RepDetector --> SessionRecorder) Tj
-T*
-(  RFID[RFID Reader] --> UserSync[User Sync]) Tj
-T*
-(  UserSync --> Recommendation) Tj
-T*
-(  Recommendation --> UI[LVGL UI]) Tj
-T*
-(  SessionRecorder --> UploadQueue[NVS Upload Queue]) Tj
-T*
-(  UploadQueue --> Firebase[Firebase RTDB]) Tj
-T*
-(  Firebase --> Dashboard[React Dashboard]) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(The system is split into embedded firmware, Firebase RTDB, and dashboard) Tj
-T*
-(visualization.) Tj
-T*
-() Tj
-T*
-(Data Flow) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(1. Sensor is sampled every 5 ms.) Tj
-T*
-(2. SensorManager filters the analog value.) Tj
-T*
-(3. Firmware converts sensor reading to ROM percentage.) Tj
-T*
-(4. User calibration maps raw ROM into user-normalized ROM.) Tj
-T*
-(5. RepDetector identifies rep phases and completed reps.) Tj
-T*
-(6. SessionRecorder stores reps, sets, weight, ROM, timing, and quality.) Tj
-T*
-(7. SmartGymTouchApp computes summary/recommendation updates.) Tj
-T*
-(8. Upload queue stores Firebase payloads.) Tj
-T*
-(9. FirebaseService sends memory-safe writes to RTDB.) Tj
-T*
-(10. Dashboard reads Firebase for charts and summaries.) Tj
-T*
-() Tj
-T*
-(User Login Flow) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(```mermaid) Tj
-T*
-(sequenceDiagram) Tj
-T*
-(  participant U as User) Tj
-T*
-(  participant R as RFID) Tj
-T*
-(  participant D as Device) Tj
-T*
-(  participant F as Firebase) Tj
-T*
-(  U->>R: Scan card) Tj
-T*
-(  R->>D: UID) Tj
-T*
-ET
-endstream
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 8 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 1697 >>
+<< /Length 726 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(  D->>D: Show loading popup) Tj
-T*
-(  D->>F: Fetch usersByRfid/{uid}) Tj
-T*
-(  F-->>D: Profile) Tj
-T*
-(  D->>F: Fetch calibrations/{uid}/{machineTypeId}) Tj
-T*
-(  F-->>D: Calibration or missing) Tj
-T*
-(  D->>D: Resolve recommendation) Tj
-T*
-(  D->>D: Apply ROM mapping) Tj
-T*
-(  D->>D: Hide loading popup) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(Inputs are blocked until sync completes or falls back safely.) Tj
-T*
-() Tj
-T*
-(Workout Flow) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(```mermaid) Tj
-T*
-(sequenceDiagram) Tj
-T*
-(  participant U as User) Tj
-T*
-(  participant D as Device) Tj
-T*
-(  participant S as SessionRecorder) Tj
-T*
-(  participant Q as Upload Queue) Tj
-T*
-(  participant F as Firebase) Tj
-T*
-(  U->>D: Press START) Tj
-T*
-(  D->>S: Start session with machine pin load) Tj
-T*
-(  U->>D: Perform reps) Tj
-T*
-(  D->>S: Record reps and sets) Tj
-T*
-(  U->>D: Finish or auto-finish) Tj
-T*
-(  D->>S: Finish session) Tj
-T*
-(  D->>Q: Queue upload) Tj
-T*
-(  Q->>F: Upload in phases) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(Manual Pin Load vs Recommendation) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Pin load is physical machine state. It stays with the machine across users.) Tj
-T*
-(Recommendation is user-specific advice.) Tj
-T*
-() Tj
-T*
-(The firmware never changes pin load because of recommendation. The user physically) Tj
-T*
-(changes the machine pin and updates the UI with weight buttons.) Tj
-T*
-() Tj
-T*
-(Calibration Flow) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Calibration uses the current machine pin load and suggested loads. The user confirms) Tj
-T*
-(the physical load before collecting reps. The firmware analyzes smooth reps, estimates) Tj
-T*
-(load suitability, and saves user-machine calibration data.) Tj
-T*
-() Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(System Architecture) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(Device, firmware, Firebase, and dashboard data flow.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 8 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 1429 >>
+<< /Length 726 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(Sync Flow) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Session finish schedules sync. Heavy Firebase work is not performed inside the) Tj
-T*
-(immediate finish path.) Tj
-T*
-() Tj
-T*
-(Sync writes:) Tj
-T*
-() Tj
-T*
-(- Core session.) Tj
-T*
-(- Metadata.) Tj
-T*
-(- Timeline.) Tj
-T*
-(- Summaries.) Tj
-T*
-(- Details.) Tj
-T*
-(- Rep sets.) Tj
-T*
-() Tj
-T*
-(The NVS queue allows retry and prevents data loss when Firebase or Wi-Fi is) Tj
-T*
-(temporarily unavailable.) Tj
-T*
-() Tj
-T*
-(Sampling and Refresh Rates) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- Main app tick: 4 ms.) Tj
-T*
-(- Sensor sample interval: 5 ms, approximately 200 Hz.) Tj
-T*
-(- Graph refresh: 16 ms, approximately 60 Hz.) Tj
-T*
-(- Slow UI refresh: 140 ms.) Tj
-T*
-(- Debug UI refresh: 160 ms.) Tj
-T*
-(- Normal cloud service cadence: 5000 ms.) Tj
-T*
-(- Summary/cloud finish cadence: approximately 1200 ms.) Tj
-T*
-(- Device heartbeat interval: 60000 ms.) Tj
-T*
-(- User sync timeout: 12000 ms.) Tj
-T*
-() Tj
-T*
-(Memory Strategy) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The ESP32 is memory-constrained during TLS/Firebase writes. The firmware tracks) Tj
-T*
-(internal heap and largest internal block, then selects upload behavior:) Tj
-T*
-() Tj
-T*
-(- Normal: larger payloads.) Tj
-T*
-(- Constrained: smaller payloads and chunked repSets.) Tj
-T*
-(- Critical: very small payloads or backoff.) Tj
-T*
-() Tj
-T*
-(Optional LVGL UI objects are freed before training/upload to improve available heap.) Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(System Architecture) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(Device, firmware, Firebase, and dashboard data flow.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 8 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R ] /Count 3 >>
+<< /Length 3811 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(System Architecture) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 2) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 19.0 Tf
+58.0 714.0 Td
+(SmartGym System Architecture) Tj
+ET
+0.0000 0.6118 0.8078 RG
+2.0 w
+58.0 704.0 m 233.0 704.0 l S
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 678.0 Td
+(High-Level Architecture) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 510.0 496.0 150.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 642.0 Td
+(flowchart LR) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 630.0 Td
+(  Motion[Motion Sensor] --> SensorManager) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 618.0 Td
+(  SensorManager --> ROM[ROM Normalization]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 606.0 Td
+(  ROM --> RepDetector) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 594.0 Td
+(  RepDetector --> SessionRecorder) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 582.0 Td
+(  RFID[RFID Reader] --> UserSync[User Sync]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 570.0 Td
+(  UserSync --> Recommendation) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 558.0 Td
+(  Recommendation --> UI[LVGL UI]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 546.0 Td
+(  SessionRecorder --> UploadQueue[NVS Upload Queue]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 534.0 Td
+(  UploadQueue --> Firebase[Firebase RTDB]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 522.0 Td
+(  Firebase --> Dashboard[React Dashboard]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 493.0 Td
+(The system is split into embedded firmware, Firebase RTDB, and dashboard visualization.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 463.0 Td
+(Data Flow) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 439.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 439.0 Td
+(Sensor is sampled every 5 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 421.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 421.0 Td
+(SensorManager filters the analog value.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 403.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 403.0 Td
+(Firmware converts sensor reading to ROM percentage.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 385.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 385.0 Td
+(User calibration maps raw ROM into user-normalized ROM.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 367.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 367.0 Td
+(RepDetector identifies rep phases and completed reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 349.0 Td
+(6.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 349.0 Td
+(SessionRecorder stores reps, sets, weight, ROM, timing, and quality.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 331.0 Td
+(7.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 331.0 Td
+(SmartGymTouchApp computes summary/recommendation updates.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 313.0 Td
+(8.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 313.0 Td
+(Upload queue stores Firebase payloads.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 295.0 Td
+(9.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 295.0 Td
+(FirebaseService sends memory-safe writes to RTDB.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 277.0 Td
+(10.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 277.0 Td
+(Dashboard reads Firebase for charts and summaries.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 251.0 Td
+(User Login Flow) Tj
+ET
+endstream
 endobj
 9 0 obj
-<< /Type /Catalog /Pages 8 0 R >>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4360 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(System Architecture) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 3) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 530.0 496.0 198.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 710.0 Td
+(sequenceDiagram) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 698.0 Td
+(  participant U as User) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 686.0 Td
+(  participant R as RFID) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 674.0 Td
+(  participant D as Device) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 662.0 Td
+(  participant F as Firebase) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 650.0 Td
+(  U->>R: Scan card) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 638.0 Td
+(  R->>D: UID) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 626.0 Td
+(  D->>D: Show loading popup) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 614.0 Td
+(  D->>F: Fetch usersByRfid/{uid}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 602.0 Td
+(  F-->>D: Profile) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 590.0 Td
+(  D->>F: Fetch calibrations/{uid}/{machineTypeId}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 578.0 Td
+(  F-->>D: Calibration or missing) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 566.0 Td
+(  D->>D: Resolve recommendation) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 554.0 Td
+(  D->>D: Apply ROM mapping) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 542.0 Td
+(  D->>D: Hide loading popup) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 513.0 Td
+(Inputs are blocked until sync completes or falls back safely.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 483.0 Td
+(Workout Flow) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 279.0 496.0 186.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 447.0 Td
+(sequenceDiagram) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 435.0 Td
+(  participant U as User) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 423.0 Td
+(  participant D as Device) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 411.0 Td
+(  participant S as SessionRecorder) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 399.0 Td
+(  participant Q as Upload Queue) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 387.0 Td
+(  participant F as Firebase) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 375.0 Td
+(  U->>D: Press START) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 363.0 Td
+(  D->>S: Start session with machine pin load) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 351.0 Td
+(  U->>D: Perform reps) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 339.0 Td
+(  D->>S: Record reps and sets) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 327.0 Td
+(  U->>D: Finish or auto-finish) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 315.0 Td
+(  D->>S: Finish session) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 303.0 Td
+(  D->>Q: Queue upload) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 291.0 Td
+(  Q->>F: Upload in phases) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 257.0 Td
+(Manual Pin Load vs Recommendation) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 233.0 Td
+(Pin load is physical machine state. It stays with the machine across users.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 218.0 Td
+(Recommendation is user-specific advice.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 193.0 Td
+(The firmware never changes pin load because of recommendation. The user physically) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 178.0 Td
+(changes the machine pin and updates the UI with weight buttons.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 148.0 Td
+(Calibration Flow) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 124.0 Td
+(Calibration uses the current machine pin load and suggested loads. The user confirms) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 109.0 Td
+(the physical load before collecting reps. The firmware analyzes smooth reps, estimates) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 94.0 Td
+(load suitability, and saves user-machine calibration data.) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4313 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(System Architecture) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 4) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 717.0 Td
+(Sync Flow) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 693.0 Td
+(Session finish schedules sync. Heavy Firebase work is not performed inside the) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 678.0 Td
+(immediate finish path.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 653.0 Td
+(Sync writes:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 628.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 628.0 Td
+(Core session.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 610.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 610.0 Td
+(Metadata.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 592.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 592.0 Td
+(Timeline.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 574.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 574.0 Td
+(Summaries.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 556.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 556.0 Td
+(Details.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 538.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 538.0 Td
+(Rep sets.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 517.0 Td
+(The NVS queue allows retry and prevents data loss when Firebase or Wi-Fi is temporarily) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 502.0 Td
+(unavailable.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 472.0 Td
+(Sampling and Refresh Rates) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 448.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 448.0 Td
+(Main app tick: 4 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 430.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 430.0 Td
+(Sensor sample interval: 5 ms, approximately 200 Hz.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 412.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 412.0 Td
+(Graph refresh: 16 ms, approximately 60 Hz.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 394.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 394.0 Td
+(Slow UI refresh: 140 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 376.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 376.0 Td
+(Debug UI refresh: 160 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 358.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 358.0 Td
+(Normal cloud service cadence: 5000 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 340.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 340.0 Td
+(Summary/cloud finish cadence: approximately 1200 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 322.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 322.0 Td
+(Device heartbeat interval: 60000 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 304.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 304.0 Td
+(User sync timeout: 12000 ms.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 278.0 Td
+(Memory Strategy) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 254.0 Td
+(The ESP32 is memory-constrained during TLS/Firebase writes. The firmware tracks) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 239.0 Td
+(internal heap and largest internal block, then selects upload behavior:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 214.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 214.0 Td
+(Normal: larger payloads.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 196.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 196.0 Td
+(Constrained: smaller payloads and chunked repSets.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 178.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 178.0 Td
+(Critical: very small payloads or backoff.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 157.0 Td
+(Optional LVGL UI objects are freed before training/upload to improve available heap.) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R ] /Count 5 >>
+endobj
+15 0 obj
+<< /Type /Catalog /Pages 14 0 R >>
 endobj
 xref
-0 10
+0 16
 0000000000 65535 f
 0000000009 00000 n
 0000000079 00000 n
-0000001827 00000 n
-0000001953 00000 n
-0000003702 00000 n
-0000003828 00000 n
-0000005309 00000 n
-0000005435 00000 n
-0000005506 00000 n
+0000000154 00000 n
+0000000222 00000 n
+0000000999 00000 n
+0000001146 00000 n
+0000001923 00000 n
+0000002070 00000 n
+0000005933 00000 n
+0000006080 00000 n
+0000010493 00000 n
+0000010642 00000 n
+0000015008 00000 n
+0000015157 00000 n
+0000015243 00000 n
 trailer
-<< /Size 10 /Root 9 0 R >>
+<< /Size 16 /Root 15 0 R >>
 startxref
-5555
+15294
 %%EOF

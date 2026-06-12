@@ -3,375 +3,1082 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1221 >>
-stream
-BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(SMARTGYM TROUBLESHOOTING GUIDE) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Build Fails) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Run:) Tj
-T*
-() Tj
-T*
-(```powershell) Tj
-T*
-(python -m platformio run --environment BOARD_VIEWE_UEDX80480070E_WB_A) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(Check:) Tj
-T*
-() Tj
-T*
-(- PlatformIO is installed.) Tj
-T*
-(- Board environment name is correct.) Tj
-T*
-(- Dependencies downloaded correctly.) Tj
-T*
-(- No local syntax changes are incomplete.) Tj
-T*
-() Tj
-T*
-(COM Port Busy) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Symptoms:) Tj
-T*
-() Tj
-T*
-(- Upload fails with access denied.) Tj
-T*
-(- Monitor cannot open serial port.) Tj
-T*
-() Tj
-T*
-(Fix:) Tj
-T*
-() Tj
-T*
-(- Close any open serial monitor.) Tj
-T*
-(- Close Arduino IDE or other terminal using the port.) Tj
-T*
-(- Unplug/replug the ESP32.) Tj
-T*
-(- Retry upload.) Tj
-T*
-() Tj
-T*
-(Upload Fails) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- Confirm USB cable supports data.) Tj
-T*
-(- Confirm correct board/port.) Tj
-T*
-(- Try holding BOOT if required by the board.) Tj
-T*
-(- Lower upload speed if needed.) Tj
-T*
-() Tj
-T*
-(Touch Not Responding) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- Confirm LVGL/display initialization succeeded.) Tj
-T*
-(- Check serial boot logs.) Tj
-T*
-(- Reboot the device.) Tj
-T*
-ET
-endstream
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 1337 >>
+<< /Length 724 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-() Tj
-T*
-(RFID Not Detected) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- Confirm MFRC522 wiring.) Tj
-T*
-(- Check RFID SPI pins.) Tj
-T*
-(- Hold card close to the reader.) Tj
-T*
-(- Avoid scanning during active upload if firmware is blocking RFID for safety.) Tj
-T*
-() Tj
-T*
-(Wi-Fi Not Connected) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- Check configured SSID/password build flags.) Tj
-T*
-(- Confirm network is 2.4 GHz.) Tj
-T*
-(- Check serial Wi-Fi logs.) Tj
-T*
-() Tj
-T*
-(Firebase Read/Write Fails) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- Confirm database URL and token/config.) Tj
-T*
-(- Confirm Wi-Fi is connected.) Tj
-T*
-(- Check Firebase RTDB rules.) Tj
-T*
-(- Check serial tags `[CloudWrite]`, `[SYNC]`, and `[USER_SYNC]`.) Tj
-T*
-() Tj
-T*
-(Sync Queue Stuck) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Look for:) Tj
-T*
-() Tj
-T*
-(- `[SYNC] queue upload delayed`) Tj
-T*
-(- `[SYNC] upload memory mode=critical`) Tj
-T*
-(- NVS queue count logs.) Tj
-T*
-() Tj
-T*
-(Keep the device powered until it drains the queue.) Tj
-T*
-() Tj
-T*
-(NVS NOT_ENOUGH_SPACE) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Cause:) Tj
-T*
-() Tj
-T*
-(- Too many queued writes or payloads.) Tj
-T*
-() Tj
-T*
-(Mitigation:) Tj
-T*
-() Tj
-T*
-(- Firmware uses queue capacity checks and chunking.) Tj
-T*
-(- Avoid repeatedly skipping summary during active upload if testing older builds.) Tj
-T*
-(- Let the queue drain.) Tj
-T*
-() Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(Troubleshooting Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(Common firmware, sync, UI, and dashboard issues.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 1296 >>
+<< /Length 724 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(repSets Upload Delayed by Heap Guard) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Cause:) Tj
-T*
-() Tj
-T*
-(- Firebase/TLS memory pressure.) Tj
-T*
-(- Large repSet PATCH payload.) Tj
-T*
-() Tj
-T*
-(Expected behavior:) Tj
-T*
-() Tj
-T*
-(- Firmware should split repSets into smaller chunks under constrained memory.) Tj
-T*
-(- Upload should eventually reach `webapp upload phase=complete`.) Tj
-T*
-() Tj
-T*
-(Graph Clipping or Wrong ROM) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(- Recalibrate ROM.) Tj
-T*
-(- Check sensor wiring.) Tj
-T*
-(- Confirm sensor direction/inversion.) Tj
-T*
-(- Check whether user calibration was loaded.) Tj
-T*
-() Tj
-T*
-(Rep Not Counted) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Possible causes:) Tj
-T*
-() Tj
-T*
-(- ROM too short.) Tj
-T*
-(- Top/bottom not reached.) Tj
-T*
-(- Motion too fast/noisy.) Tj
-T*
-(- Calibration mismatch.) Tj
-T*
-() Tj
-T*
-(Try smooth reps through full range.) Tj
-T*
-() Tj
-T*
-(Calibration Cancel Freeze) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(If calibration does not return safely:) Tj
-T*
-() Tj
-T*
-(- Check serial logs around `[CAL]`, `[CAL_UI]`, and UI destroy paths.) Tj
-T*
-(- Reboot device if needed.) Tj
-T*
-(- Verify no stale LVGL pointer accesses were introduced.) Tj
-T*
-() Tj
-T*
-(Dashboard Missing Data) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Check:) Tj
-T*
-() Tj
-T*
-(- Correct RFID UID selected.) Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(Troubleshooting Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(Common firmware, sync, UI, and dashboard issues.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 271 >>
+<< /Length 4064 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(- Firebase path exists under `athleteWeeklySessions/{uid}`.) Tj
-T*
-(- Session upload reached `phase=complete`.) Tj
-T*
-(- Browser console for Firebase permission errors.) Tj
-T*
-(- Dashboard Firebase config matches firmware database.) Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(Troubleshooting Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 2) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 19.0 Tf
+58.0 714.0 Td
+(SmartGym Troubleshooting Guide) Tj
+ET
+0.0000 0.6118 0.8078 RG
+2.0 w
+58.0 704.0 m 233.0 704.0 l S
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 678.0 Td
+(Build Fails) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 654.0 Td
+(Run:) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 605.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 617.0 Td
+(python -m platformio run --environment BOARD_VIEWE_UEDX80480070E_WB_A) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 588.0 Td
+(Check:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 563.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 563.0 Td
+(PlatformIO is installed.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 545.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 545.0 Td
+(Board environment name is correct.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 527.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 527.0 Td
+(Dependencies downloaded correctly.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 509.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 509.0 Td
+(No local syntax changes are incomplete.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 483.0 Td
+(COM Port Busy) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 459.0 Td
+(Symptoms:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 434.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 434.0 Td
+(Upload fails with access denied.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 416.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 416.0 Td
+(Monitor cannot open serial port.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 395.0 Td
+(Fix:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 370.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 370.0 Td
+(Close any open serial monitor.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 352.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 352.0 Td
+(Close Arduino IDE or other terminal using the port.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 334.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 334.0 Td
+(Unplug/replug the ESP32.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 316.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 316.0 Td
+(Retry upload.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 290.0 Td
+(Upload Fails) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 266.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 266.0 Td
+(Confirm USB cable supports data.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 248.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 248.0 Td
+(Confirm correct board/port.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 230.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 230.0 Td
+(Try holding BOOT if required by the board.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 212.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 212.0 Td
+(Lower upload speed if needed.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 186.0 Td
+(Touch Not Responding) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 162.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 162.0 Td
+(Confirm LVGL/display initialization succeeded.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 144.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 144.0 Td
+(Check serial boot logs.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 126.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 126.0 Td
+(Reboot the device.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 100.0 Td
+(RFID Not Detected) Tj
 ET
 endstream
 endobj
 9 0 obj
-<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R ] /Count 4 >>
+<< /Length 4436 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Troubleshooting Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 3) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(Confirm MFRC522 wiring.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(Check RFID SPI pins.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(Hold card close to the reader.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 668.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 668.0 Td
+(Avoid scanning during active upload if firmware is blocking RFID for safety.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 642.0 Td
+(Wi-Fi Not Connected) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 618.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 618.0 Td
+(Check configured SSID/password build flags.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 600.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 600.0 Td
+(Confirm network is 2.4 GHz.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 582.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 582.0 Td
+(Check serial Wi-Fi logs.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 556.0 Td
+(Firebase Read/Write Fails) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 532.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 532.0 Td
+(Confirm database URL and token/config.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 514.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 514.0 Td
+(Confirm Wi-Fi is connected.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 496.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 496.0 Td
+(Check Firebase RTDB rules.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 478.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 478.0 Td
+(Check serial tags `[CloudWrite]`, `[SYNC]`, and `[USER_SYNC]`.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 452.0 Td
+(Sync Queue Stuck) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 428.0 Td
+(Look for:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 403.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 403.0 Td
+(`[SYNC] queue upload delayed`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 385.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 385.0 Td
+(`[SYNC] upload memory mode=critical`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 367.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 367.0 Td
+(NVS queue count logs.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 346.0 Td
+(Keep the device powered until it drains the queue.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 316.0 Td
+(NVS NOT_ENOUGH_SPACE) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 292.0 Td
+(Cause:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 267.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 267.0 Td
+(Too many queued writes or payloads.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 246.0 Td
+(Mitigation:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 221.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 221.0 Td
+(Firmware uses queue capacity checks and chunking.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 203.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 203.0 Td
+(Avoid repeatedly skipping summary during active upload if testing older builds.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 185.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 185.0 Td
+(Let the queue drain.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 159.0 Td
+(repSets Upload Delayed by Heap Guard) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 135.0 Td
+(Cause:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 110.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 110.0 Td
+(Firebase/TLS memory pressure.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 92.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 92.0 Td
+(Large repSet PATCH payload.) Tj
+ET
+endstream
 endobj
 11 0 obj
-<< /Type /Catalog /Pages 10 0 R >>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4106 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Troubleshooting Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 4) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 722.0 Td
+(Expected behavior:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 697.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 697.0 Td
+(Firmware should split repSets into smaller chunks under constrained memory.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 679.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 679.0 Td
+(Upload should eventually reach `webapp upload phase=complete`.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 653.0 Td
+(Graph Clipping or Wrong ROM) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 629.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 629.0 Td
+(Recalibrate ROM.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 611.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 611.0 Td
+(Check sensor wiring.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 593.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 593.0 Td
+(Confirm sensor direction/inversion.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 575.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 575.0 Td
+(Check whether user calibration was loaded.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 549.0 Td
+(Rep Not Counted) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 525.0 Td
+(Possible causes:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 500.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 500.0 Td
+(ROM too short.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 482.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 482.0 Td
+(Top/bottom not reached.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 464.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 464.0 Td
+(Motion too fast/noisy.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 446.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 446.0 Td
+(Calibration mismatch.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 425.0 Td
+(Try smooth reps through full range.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 395.0 Td
+(Calibration Cancel Freeze) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 371.0 Td
+(If calibration does not return safely:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 346.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 346.0 Td
+(Check serial logs around `[CAL]`, `[CAL_UI]`, and UI destroy paths.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 328.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 328.0 Td
+(Reboot device if needed.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 310.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 310.0 Td
+(Verify no stale LVGL pointer accesses were introduced.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 284.0 Td
+(Dashboard Missing Data) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 260.0 Td
+(Check:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 235.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 235.0 Td
+(Correct RFID UID selected.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 217.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 217.0 Td
+(Firebase path exists under `athleteWeeklySessions/{uid}`.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 199.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 199.0 Td
+(Session upload reached `phase=complete`.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 181.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 181.0 Td
+(Browser console for Firebase permission errors.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 163.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 163.0 Td
+(Dashboard Firebase config matches firmware database.) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R ] /Count 5 >>
+endobj
+15 0 obj
+<< /Type /Catalog /Pages 14 0 R >>
 endobj
 xref
-0 12
+0 16
 0000000000 65535 f
 0000000009 00000 n
 0000000079 00000 n
-0000001352 00000 n
-0000001479 00000 n
-0000002868 00000 n
-0000002995 00000 n
-0000004343 00000 n
-0000004470 00000 n
-0000004792 00000 n
-0000004919 00000 n
-0000004997 00000 n
+0000000154 00000 n
+0000000222 00000 n
+0000000997 00000 n
+0000001144 00000 n
+0000001919 00000 n
+0000002066 00000 n
+0000006182 00000 n
+0000006329 00000 n
+0000010818 00000 n
+0000010967 00000 n
+0000015126 00000 n
+0000015275 00000 n
+0000015361 00000 n
 trailer
-<< /Size 12 /Root 11 0 R >>
+<< /Size 16 /Root 15 0 R >>
 startxref
-5048
+15412
 %%EOF

@@ -3,480 +3,1285 @@
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<< /Length 1671 >>
-stream
-BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(SMARTGYM FIREBASE GUIDE) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(SmartGym uses Firebase Realtime Database as the backend for user profiles, calibration) Tj
-T*
-(data, session history, summaries, dashboard charts, and device heartbeat.) Tj
-T*
-() Tj
-T*
-(Safety Warning) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Do not import a full JSON file at the Firebase root unless you intentionally want to) Tj
-T*
-(replace the entire database.) Tj
-T*
-() Tj
-T*
-(Do not commit database secrets, service account files, private auth tokens, Wi-Fi) Tj
-T*
-(passwords, or local `.env` files. Public Firebase web config should still be) Tj
-T*
-(restricted with proper Firebase rules and domain/app restrictions.) Tj
-T*
-() Tj
-T*
-(Safer import pattern:) Tj
-T*
-() Tj
-T*
-(- Import user JSON at `usersByRfid`.) Tj
-T*
-(- Import calibration JSON at `calibrations`.) Tj
-T*
-(- Import machine config JSON at `machineConfigs`.) Tj
-T*
-(- Import session data at the matching `athleteWeeklySessions/{uid}/{weekKey}` node.) Tj
-T*
-() Tj
-T*
-(Main RTDB Nodes) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(usersByRfid) Tj
-T*
-() Tj
-T*
-(```text) Tj
-T*
-(usersByRfid/{uid}) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(Stores RFID-linked user profile data such as display name, age, height, weight,) Tj
-T*
-(gender, and preferred goal.) Tj
-T*
-() Tj
-T*
-(Profile reads happen during RFID user sync. Profile writes should only happen for) Tj
-T*
-(explicit profile edits or intentional compatibility fields.) Tj
-T*
-() Tj
-T*
-(calibrations) Tj
-T*
-() Tj
-T*
-(```text) Tj
-T*
-(calibrations/{uid}/{machineTypeId}) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(Stores user-machine calibration data:) Tj
-T*
-() Tj
-T*
-(- Has calibration flag.) Tj
-T*
-(- Suggested/recommended load.) Tj
-T*
-ET
-endstream
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 1395 >>
+<< /Length 795 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(- User ROM bottom/top/range.) Tj
-T*
-(- Confidence.) Tj
-T*
-(- Action.) Tj
-T*
-(- Reason.) Tj
-T*
-(- Goal-specific recommendations.) Tj
-T*
-(- Motion target snapshot.) Tj
-T*
-(- Calibration set snapshots.) Tj
-T*
-(- Next recommended weight fields.) Tj
-T*
-() Tj
-T*
-(machineConfigs) Tj
-T*
-() Tj
-T*
-(```text) Tj
-T*
-(machineConfigs/{machineId}) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(Stores cloud machine configuration where available. The firmware also contains an) Tj
-T*
-(embedded machine catalog so it can boot offline.) Tj
-T*
-() Tj
-T*
-(athleteWeeklySessions) Tj
-T*
-() Tj
-T*
-(```text) Tj
-T*
-(athleteWeeklySessions/{uid}/{weekKey}) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(This is the main workout history node for dashboard analysis.) Tj
-T*
-() Tj
-T*
-(Typical structure:) Tj
-T*
-() Tj
-T*
-(```text) Tj
-T*
-(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/sessions/{sessionId}) Tj
-T*
-(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/daySummary) Tj
-T*
-(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/timeline/{timelineKey}) Tj
-T*
-(athleteWeeklySessions/{uid}/{weekKey}/weekSummary) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(devices) Tj
-T*
-() Tj
-T*
-(```text) Tj
-T*
-(devices/{deviceId}) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(Stores heartbeat and device identity/status data.) Tj
-T*
-() Tj
-T*
-(Session Root) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The session root contains the main record for a completed workout:) Tj
-T*
-() Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(Firebase Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(Realtime Database paths, upload phases, and safe import) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 614.0 Td
+(guidance.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 1337 >>
+<< /Length 795 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(- Session ID.) Tj
-T*
-(- User UID.) Tj
-T*
-(- Machine ID/type.) Tj
-T*
-(- Goal.) Tj
-T*
-(- Started/ended time.) Tj
-T*
-(- Duration.) Tj
-T*
-(- Selected/pin load.) Tj
-T*
-(- Recommended load.) Tj
-T*
-(- Set/repetition totals.) Tj
-T*
-(- Valid/invalid rep counts.) Tj
-T*
-(- ROM and velocity metrics.) Tj
-T*
-(- Quality score/tier.) Tj
-T*
-(- Links to heavy details.) Tj
-T*
-() Tj
-T*
-(daySummary) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Daily aggregate summary for fast dashboard reads. It avoids requiring the dashboard to) Tj
-T*
-(scan every session for common day-level metrics.) Tj
-T*
-() Tj
-T*
-(weekSummary) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Weekly aggregate summary for the active user/week. It includes summary counters and) Tj
-T*
-(recent training signal information.) Tj
-T*
-() Tj
-T*
-(timeline) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Timeline entries are lightweight ordered cards for the dashboard. The timeline key) Tj
-T*
-(also acts as an idempotency marker so retries do not double-count summaries.) Tj
-T*
-() Tj
-T*
-(representativeReps) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Stores selected representative reps, such as:) Tj
-T*
-() Tj
-T*
-(- Best ROM rep.) Tj
-T*
-(- Best velocity rep.) Tj
-T*
-(- First valid rep.) Tj
-T*
-(- Last valid rep.) Tj
-T*
-() Tj
-T*
-(setDetails) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Stores per-set summary information:) Tj
-T*
-() Tj
-T*
-(- Set number.) Tj
-T*
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(Firebase Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(Realtime Database paths, upload phases, and safe import) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 614.0 Td
+(guidance.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
 ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 1321 >>
+<< /Length 4182 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(- Target reps.) Tj
-T*
-(- Valid reps.) Tj
-T*
-(- Invalid reps.) Tj
-T*
-(- Start/end selected load.) Tj
-T*
-(- Whether weight changed during set.) Tj
-T*
-(- ROM/velocity summaries.) Tj
-T*
-() Tj
-T*
-(repSets) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(Stores deeper per-rep data by set:) Tj
-T*
-() Tj
-T*
-(```text) Tj
-T*
-(repSets/set1/reps/0) Tj
-T*
-(repSets/set1/reps/1) Tj
-T*
-(```) Tj
-T*
-() Tj
-T*
-(The firmware may upload these details in smaller PATCH payloads, but the final) Tj
-T*
-(Firebase shape remains unchanged.) Tj
-T*
-() Tj
-T*
-(Upload Phases) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(1. Root session/core data.) Tj
-T*
-(2. Day metadata.) Tj
-T*
-(3. Timeline.) Tj
-T*
-(4. Day summary.) Tj
-T*
-(5. Week summary.) Tj
-T*
-(6. Representative reps.) Tj
-T*
-(7. Set details.) Tj
-T*
-(8. Rep sets.) Tj
-T*
-() Tj
-T*
-(Memory-Safe Upload) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The firmware uses NVS queueing and memory-aware payload splitting. Under constrained) Tj
-T*
-(heap, repSets are split into smaller patches to avoid Firebase/TLS blocking.) Tj
-T*
-() Tj
-T*
-(Dashboard Compatibility) Tj
-T*
-() Tj
-T*
-() Tj
-T*
-(The dashboard currently reads:) Tj
-T*
-() Tj
-T*
-(- `usersByRfid/{rfid}`) Tj
-T*
-(- `athleteWeeklySessions/{rfid}`) Tj
-T*
-(- `athleteWeeklySessions/{rfid}/{week}/days`) Tj
-T*
-(- `recommendedRoutineProgress/{rfid}/{selectedDate}`) Tj
-T*
-() Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(Firebase Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 2) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 19.0 Tf
+58.0 714.0 Td
+(SmartGym Firebase Guide) Tj
+ET
+0.0000 0.6118 0.8078 RG
+2.0 w
+58.0 704.0 m 233.0 704.0 l S
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 683.0 Td
+(SmartGym uses Firebase Realtime Database as the backend for user profiles, calibration) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 668.0 Td
+(data, session history, summaries, dashboard charts, and device heartbeat.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 638.0 Td
+(Safety Warning) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 614.0 Td
+(Do not import a full JSON file at the Firebase root unless you intentionally want to) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 599.0 Td
+(replace the entire database.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 574.0 Td
+(Do not commit database secrets, service account files, private auth tokens, Wi-Fi) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 559.0 Td
+(passwords, or local `.env` files. Public Firebase web config should still be restricted) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 544.0 Td
+(with proper Firebase rules and domain/app restrictions.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 519.0 Td
+(Safer import pattern:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 494.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 494.0 Td
+(Import user JSON at `usersByRfid`.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 476.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 476.0 Td
+(Import calibration JSON at `calibrations`.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 458.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 458.0 Td
+(Import machine config JSON at `machineConfigs`.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 440.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 440.0 Td
+(Import session data at the matching `athleteWeeklySessions/{uid}/{weekKey}` node.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 414.0 Td
+(Main RTDB Nodes) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 390.0 Td
+(usersByRfid) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 345.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 357.0 Td
+(usersByRfid/{uid}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 328.0 Td
+(Stores RFID-linked user profile data such as display name, age, height, weight, gender,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 313.0 Td
+(and preferred goal.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 288.0 Td
+(Profile reads happen during RFID user sync. Profile writes should only happen for) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 273.0 Td
+(explicit profile edits or intentional compatibility fields.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 248.0 Td
+(calibrations) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 203.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 215.0 Td
+(calibrations/{uid}/{machineTypeId}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 186.0 Td
+(Stores user-machine calibration data:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 161.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 161.0 Td
+(Has calibration flag.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 143.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 143.0 Td
+(Suggested/recommended load.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 125.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 125.0 Td
+(User ROM bottom/top/range.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 107.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 107.0 Td
+(Confidence.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 89.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 89.0 Td
+(Action.) Tj
 ET
 endstream
 endobj
 9 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 104 >>
+<< /Length 4156 >>
 stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
 BT
-/F1 10 Tf
-50 760 Td
-14 TL
-(Do not rename the firmware paths without updating the dashboard.) Tj
-T*
+/F2 10.0 Tf
+58.0 765.0 Td
+(Firebase Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 3) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(Reason.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(Goal-specific recommendations.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(Motion target snapshot.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 668.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 668.0 Td
+(Calibration set snapshots.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 650.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 650.0 Td
+(Next recommended weight fields.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 629.0 Td
+(machineConfigs) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 584.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 596.0 Td
+(machineConfigs/{machineId}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 567.0 Td
+(Stores cloud machine configuration where available. The firmware also contains an) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 552.0 Td
+(embedded machine catalog so it can boot offline.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 527.0 Td
+(athleteWeeklySessions) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 482.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 494.0 Td
+(athleteWeeklySessions/{uid}/{weekKey}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 465.0 Td
+(This is the main workout history node for dashboard analysis.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 440.0 Td
+(Typical structure:) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 355.0 496.0 66.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 403.0 Td
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/sessions/{sessionId}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 391.0 Td
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/daySummary) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 379.0 Td
+(athleteWeeklySessions/{uid}/{weekKey}/days/{dayKey}/timeline/{timelineKey}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 367.0 Td
+(athleteWeeklySessions/{uid}/{weekKey}/weekSummary) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 338.0 Td
+(devices) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 293.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 305.0 Td
+(devices/{deviceId}) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 276.0 Td
+(Stores heartbeat and device identity/status data.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 246.0 Td
+(Session Root) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 222.0 Td
+(The session root contains the main record for a completed workout:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 197.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 197.0 Td
+(Session ID.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 179.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 179.0 Td
+(User UID.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 161.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 161.0 Td
+(Machine ID/type.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 143.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 143.0 Td
+(Goal.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 125.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 125.0 Td
+(Started/ended time.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 107.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 107.0 Td
+(Duration.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 89.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 89.0 Td
+(Selected/pin load.) Tj
 ET
 endstream
 endobj
 11 0 obj
-<< /Type /Page /Parent 12 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 10 0 R >>
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Type /Pages /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R ] /Count 5 >>
+<< /Length 4259 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Firebase Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 4) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(Recommended load.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(Set/repetition totals.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(Valid/invalid rep counts.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 668.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 668.0 Td
+(ROM and velocity metrics.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 650.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 650.0 Td
+(Quality score/tier.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 632.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 632.0 Td
+(Links to heavy details.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 606.0 Td
+(daySummary) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 582.0 Td
+(Daily aggregate summary for fast dashboard reads. It avoids requiring the dashboard to) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 567.0 Td
+(scan every session for common day-level metrics.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 537.0 Td
+(weekSummary) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 513.0 Td
+(Weekly aggregate summary for the active user/week. It includes summary counters and) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 498.0 Td
+(recent training signal information.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 468.0 Td
+(timeline) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 444.0 Td
+(Timeline entries are lightweight ordered cards for the dashboard. The timeline key also) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 429.0 Td
+(acts as an idempotency marker so retries do not double-count summaries.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 399.0 Td
+(representativeReps) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 375.0 Td
+(Stores selected representative reps, such as:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 350.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 350.0 Td
+(Best ROM rep.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 332.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 332.0 Td
+(Best velocity rep.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 314.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 314.0 Td
+(First valid rep.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 296.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 296.0 Td
+(Last valid rep.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 270.0 Td
+(setDetails) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 246.0 Td
+(Stores per-set summary information:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 221.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 221.0 Td
+(Set number.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 203.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 203.0 Td
+(Target reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 185.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 185.0 Td
+(Valid reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 167.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 167.0 Td
+(Invalid reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 149.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 149.0 Td
+(Start/end selected load.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 131.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 131.0 Td
+(Whether weight changed during set.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 113.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 113.0 Td
+(ROM/velocity summaries.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 87.0 Td
+(repSets) Tj
+ET
+endstream
 endobj
 13 0 obj
-<< /Type /Catalog /Pages 12 0 R >>
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 3461 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Firebase Guide) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 5) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 722.0 Td
+(Stores deeper per-rep data by set:) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 661.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 685.0 Td
+(repSets/set1/reps/0) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 673.0 Td
+(repSets/set1/reps/1) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 644.0 Td
+(The firmware may upload these details in smaller PATCH payloads, but the final Firebase) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 629.0 Td
+(shape remains unchanged.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 599.0 Td
+(Upload Phases) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 575.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 575.0 Td
+(Root session/core data.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 557.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 557.0 Td
+(Day metadata.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 539.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 539.0 Td
+(Timeline.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 521.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 521.0 Td
+(Day summary.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 503.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 503.0 Td
+(Week summary.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 485.0 Td
+(6.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 485.0 Td
+(Representative reps.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 467.0 Td
+(7.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 467.0 Td
+(Set details.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 449.0 Td
+(8.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 449.0 Td
+(Rep sets.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 423.0 Td
+(Memory-Safe Upload) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 399.0 Td
+(The firmware uses NVS queueing and memory-aware payload splitting. Under constrained) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 384.0 Td
+(heap, repSets are split into smaller patches to avoid Firebase/TLS blocking.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 354.0 Td
+(Dashboard Compatibility) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 330.0 Td
+(The dashboard currently reads:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 305.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 305.0 Td
+(`usersByRfid/{rfid}`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 287.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 287.0 Td
+(`athleteWeeklySessions/{rfid}`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 269.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 269.0 Td
+(`athleteWeeklySessions/{rfid}/{week}/days`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 251.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 251.0 Td
+(`recommendedRoutineProgress/{rfid}/{selectedDate}`) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 230.0 Td
+(Do not rename the firmware paths without updating the dashboard.) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R ] /Count 6 >>
+endobj
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
 endobj
 xref
-0 14
+0 18
 0000000000 65535 f
 0000000009 00000 n
 0000000079 00000 n
-0000001802 00000 n
-0000001929 00000 n
-0000003376 00000 n
-0000003503 00000 n
-0000004892 00000 n
-0000005019 00000 n
-0000006392 00000 n
-0000006519 00000 n
-0000006675 00000 n
-0000006804 00000 n
-0000006889 00000 n
+0000000154 00000 n
+0000000222 00000 n
+0000001068 00000 n
+0000001215 00000 n
+0000002061 00000 n
+0000002208 00000 n
+0000006442 00000 n
+0000006589 00000 n
+0000010798 00000 n
+0000010947 00000 n
+0000015259 00000 n
+0000015408 00000 n
+0000018922 00000 n
+0000019071 00000 n
+0000019164 00000 n
 trailer
-<< /Size 14 /Root 13 0 R >>
+<< /Size 18 /Root 17 0 R >>
 startxref
-6940
+19215
 %%EOF

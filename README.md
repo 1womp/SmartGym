@@ -73,6 +73,18 @@ The firmware reads motion, normalizes ROM, detects reps, records sessions, compu
 `-- README.md
 ```
 
+## Documentation
+
+The full documentation package is indexed in [docs/README.md](docs/README.md).
+
+Most important PDFs:
+
+- [User Manual](docs/USER_MANUAL.pdf)
+- [System Architecture](docs/SYSTEM_ARCHITECTURE.pdf)
+- [Developer Guide](docs/DEVELOPER_GUIDE.pdf)
+- [Firebase Guide](docs/FIREBASE_GUIDE.pdf)
+- [Troubleshooting Guide](docs/TROUBLESHOOTING.pdf)
+
 ## Quick Start
 
 ### Firmware

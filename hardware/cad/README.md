@@ -17,6 +17,12 @@ prototype hardware mounts and 3D-printed enclosure pieces.
 | `screen7inchcover.STL` | 3D-printable display cover export. |
 | `screen7inchfrontcover.SLDPRT` | SolidWorks source for the display front cover. |
 | `screen7inchfrontcover.STL` | 3D-printable display front cover export. |
+| `Target.step` | STEP source for the ToF target piece. |
+| `Target.stl` | 3D-printable export for the ToF target piece. |
+| `Fastener.step` | STEP source for the ToF holder fastener. |
+| `Fastener.stl` | 3D-printable export for the ToF holder fastener. |
+| `tof_sensor_holder_nuevo_en mm.SLDPRT` | SolidWorks source for the updated ToF sensor holder. |
+| `tof_sensor_holder_nuevo_en mm.STL` | 3D-printable export for the updated ToF sensor holder. |
 
 The `.SLDPRT` files are editable CAD sources. The `.STL` files are exported
 for slicing and 3D printing.

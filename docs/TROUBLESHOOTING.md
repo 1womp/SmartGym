@@ -1,5 +1,7 @@
 # SmartGym Troubleshooting Guide
 
+Language: English | [Espanol](TROUBLESHOOTING.es.md)
+
 ## Build Fails
 
 Run:

@@ -1,0 +1,1130 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 724 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
+BT
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(Start Here) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(A quick map for finding every SmartGym subsystem and guide.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 724 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 607.0 612.0 185.0 re f
+0.0000 0.6118 0.8078 rg
+0.0 602.0 612.0 8.0 re f
+0.8980 0.9686 0.9882 rg
+BT
+/F2 13.0 Tf
+58.0 710.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+1.0000 1.0000 1.0000 rg
+BT
+/F2 30.0 Tf
+58.0 664.0 Td
+(Start Here) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 632.0 Td
+(A quick map for finding every SmartGym subsystem and guide.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 15.0 Tf
+58.0 140.0 Td
+(Version 1.0 Prototype) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 11.0 Tf
+58.0 116.0 Td
+(ESP32-S3 firmware | Firebase RTDB | React dashboard) Tj
+ET
+0.3804 0.4353 0.5020 rg
+BT
+/F1 10.0 Tf
+58.0 92.0 Td
+(Generated documentation package) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3645 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Start Here) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 2) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 19.0 Tf
+58.0 714.0 Td
+(Start Here) Tj
+ET
+0.0000 0.6118 0.8078 RG
+2.0 w
+58.0 704.0 m 233.0 704.0 l S
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 683.0 Td
+(Language: English | [Espanol]\(START_HERE.es.md\)) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 658.0 Td
+(This page is the fastest way to find the right SmartGym information without) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 636.0 Td
+(digging through folders.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 606.0 Td
+(What SmartGym Is) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 582.0 Td
+(SmartGym is an ESP32-S3 prototype that instruments a selectorized gym machine.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 560.0 Td
+(It reads machine motion, normalizes range of motion, detects reps and sets,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 538.0 Td
+(records user sessions, stores calibration data, and syncs finished workouts to) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 516.0 Td
+(Firebase for dashboard analysis.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 486.0 Td
+(First Read These) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 438.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 450.0 Td
+(| Need | Open |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 400.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 412.0 Td
+(| --- | --- |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 362.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 374.0 Td
+(| Understand the project in 5 minutes | [Project README]\(../README.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 324.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 336.0 Td
+(| Use the device during a demo | [User Manual]\(USER_MANUAL.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 274.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 298.0 Td
+(| Understand ROM, calibration, equations, and errors | [Measurement and) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 286.0 Td
+(Calibration Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 224.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 248.0 Td
+(| Understand firmware modules and data flow | [System) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 236.0 Td
+(Architecture]\(SYSTEM_ARCHITECTURE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 186.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 198.0 Td
+(| Build or modify firmware | [Developer Guide]\(DEVELOPER_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 136.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 160.0 Td
+(| Understand Firebase paths and upload behavior | [Firebase) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 148.0 Td
+(Guide]\(FIREBASE_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 86.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 110.0 Td
+(| Understand dashboard seed/test data | [Firebase Dashboard Seed) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 98.0 Td
+(Guide]\(FIREBASE_DASHBOARD_SEED_GUIDE.md\) |) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4328 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Start Here) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 3) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 686.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 710.0 Td
+(| Fix common hardware, sync, or UI problems | [Troubleshooting) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 698.0 Td
+(Guide]\(TROUBLESHOOTING.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 636.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 660.0 Td
+(| Find CAD and printable hardware files | [Hardware CAD) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 648.0 Td
+(README]\(../hardware/cad/README.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 598.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 610.0 Td
+(| Run the React dashboard | [Dashboard README]\(../dashboard/README.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 548.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 572.0 Td
+(| Test the separate VL53L0X prototype | [Weight Detection) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 560.0 Td
+(README]\(../weight_detection/README.md\) |) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 526.0 Td
+(If You Are Building the Full Project) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 502.0 Td
+(Follow this order:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 477.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 477.0 Td
+(Read the [Project README]\(../README.md\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 459.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 459.0 Td
+(Build the firmware using the commands in the README.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 441.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 441.0 Td
+(Read the [Measurement and Calibration Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 423.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 423.0 Td
+(Wire and mount hardware using [Hardware Notes]\(../hardware/README.md\) and [CAD) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 409.0 Td
+(files]\(../hardware/cad/README.md\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 391.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 391.0 Td
+(Configure Firebase using the [Firebase Guide]\(FIREBASE_GUIDE.md\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 373.0 Td
+(6.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 373.0 Td
+(Use the [Firebase Dashboard Seed Guide]\(FIREBASE_DASHBOARD_SEED_GUIDE.md\) if you) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 359.0 Td
+(need demo data.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 341.0 Td
+(7.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 341.0 Td
+(Run the dashboard using [Dashboard README]\(../dashboard/README.md\).) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 323.0 Td
+(8.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 323.0 Td
+(Use the [Troubleshooting Guide]\(TROUBLESHOOTING.md\) during hardware tests.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 297.0 Td
+(How the Main Data Flow Works) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 225.0 496.0 54.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 261.0 Td
+(Motion sensor -> ESP32-S3 -> ROM normalization -> rep detection) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 249.0 Td
+(RFID -> user profile -> calibration -> recommendation) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 237.0 Td
+(Session recorder -> NVS queue -> Firebase RTDB -> React dashboard) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 203.0 Td
+(Core Concepts) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 155.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 167.0 Td
+(| Concept | Short Explanation | Full Details |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 117.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 129.0 Td
+(| --- | --- | --- |) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3992 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Start Here) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 4) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 686.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 710.0 Td
+(| ROM | The user's calibrated movement range, normalized from bottom to top. |) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 698.0 Td
+([Measurement and Calibration Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 624.0 496.0 54.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 660.0 Td
+(| Pin load | The physical machine weight-pin position. It belongs to the) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 648.0 Td
+(machine, not the user. | [Measurement and Calibration) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 636.0 Td
+(Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 562.0 496.0 54.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 598.0 Td
+(| Recommended load | User-specific advice from calibration or session history.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 586.0 Td
+(It does not move the pin. | [Measurement and Calibration) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 574.0 Td
+(Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 512.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 536.0 Td
+(| Rep detection | A ROM state machine that detects bottom, ascent, top,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 524.0 Td
+(descent, and completion. | [Developer Guide]\(DEVELOPER_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 462.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 486.0 Td
+(| Firebase queue | Local NVS-backed retry queue for safe uploads. | [Firebase) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 474.0 Td
+(Guide]\(FIREBASE_GUIDE.md\) |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 412.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 436.0 Td
+(| Dashboard | React app that reads Firebase workout history. | [Dashboard) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 424.0 Td
+(README]\(../dashboard/README.md\) |) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 390.0 Td
+(Where Files Live) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 342.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 354.0 Td
+(| Area | Folder |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 304.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 316.0 Td
+(| --- | --- |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 266.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 278.0 Td
+(| ESP32-S3 firmware | `src/`, `lib/`, `boards/`, `platformio.ini` |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 228.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 240.0 Td
+(| Documentation | `docs/` |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 190.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 202.0 Td
+(| Dashboard | `dashboard/` |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 152.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 164.0 Td
+(| CAD and STL files | `hardware/cad/` |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 114.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 126.0 Td
+(| Hardware notes | `hardware/` |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 76.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 88.0 Td
+(| VL53L0X prototype sketch | `weight_detection/` |) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4226 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Start Here) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 5) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 698.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 710.0 Td
+(| Utility scripts | `scripts/`, `tools/` |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 660.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 672.0 Td
+(| Firebase/sample data | `sample_data/` |) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 638.0 Td
+(What To Check Before a Demo) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 614.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 614.0 Td
+(Firmware builds and uploads.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 596.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 596.0 Td
+(Wi-Fi connects.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 578.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 578.0 Td
+(RFID scans a known user.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 560.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 560.0 Td
+(User sync finishes before START is enabled.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 542.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 542.0 Td
+(ROM calibration is loaded or a safe fallback is shown.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 524.0 Td
+(6.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 524.0 Td
+(Pin load and recommendation are displayed separately.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 506.0 Td
+(7.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 506.0 Td
+(Session starts, reps count, and summary appears.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 488.0 Td
+(8.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 488.0 Td
+(Firebase upload reaches complete.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 470.0 Td
+(9.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 470.0 Td
+(Dashboard shows the session.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 444.0 Td
+(Most Common Confusions) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 396.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 408.0 Td
+(| Confusion | Correct Mental Model |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 358.0 496.0 30.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 370.0 Td
+(| --- | --- |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 308.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 332.0 Td
+(| Recommendation changed, so pin load changed. | No. Recommendation is advice;) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 320.0 Td
+(pin load is the physical machine state. |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 258.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 282.0 Td
+(| A movement always counts as a rep. | No. A rep must satisfy ROM, timing, and) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 270.0 Td
+(phase-order checks. |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 208.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 232.0 Td
+(| Firebase upload happens immediately in one request. | No. It is queued) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 220.0 Td
+(locally and uploaded in phases. |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 158.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 182.0 Td
+(| The dashboard owns the data model. | No. Firmware writes the data; dashboard) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 170.0 Td
+(reads it. |) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 108.0 496.0 42.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 132.0 Td
+(| The VL53L0X prototype automatically controls the main firmware. | No. It is) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 120.0 Td
+(a separate prototype unless integrated intentionally. |) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 745 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Start Here) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 6) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 717.0 Td
+(Security Reminder) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 693.0 Td
+(Do not commit real Wi-Fi passwords, Firebase secrets, service accounts, tokens,) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 671.0 Td
+(or private `.env` files. Use example files and local environment variables.) Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R ] /Count 7 >>
+endobj
+19 0 obj
+<< /Type /Catalog /Pages 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f
+0000000009 00000 n
+0000000079 00000 n
+0000000154 00000 n
+0000000222 00000 n
+0000000997 00000 n
+0000001144 00000 n
+0000001919 00000 n
+0000002066 00000 n
+0000005763 00000 n
+0000005910 00000 n
+0000010291 00000 n
+0000010440 00000 n
+0000014485 00000 n
+0000014634 00000 n
+0000018913 00000 n
+0000019062 00000 n
+0000019859 00000 n
+0000020008 00000 n
+0000020108 00000 n
+trailer
+<< /Size 20 /Root 19 0 R >>
+startxref
+20159
+%%EOF

@@ -9,7 +9,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 724 >>
+<< /Length 805 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -27,13 +27,19 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Troubleshooting Guide) Tj
+(Arquitectura del Sistema) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(Common firmware, sync, UI, and dashboard issues.) Tj
+(Flujo de datos entre dispositivo, firmware, Firebase y) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 614.0 Td
+(dashboard.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -59,7 +65,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 724 >>
+<< /Length 805 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -77,13 +83,19 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Troubleshooting Guide) Tj
+(Arquitectura del Sistema) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(Common firmware, sync, UI, and dashboard issues.) Tj
+(Flujo de datos entre dispositivo, firmware, Firebase y) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 13.0 Tf
+58.0 614.0 Td
+(dashboard.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -109,7 +121,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 4101 >>
+<< /Length 3954 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -119,7 +131,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Troubleshooting Guide) Tj
+(Arquitectura del Sistema) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -140,7 +152,7 @@ ET
 BT
 /F2 19.0 Tf
 58.0 714.0 Td
-(SmartGym Troubleshooting Guide) Tj
+(Arquitectura Del Sistema SmartGym) Tj
 ET
 0.0000 0.6118 0.8078 RG
 2.0 w
@@ -149,268 +161,220 @@ ET
 BT
 /F1 10.5 Tf
 58.0 683.0 Td
-(Language: English | [Espanol]\(TROUBLESHOOTING.es.md\)) Tj
+(Idioma: [English]\(SYSTEM_ARCHITECTURE.md\) | Espanol) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 653.0 Td
-(Build Fails) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 629.0 Td
-(Run:) Tj
+(Arquitectura General) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 580.0 496.0 30.0 re B
+58.0 485.0 496.0 150.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 592.0 Td
-(python -m platformio run --environment BOARD_VIEWE_UEDX80480070E_WB_A) Tj
+70.0 617.0 Td
+(flowchart LR) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 605.0 Td
+(  Motion[Sensor de movimiento] --> SensorManager) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 593.0 Td
+(  SensorManager --> ROM[Normalizacion ROM]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 581.0 Td
+(  ROM --> RepDetector) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 569.0 Td
+(  RepDetector --> SessionRecorder) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 557.0 Td
+(  RFID[Lector RFID] --> UserSync[Sync de usuario]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 545.0 Td
+(  UserSync --> Recommendation) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 533.0 Td
+(  Recommendation --> UI[UI LVGL]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 521.0 Td
+(  SessionRecorder --> UploadQueue[Cola NVS]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 509.0 Td
+(  UploadQueue --> Firebase[Firebase RTDB]) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 497.0 Td
+(  Firebase --> Dashboard[Dashboard React]) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 563.0 Td
-(Check:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 538.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 538.0 Td
-(PlatformIO is installed.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 520.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 520.0 Td
-(Board environment name is correct.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 502.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 502.0 Td
-(Dependencies downloaded correctly.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 484.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 484.0 Td
-(No local syntax changes are incomplete.) Tj
+58.0 468.0 Td
+(El sistema se divide en firmware embebido, Firebase RTDB y visualizacion en dashboard.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 458.0 Td
-(COM Port Busy) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 434.0 Td
-(Symptoms:) Tj
+58.0 438.0 Td
+(Flujo De Datos) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 409.0 Td
-(-) Tj
+68.0 414.0 Td
+(1.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 409.0 Td
-(Upload fails with access denied.) Tj
+92.0 414.0 Td
+(El sensor se muestrea cada 5 ms.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 391.0 Td
-(-) Tj
+68.0 396.0 Td
+(2.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 391.0 Td
-(Monitor cannot open serial port.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 370.0 Td
-(Fix:) Tj
+92.0 396.0 Td
+(`SensorManager` filtra el valor analogico.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 345.0 Td
-(-) Tj
+68.0 378.0 Td
+(3.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 345.0 Td
-(Close any open serial monitor.) Tj
+92.0 378.0 Td
+(El firmware convierte la lectura a porcentaje ROM.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 327.0 Td
-(-) Tj
+68.0 360.0 Td
+(4.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 327.0 Td
-(Close Arduino IDE or other terminal using the port.) Tj
+92.0 360.0 Td
+(La calibracion de usuario mapea ROM crudo a ROM normalizado.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 309.0 Td
-(-) Tj
+68.0 342.0 Td
+(5.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 309.0 Td
-(Unplug/replug the ESP32.) Tj
+92.0 342.0 Td
+(`RepDetector` identifica fases y repeticiones completas.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 291.0 Td
-(-) Tj
+68.0 324.0 Td
+(6.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 291.0 Td
-(Retry upload.) Tj
+92.0 324.0 Td
+(`SessionRecorder` guarda reps, sets, peso, ROM, tiempos y calidad.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 306.0 Td
+(7.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 306.0 Td
+(`SmartGymTouchApp` calcula resumen y recomendacion.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 288.0 Td
+(8.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 288.0 Td
+(La cola de subida guarda payloads Firebase.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 270.0 Td
+(9.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 270.0 Td
+(`FirebaseService` envia escrituras seguras a RTDB.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 252.0 Td
+(10.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 252.0 Td
+(El dashboard lee Firebase para graficas y resumenes.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 265.0 Td
-(Upload Fails) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 241.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 241.0 Td
-(Confirm USB cable supports data.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 223.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 223.0 Td
-(Confirm correct board/port.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 205.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 205.0 Td
-(Try holding BOOT if required by the board.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 187.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 187.0 Td
-(Lower upload speed if needed.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 161.0 Td
-(Touch Not Responding) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 137.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 137.0 Td
-(Confirm LVGL/display initialization succeeded.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 119.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 119.0 Td
-(Check serial boot logs.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 101.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 101.0 Td
-(Reboot the device.) Tj
+58.0 226.0 Td
+(Flujo De Login) Tj
 ET
 endstream
 endobj
@@ -418,7 +382,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 4211 >>
+<< /Length 4388 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -428,7 +392,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Troubleshooting Guide) Tj
+(Arquitectura del Sistema) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -445,287 +409,251 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
-0.0706 0.1843 0.3490 rg
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 530.0 496.0 198.0 re B
+0.1216 0.1608 0.2157 rg
 BT
-/F2 14.0 Tf
-58.0 717.0 Td
-(RFID Not Detected) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 693.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 710.0 Td
+(sequenceDiagram) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 693.0 Td
-(Confirm MFRC522 wiring.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 675.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 698.0 Td
+(  participant U as Usuario) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 675.0 Td
-(Check RFID SPI pins.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 657.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 686.0 Td
+(  participant R as RFID) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 657.0 Td
-(Hold card close to the reader.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 639.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 674.0 Td
+(  participant D as Dispositivo) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 639.0 Td
-(Avoid scanning during active upload if firmware is blocking RFID for safety.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 613.0 Td
-(Wi-Fi Not Connected) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 589.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 662.0 Td
+(  participant F as Firebase) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 589.0 Td
-(Check configured SSID/password build flags.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 571.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 650.0 Td
+(  U->>R: Escanea tarjeta) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 571.0 Td
-(Confirm network is 2.4 GHz.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 553.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 638.0 Td
+(  R->>D: UID) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 553.0 Td
-(Check serial Wi-Fi logs.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 527.0 Td
-(Firebase Read/Write Fails) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 503.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 626.0 Td
+(  D->>D: Muestra popup de carga) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 503.0 Td
-(Confirm database URL and token/config.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 485.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 614.0 Td
+(  D->>F: Lee usersByRfid/{uid}) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 485.0 Td
-(Confirm Wi-Fi is connected.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 467.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 602.0 Td
+(  F-->>D: Perfil) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 467.0 Td
-(Check Firebase RTDB rules.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 449.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 590.0 Td
+(  D->>F: Lee calibrations/{uid}/{machineTypeId}) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 449.0 Td
-(Check serial tags `[CloudWrite]`, `[SYNC]`, and `[USER_SYNC]`.) Tj
+/F3 8.6 Tf
+70.0 578.0 Td
+(  F-->>D: Calibracion o missing) Tj
 ET
-0.0706 0.1843 0.3490 rg
+0.1216 0.1608 0.2157 rg
 BT
-/F2 14.0 Tf
-58.0 423.0 Td
-(Sync Queue Stuck) Tj
+/F3 8.6 Tf
+70.0 566.0 Td
+(  D->>D: Resuelve recomendacion) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 554.0 Td
+(  D->>D: Aplica mapeo ROM) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 542.0 Td
+(  D->>D: Oculta popup) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 399.0 Td
-(Look for:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 374.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 374.0 Td
-(`[SYNC] queue upload delayed`) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 356.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 356.0 Td
-(`[SYNC] upload memory mode=critical`) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 338.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 338.0 Td
-(NVS queue count logs.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 317.0 Td
-(Keep the device powered until it drains the queue.) Tj
+58.0 513.0 Td
+(Las entradas quedan bloqueadas hasta que el sync termina o cae a un fallback seguro.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 287.0 Td
-(NVS NOT_ENOUGH_SPACE) Tj
+58.0 483.0 Td
+(Flujo De Entrenamiento) Tj
+ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 279.0 496.0 186.0 re B
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 447.0 Td
+(sequenceDiagram) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.5 Tf
-58.0 263.0 Td
-(Cause:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 238.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 435.0 Td
+(  participant U as Usuario) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 238.0 Td
-(Too many queued writes or payloads.) Tj
+/F3 8.6 Tf
+70.0 423.0 Td
+(  participant D as Dispositivo) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.5 Tf
-58.0 217.0 Td
-(Mitigation:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 192.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 411.0 Td
+(  participant S as SessionRecorder) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 192.0 Td
-(Firmware uses queue capacity checks and chunking.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 174.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 399.0 Td
+(  participant Q as Cola) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 174.0 Td
-(Avoid repeatedly skipping summary during active upload if testing older builds.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 156.0 Td
-(-) Tj
+/F3 8.6 Tf
+70.0 387.0 Td
+(  participant F as Firebase) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 156.0 Td
-(Let the queue drain.) Tj
+/F3 8.6 Tf
+70.0 375.0 Td
+(  U->>D: Presiona START) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 363.0 Td
+(  D->>S: Inicia sesion con pin load) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 351.0 Td
+(  U->>D: Hace reps) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 339.0 Td
+(  D->>S: Registra reps y sets) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 327.0 Td
+(  U->>D: Termina o auto-finish) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 315.0 Td
+(  D->>S: Cierra sesion) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 303.0 Td
+(  D->>Q: Encola subida) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 291.0 Td
+(  Q->>F: Sube por fases) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 130.0 Td
-(repSets Upload Delayed by Heap Guard) Tj
+58.0 257.0 Td
+(Pin Load Vs Recomendacion) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 106.0 Td
-(Cause:) Tj
+58.0 233.0 Td
+(Pin load es estado fisico de la maquina. Permanece con la maquina entre usuarios. La) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 218.0 Td
+(recomendacion es consejo especifico por usuario.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 193.0 Td
+(El firmware nunca cambia pin load por una recomendacion. El usuario mueve fisicamente) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 178.0 Td
+(el pin y actualiza la UI con botones.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 148.0 Td
+(Calibracion) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 124.0 Td
+(La calibracion usa el pin load actual y cargas sugeridas. El usuario confirma la carga) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 109.0 Td
+(fisica antes de recolectar reps. El firmware analiza repeticiones suaves, estima si la) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 94.0 Td
+(carga es adecuada y guarda datos de calibracion por usuario y maquina.) Tj
 ET
 endstream
 endobj
@@ -733,7 +661,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Length 4412 >>
+<< /Length 4311 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -743,7 +671,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Troubleshooting Guide) Tj
+(Arquitectura del Sistema) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -760,239 +688,257 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
-0.0000 0.6118 0.8078 rg
+0.0706 0.1843 0.3490 rg
 BT
-/F2 10.5 Tf
-68.0 722.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 722.0 Td
-(Firebase/TLS memory pressure.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 704.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 704.0 Td
-(Large repSet PATCH payload.) Tj
+/F2 14.0 Tf
+58.0 717.0 Td
+(Sync) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 683.0 Td
-(Expected behavior:) Tj
+58.0 693.0 Td
+(El final de sesion agenda sync. Trabajo pesado de Firebase no ocurre dentro del cierre) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 678.0 Td
+(inmediato.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 653.0 Td
+(Fases:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 658.0 Td
+68.0 628.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 658.0 Td
-(Firmware should split repSets into smaller chunks under constrained memory.) Tj
+92.0 628.0 Td
+(Core de sesion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 640.0 Td
+68.0 610.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 640.0 Td
-(Upload should eventually reach `webapp upload phase=complete`.) Tj
+92.0 610.0 Td
+(Metadata.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 592.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 592.0 Td
+(Timeline.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 574.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 574.0 Td
+(Resumenes.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 556.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 556.0 Td
+(Detalles.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 538.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 538.0 Td
+(Rep sets.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 517.0 Td
+(La cola NVS permite reintentos y evita perdida de datos si Firebase o Wi-Fi fallan) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 502.0 Td
+(temporalmente.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 614.0 Td
-(Graph Clipping or Wrong ROM) Tj
+58.0 472.0 Td
+(Frecuencias) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 590.0 Td
+68.0 448.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 590.0 Td
-(Recalibrate ROM.) Tj
+92.0 448.0 Td
+(Tick principal: 4 ms.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 572.0 Td
+68.0 430.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 572.0 Td
-(Check sensor wiring.) Tj
+92.0 430.0 Td
+(Muestreo sensor: 5 ms, aproximadamente 200 Hz.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 554.0 Td
+68.0 412.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 554.0 Td
-(Confirm sensor direction/inversion.) Tj
+92.0 412.0 Td
+(Grafica: 16 ms, aproximadamente 60 Hz.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 536.0 Td
+68.0 394.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 536.0 Td
-(Check whether user calibration was loaded.) Tj
+92.0 394.0 Td
+(UI lenta: 140 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 376.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 376.0 Td
+(UI debug: 160 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 358.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 358.0 Td
+(Servicio cloud normal: 5000 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 340.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 340.0 Td
+(Cadencia de finish sync: aproximadamente 1200 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 322.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 322.0 Td
+(Heartbeat: 60000 ms.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 304.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 304.0 Td
+(Timeout user sync: 12000 ms.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 510.0 Td
-(Rep Not Counted) Tj
+58.0 278.0 Td
+(Estrategia De Memoria) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 486.0 Td
-(Possible causes:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 461.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 461.0 Td
-(ROM too short.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 443.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 443.0 Td
-(Top/bottom not reached.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 425.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 425.0 Td
-(Motion too fast/noisy.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 407.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 407.0 Td
-(Calibration mismatch.) Tj
+58.0 254.0 Td
+(El ESP32-S3 tiene poca memoria durante escrituras TLS/Firebase. El firmware mide heap) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 386.0 Td
-(Try smooth reps through full range.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 356.0 Td
-(Calibration Cancel Freeze) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 332.0 Td
-(If calibration does not return safely:) Tj
+58.0 239.0 Td
+(interno y bloque interno mas grande, y elige modo:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 307.0 Td
+68.0 214.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 307.0 Td
-(Check serial logs around `[CAL]`, `[CAL_UI]`, and UI destroy paths.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 289.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 289.0 Td
-(Reboot device if needed.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 271.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 271.0 Td
-(Verify no stale LVGL pointer accesses were introduced.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 245.0 Td
-(Dashboard Missing Data) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 221.0 Td
-(Check:) Tj
+92.0 214.0 Td
+(Normal: payloads mas grandes.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -1004,7 +950,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 196.0 Td
-(Correct RFID UID selected.) Tj
+(Constrained: payloads pequenos y repSets fragmentados.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -1016,43 +962,19 @@ ET
 BT
 /F1 10.2 Tf
 92.0 178.0 Td
-(Firebase path exists under `athleteWeeklySessions/{uid}`.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 160.0 Td
-(-) Tj
+(Critical: payloads muy pequenos o backoff.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 160.0 Td
-(Session upload reached `phase=complete`.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 142.0 Td
-(-) Tj
+/F1 10.5 Tf
+58.0 157.0 Td
+(Objetos LVGL opcionales se liberan antes de entrenamiento/subida para mejorar heap) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 142.0 Td
-(Browser console for Firebase permission errors.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 124.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 124.0 Td
-(Dashboard Firebase config matches firmware database.) Tj
+/F1 10.5 Tf
+58.0 142.0 Td
+(disponible.) Tj
 ET
 endstream
 endobj
@@ -1072,19 +994,19 @@ xref
 0000000079 00000 n
 0000000154 00000 n
 0000000222 00000 n
-0000000997 00000 n
-0000001144 00000 n
-0000001919 00000 n
-0000002066 00000 n
-0000006219 00000 n
-0000006366 00000 n
-0000010630 00000 n
-0000010779 00000 n
-0000015244 00000 n
-0000015393 00000 n
-0000015479 00000 n
+0000001078 00000 n
+0000001225 00000 n
+0000002081 00000 n
+0000002228 00000 n
+0000006234 00000 n
+0000006381 00000 n
+0000010822 00000 n
+0000010971 00000 n
+0000015335 00000 n
+0000015484 00000 n
+0000015570 00000 n
 trailer
 << /Size 16 /Root 15 0 R >>
 startxref
-15530
+15621
 %%EOF

@@ -1,5 +1,7 @@
 # Screenshots
 
+Language: English | [Espanol](README.es.md)
+
 Place project screenshots, dashboard captures, wiring photos, and demo images in this folder.
 
 Suggested files:

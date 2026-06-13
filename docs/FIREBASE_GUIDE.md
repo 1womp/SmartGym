@@ -1,5 +1,7 @@
 # SmartGym Firebase Guide
 
+Language: English | [Espanol](FIREBASE_GUIDE.es.md)
+
 SmartGym uses Firebase Realtime Database as the backend for user profiles, calibration data, session history, summaries, dashboard charts, and device heartbeat.
 
 ## Safety Warning

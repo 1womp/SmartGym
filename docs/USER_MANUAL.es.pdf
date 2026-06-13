@@ -9,7 +9,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 794 >>
+<< /Length 731 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -27,19 +27,13 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(User Manual) Tj
+(Manual de Usuario) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(How to operate, calibrate, and troubleshoot the SmartGym) Tj
-ET
-0.8980 0.9686 0.9882 rg
-BT
-/F1 13.0 Tf
-58.0 614.0 Td
-(prototype.) Tj
+(Como operar, calibrar y diagnosticar el prototipo SmartGym.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -65,7 +59,7 @@ endobj
 << /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 794 >>
+<< /Length 731 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -83,19 +77,13 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(User Manual) Tj
+(Manual de Usuario) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(How to operate, calibrate, and troubleshoot the SmartGym) Tj
-ET
-0.8980 0.9686 0.9882 rg
-BT
-/F1 13.0 Tf
-58.0 614.0 Td
-(prototype.) Tj
+(Como operar, calibrar y diagnosticar el prototipo SmartGym.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -121,7 +109,7 @@ endobj
 << /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 4550 >>
+<< /Length 4632 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -131,7 +119,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(User Manual) Tj
+(Manual de Usuario) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -152,7 +140,7 @@ ET
 BT
 /F2 19.0 Tf
 58.0 714.0 Td
-(SmartGym User Manual) Tj
+(Manual de Usuario SmartGym) Tj
 ET
 0.0000 0.6118 0.8078 RG
 2.0 w
@@ -161,25 +149,25 @@ ET
 BT
 /F1 10.5 Tf
 58.0 683.0 Td
-(Language: English | [Espanol]\(USER_MANUAL.es.md\)) Tj
+(Idioma: [English]\(USER_MANUAL.md\) | Espanol) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 658.0 Td
-(This manual explains how to use the SmartGym Adaptive Training System as an evaluator,) Tj
+(Este manual explica como usar el sistema SmartGym Adaptive Training como evaluador,) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 643.0 Td
-(athlete, or demo user.) Tj
+(atleta o usuario de demo.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 613.0 Td
-(1. Turning On the Device) Tj
+(1. Encender El Dispositivo) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -191,7 +179,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 589.0 Td
-(Connect power to the ESP32-S3 display.) Tj
+(Conecta energia a la pantalla ESP32-S3.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -203,7 +191,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 571.0 Td
-(Wait for the main screen to appear.) Tj
+(Espera a que aparezca la pantalla principal.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -215,7 +203,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 553.0 Td
-(Allow the device to connect to Wi-Fi, Firebase, RFID, and time services.) Tj
+(Permite que el dispositivo conecte Wi-Fi, Firebase, RFID y servicios de tiempo.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -227,13 +215,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 535.0 Td
-(Do not start a workout until the device reaches the ready state.) Tj
+(No inicies un entrenamiento hasta que el dispositivo llegue al estado listo.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 509.0 Td
-(2. RFID Login) Tj
+(2. Login Por RFID) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -245,7 +233,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 485.0 Td
-(Place the RFID card near the reader.) Tj
+(Acerca la tarjeta RFID al lector.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -257,7 +245,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 467.0 Td
-(The screen shows a loading popup.) Tj
+(La pantalla muestra un popup de carga.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -269,13 +257,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 449.0 Td
-(Keep waiting until the popup closes.) Tj
+(Espera hasta que el popup se cierre.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 428.0 Td
-(The popup remains visible while the device loads:) Tj
+(El popup permanece visible mientras el dispositivo carga:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -287,7 +275,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 403.0 Td
-(User profile.) Tj
+(Perfil de usuario.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -299,7 +287,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 385.0 Td
-(User calibration for the active machine.) Tj
+(Calibracion del usuario para la maquina activa.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -311,7 +299,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 367.0 Td
-(Recommendation for the active user and machine.) Tj
+(Recomendacion para usuario y maquina activos.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -323,37 +311,37 @@ ET
 BT
 /F1 10.2 Tf
 92.0 349.0 Td
-(Calibrated ROM mapping.) Tj
+(Mapeo ROM calibrado.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 328.0 Td
-(The user should not press START or CALIBRATE while the loading popup is active.) Tj
+(No se debe presionar START o CALIBRATE mientras el popup de carga esta activo.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 298.0 Td
-(3. Main Screen) Tj
+(3. Pantalla Principal) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 274.0 Td
-(The main screen shows the current session state, live motion graph, pin load,) Tj
+(La pantalla principal muestra estado de sesion, grafica de movimiento, carga de pin,) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 259.0 Td
-(recommendation, reps, sets, and action buttons.) Tj
+(recomendacion, repeticiones, series y botones de accion.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 234.0 Td
-(Important terms:) Tj
+(Terminos importantes:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -365,7 +353,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 209.0 Td
-(Pin load: the physical weight pin position on the machine.) Tj
+(Pin load: posicion fisica del pin de peso en la maquina.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -377,37 +365,37 @@ ET
 BT
 /F1 10.2 Tf
 92.0 191.0 Td
-(Recommended load: the load suggested by SmartGym for the active user.) Tj
+(Recommended load: carga sugerida por SmartGym para el usuario activo.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 170.0 Td
-(The pin load belongs to the machine, not the user. It does not automatically change) Tj
+(La carga de pin pertenece a la maquina, no al usuario. No cambia automaticamente cuando) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 155.0 Td
-(when a different user scans an RFID card. The recommendation is user-specific advice.) Tj
+(otro usuario escanea RFID. La recomendacion es consejo especifico para el usuario.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 125.0 Td
-(4. Pin Load vs Recommended Load) Tj
+(4. Pin Load Vs Recommended Load) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 101.0 Td
-(The system never physically moves the weight pin. If the screen recommends 25.0 kg but) Tj
+(El sistema nunca mueve fisicamente el pin de peso. Si la pantalla recomienda 25.0 kg) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 86.0 Td
-(the machine pin is at 20.0 kg, the device shows both values separately:) Tj
+(pero la maquina esta en 20.0 kg, el dispositivo muestra ambos valores:) Tj
 ET
 endstream
 endobj
@@ -415,7 +403,7 @@ endobj
 << /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 4311 >>
+<< /Length 4321 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -425,7 +413,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(User Manual) Tj
+(Manual de Usuario) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -470,25 +458,25 @@ ET
 BT
 /F1 10.5 Tf
 58.0 683.0 Td
-(If the user wants to follow the recommendation, they must physically move the pin and) Tj
+(Si el usuario quiere seguir la recomendacion, debe mover fisicamente el pin y) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 668.0 Td
-(then update the displayed pin load with the touchscreen buttons.) Tj
+(actualizar el valor mostrado con los botones tactiles.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 638.0 Td
-(5. Changing Pin Load) Tj
+(5. Cambiar Pin Load) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 614.0 Td
-(Use the four weight buttons:) Tj
+(Usa los cuatro botones de peso:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -542,181 +530,175 @@ ET
 BT
 /F1 10.5 Tf
 58.0 514.0 Td
-(These buttons update the displayed machine pin load. They do not change the) Tj
+(Estos botones actualizan la carga de pin mostrada. No cambian la recomendacion.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 499.0 Td
-(recommendation.) Tj
+58.0 489.0 Td
+(El pin load puede cambiar antes o durante el entrenamiento. Si cambia durante el) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 474.0 Td
-(Pin load can be changed before training or during training. If it changes during) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 459.0 Td
-(training, later reps are recorded with the new load.) Tj
+(entrenamiento, las repeticiones posteriores se registran con la nueva carga.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 429.0 Td
-(6. Starting a Workout) Tj
+58.0 444.0 Td
+(6. Iniciar Un Entrenamiento) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 405.0 Td
+68.0 420.0 Td
 (1.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 405.0 Td
-(Scan RFID and wait for loading to finish.) Tj
+92.0 420.0 Td
+(Escanea RFID y espera a que termine la carga.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 387.0 Td
+68.0 402.0 Td
 (2.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 387.0 Td
-(Check the pin load.) Tj
+92.0 402.0 Td
+(Revisa el pin load.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 369.0 Td
+68.0 384.0 Td
 (3.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 369.0 Td
-(Physically set the machine pin if needed.) Tj
+92.0 384.0 Td
+(Ajusta fisicamente el pin de la maquina si hace falta.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 351.0 Td
+68.0 366.0 Td
 (4.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 351.0 Td
-(Adjust the on-screen pin load to match the physical pin.) Tj
+92.0 366.0 Td
+(Ajusta el pin load en pantalla para que coincida con el pin fisico.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 333.0 Td
+68.0 348.0 Td
 (5.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 333.0 Td
-(Press START.) Tj
+92.0 348.0 Td
+(Presiona START.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 312.0 Td
-(The session starts using the displayed pin load exactly as shown.) Tj
+58.0 327.0 Td
+(La sesion inicia usando exactamente el pin load mostrado.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 282.0 Td
-(7. Following the Graph) Tj
+58.0 297.0 Td
+(7. Seguir La Grafica) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 273.0 Td
+(La grafica muestra el movimiento a traves del rango del ejercicio. El firmware usa ROM,) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 258.0 Td
-(The graph shows motion through the exercise range. The firmware uses ROM, or range of) Tj
+(o rango de movimiento, para detectar repeticiones.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 243.0 Td
-(motion, to detect repetitions.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 218.0 Td
-(The user-facing cues focus on timing, for example:) Tj
+58.0 233.0 Td
+(Las pistas para usuario se enfocan en tiempo:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 193.0 Td
+68.0 208.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 193.0 Td
-(Rise time.) Tj
+92.0 208.0 Td
+(Tiempo de subida.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 175.0 Td
+68.0 190.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 175.0 Td
-(Lower time.) Tj
+92.0 190.0 Td
+(Tiempo de bajada.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 157.0 Td
+68.0 172.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 157.0 Td
-(Top hold.) Tj
+92.0 172.0 Td
+(Pausa arriba.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 139.0 Td
+68.0 154.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 139.0 Td
-(Bottom hold.) Tj
+92.0 154.0 Td
+(Pausa abajo.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 118.0 Td
-(The system avoids showing raw technical values such as `%ROM/s` in the main user) Tj
+58.0 133.0 Td
+(La interfaz principal evita mostrar valores tecnicos crudos como `%ROM/s`.) Tj
 ET
-0.1216 0.1608 0.2157 rg
+0.0706 0.1843 0.3490 rg
 BT
-/F1 10.5 Tf
+/F2 14.0 Tf
 58.0 103.0 Td
-(interface.) Tj
+(8. Repeticiones Y Series) Tj
 ET
 endstream
 endobj
@@ -724,7 +706,7 @@ endobj
 << /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Length 4256 >>
+<< /Length 4381 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -734,7 +716,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(User Manual) Tj
+(Manual de Usuario) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -751,275 +733,275 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
-0.0706 0.1843 0.3490 rg
+0.1216 0.1608 0.2157 rg
 BT
-/F2 14.0 Tf
-58.0 717.0 Td
-(8. Reps and Sets) Tj
+/F1 10.5 Tf
+58.0 722.0 Td
+(El firmware detecta repeticiones desde la senal ROM. Una repeticion debe moverse por) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 693.0 Td
-(The firmware detects reps from the ROM signal. A rep must move through enough range and) Tj
+58.0 707.0 Td
+(suficiente rango y pasar reglas internas de validacion.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 678.0 Td
-(pass the internal validation rules.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 653.0 Td
-(The screen shows:) Tj
+58.0 682.0 Td
+(La pantalla muestra:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 628.0 Td
+68.0 657.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 628.0 Td
-(Current reps in the set.) Tj
+92.0 657.0 Td
+(Repeticiones actuales en la serie.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 610.0 Td
+68.0 639.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 610.0 Td
-(Current set.) Tj
+92.0 639.0 Td
+(Serie actual.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 592.0 Td
+68.0 621.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 592.0 Td
-(Training state.) Tj
+92.0 621.0 Td
+(Estado de entrenamiento.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 574.0 Td
+68.0 603.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 574.0 Td
-(Timer or progress where available.) Tj
+92.0 603.0 Td
+(Timer o progreso cuando esta disponible.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 553.0 Td
-(If a rep is not counted, possible causes include short range of motion, noisy movement,) Tj
+58.0 582.0 Td
+(Si una repeticion no cuenta, las causas pueden ser ROM corto, movimiento ruidoso o no) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 538.0 Td
-(or not reaching the top/bottom thresholds.) Tj
+58.0 567.0 Td
+(llegar a umbrales de arriba/abajo.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 508.0 Td
-(9. Rest and Finishing) Tj
+58.0 537.0 Td
+(9. Descanso Y Finalizacion) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 484.0 Td
-(When the target reps for a set are completed, the system marks the set complete.) Tj
+58.0 513.0 Td
+(Cuando se completan las repeticiones objetivo de una serie, el sistema marca la serie) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 469.0 Td
-(Depending on the target set count, the session may auto-finish or continue to the next) Tj
+58.0 498.0 Td
+(como completa. Segun el numero objetivo de series, la sesion puede terminar) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 454.0 Td
-(set.) Tj
+58.0 483.0 Td
+(automaticamente o continuar a la siguiente serie.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 429.0 Td
-(The user can also finish manually by pressing FINISH.) Tj
+58.0 458.0 Td
+(El usuario tambien puede terminar manualmente presionando FINISH.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 399.0 Td
-(10. Summary Screen and Sync) Tj
+58.0 428.0 Td
+(10. Resumen Y Sync) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 375.0 Td
-(After finishing, the summary screen appears. It may show:) Tj
+58.0 404.0 Td
+(Despues de terminar, aparece la pantalla de resumen. Puede mostrar:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 350.0 Td
+68.0 379.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 350.0 Td
-(Session complete.) Tj
+92.0 379.0 Td
+(Sesion completa.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 332.0 Td
+68.0 361.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 332.0 Td
-(Pin load used.) Tj
+92.0 361.0 Td
+(Pin load usado.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 314.0 Td
+68.0 343.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 314.0 Td
-(New recommendation.) Tj
+92.0 343.0 Td
+(Nueva recomendacion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 296.0 Td
+68.0 325.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 296.0 Td
-(Save/upload status.) Tj
+92.0 325.0 Td
+(Estado de guardado/subida.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 275.0 Td
-(Typical save states:) Tj
+58.0 304.0 Td
+(Estados tipicos:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 250.0 Td
+68.0 279.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 250.0 Td
+92.0 279.0 Td
 (Saving session...) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 232.0 Td
+68.0 261.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 232.0 Td
+92.0 261.0 Td
 (Uploading core...) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 214.0 Td
+68.0 243.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 214.0 Td
+92.0 243.0 Td
 (Uploading details...) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 196.0 Td
+68.0 225.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 196.0 Td
+92.0 225.0 Td
 (Uploading reps...) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 178.0 Td
+68.0 207.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 178.0 Td
+92.0 207.0 Td
 (Session saved.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 160.0 Td
+68.0 189.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 160.0 Td
+92.0 189.0 Td
 (Saving in background.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 139.0 Td
-(If sync is still running, the device can continue saving in the background. Do not) Tj
+58.0 168.0 Td
+(Si la sincronizacion sigue corriendo, el dispositivo puede guardar en segundo plano. No) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 124.0 Td
-(power off immediately after a workout if the screen still indicates saving.) Tj
+58.0 153.0 Td
+(se debe apagar inmediatamente despues de entrenar si la pantalla aun indica guardado.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 94.0 Td
-(11. Calibration) Tj
+58.0 123.0 Td
+(11. Calibracion) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 99.0 Td
+(Usa calibracion cuando:) Tj
 ET
 endstream
 endobj
@@ -1027,7 +1009,7 @@ endobj
 << /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
 endobj
 14 0 obj
-<< /Length 4874 >>
+<< /Length 4890 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -1037,7 +1019,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(User Manual) Tj
+(Manual de Usuario) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -1054,335 +1036,335 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 722.0 Td
-(Calibration should be used when:) Tj
-ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 697.0 Td
+68.0 722.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 697.0 Td
-(A new user uses the machine.) Tj
+92.0 722.0 Td
+(Un usuario nuevo use la maquina.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 679.0 Td
+68.0 704.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 679.0 Td
-(ROM looks incorrect.) Tj
+92.0 704.0 Td
+(El ROM se vea incorrecto.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 661.0 Td
+68.0 686.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 661.0 Td
-(Recommendations are missing.) Tj
+92.0 686.0 Td
+(Falten recomendaciones.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 643.0 Td
+68.0 668.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 643.0 Td
-(The system says to calibrate first.) Tj
+92.0 668.0 Td
+(El sistema indique calibrate first.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 625.0 Td
+68.0 650.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 625.0 Td
-(The exercise setup has changed.) Tj
+92.0 650.0 Td
+(Cambie la configuracion del ejercicio.) Tj
 ET
-0.1216 0.1608 0.2157 rg
+0.0706 0.1843 0.3490 rg
 BT
-/F2 11.5 Tf
-58.0 604.0 Td
-(Calibration Steps) Tj
+/F2 14.0 Tf
+58.0 624.0 Td
+(Pasos De Calibracion) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 583.0 Td
+68.0 600.0 Td
 (1.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 583.0 Td
-(Press CALIBRATE.) Tj
+92.0 600.0 Td
+(Presiona CALIBRATE.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 565.0 Td
+68.0 582.0 Td
 (2.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 565.0 Td
-(Read the step title and instruction.) Tj
+92.0 582.0 Td
+(Lee el titulo e instruccion del paso.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 547.0 Td
+68.0 564.0 Td
 (3.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 547.0 Td
-(Move the physical pin to the suggested load if appropriate.) Tj
+92.0 564.0 Td
+(Mueve el pin fisico a la carga sugerida si aplica.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 529.0 Td
+68.0 546.0 Td
 (4.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 529.0 Td
-(Use the calibration screen's four pin-load buttons if the displayed pin does not) Tj
+92.0 546.0 Td
+(Usa los cuatro botones de pin load si el valor en pantalla no coincide con el pin) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 515.0 Td
-(match the physical pin.) Tj
+92.0 532.0 Td
+(fisico.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 497.0 Td
+68.0 514.0 Td
 (5.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 497.0 Td
-(Tap LOAD SET.) Tj
+92.0 514.0 Td
+(Toca LOAD SET.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 479.0 Td
+68.0 496.0 Td
 (6.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 479.0 Td
-(Perform 3 to 5 smooth reps.) Tj
+92.0 496.0 Td
+(Haz 3 a 5 repeticiones suaves.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 461.0 Td
+68.0 478.0 Td
 (7.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 461.0 Td
-(Follow any next-load instruction.) Tj
+92.0 478.0 Td
+(Sigue cualquier instruccion de siguiente carga.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 443.0 Td
+68.0 460.0 Td
 (8.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 443.0 Td
-(Save the result when complete.) Tj
+92.0 460.0 Td
+(Guarda el resultado al terminar.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 422.0 Td
-(The calibration screen shows:) Tj
+58.0 439.0 Td
+(La pantalla de calibracion muestra:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 397.0 Td
+68.0 414.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 397.0 Td
+92.0 414.0 Td
 (Pin load.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 379.0 Td
+68.0 396.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 379.0 Td
-(Suggested load.) Tj
+92.0 396.0 Td
+(Carga sugerida.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 361.0 Td
+68.0 378.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 361.0 Td
-(Weight adjustment buttons.) Tj
+92.0 378.0 Td
+(Botones de ajuste de peso.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 343.0 Td
+68.0 360.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 343.0 Td
-(Rep feedback.) Tj
+92.0 360.0 Td
+(Feedback de repeticiones.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 325.0 Td
+68.0 342.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 325.0 Td
-(Save/cancel actions.) Tj
+92.0 342.0 Td
+(Acciones de guardar/cancelar.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 304.0 Td
-(If the pin load differs from the suggested load, the user may still continue, but the) Tj
+58.0 321.0 Td
+(Si el pin load difiere de la carga sugerida, el usuario puede continuar, pero el) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 289.0 Td
-(device logs that the user chose a different physical pin.) Tj
+58.0 306.0 Td
+(dispositivo registra que se eligio un pin fisico distinto.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 259.0 Td
-(12. Recommendations) Tj
+58.0 276.0 Td
+(12. Recomendaciones) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 235.0 Td
-(Recommendations are generated from calibration and session history. They are advice) Tj
+58.0 252.0 Td
+(Las recomendaciones se generan desde calibracion e historial de sesiones. Son consejo) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 220.0 Td
-(only. The system does not automatically change the physical pin load.) Tj
+58.0 237.0 Td
+(solamente. El sistema no cambia automaticamente el pin fisico.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 195.0 Td
-(Recommendation sources may include:) Tj
+58.0 212.0 Td
+(Fuentes posibles:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 170.0 Td
+68.0 187.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 170.0 Td
-(Calibration.) Tj
+92.0 187.0 Td
+(Calibracion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 152.0 Td
+68.0 169.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 152.0 Td
-(Last session.) Tj
+92.0 169.0 Td
+(Ultima sesion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 134.0 Td
+68.0 151.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 134.0 Td
-(Machine default.) Tj
+92.0 151.0 Td
+(Default de maquina.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 116.0 Td
+68.0 133.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 116.0 Td
-(No recommendation.) Tj
+92.0 133.0 Td
+(Sin recomendacion.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 90.0 Td
-(13. Troubleshooting) Tj
+58.0 107.0 Td
+(13. Troubleshooting Rapido) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 83.0 Td
+(RFID No Detectado) Tj
 ET
 endstream
 endobj
@@ -1390,7 +1372,7 @@ endobj
 << /Type /Page /Parent 18 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
 endobj
 16 0 obj
-<< /Length 4221 >>
+<< /Length 4183 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -1400,7 +1382,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(User Manual) Tj
+(Manual de Usuario) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -1417,287 +1399,281 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
-0.1216 0.1608 0.2157 rg
-BT
-/F2 11.5 Tf
-58.0 722.0 Td
-(RFID Not Detected) Tj
-ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 701.0 Td
+68.0 722.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 701.0 Td
-(Hold the card closer to the RFID reader.) Tj
+92.0 722.0 Td
+(Acerca mas la tarjeta al lector.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 683.0 Td
+68.0 704.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 683.0 Td
-(Wait for upload/sync to finish.) Tj
+92.0 704.0 Td
+(Espera a que termine upload/sync.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 665.0 Td
+68.0 686.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 665.0 Td
-(Try scanning again.) Tj
+92.0 686.0 Td
+(Intenta escanear de nuevo.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 644.0 Td
-(User Still Loading) Tj
+58.0 665.0 Td
+(Usuario Sigue Cargando) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 623.0 Td
+68.0 644.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 623.0 Td
-(Wait for the loading popup to close.) Tj
+92.0 644.0 Td
+(Espera a que cierre el popup.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 605.0 Td
+68.0 626.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 605.0 Td
-(If cloud read fails, the device should fall back safely.) Tj
+92.0 626.0 Td
+(Si falla la lectura cloud, el dispositivo debe hacer fallback seguro.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 584.0 Td
-(Rep Not Counted) Tj
+58.0 605.0 Td
+(Repeticion No Contada) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 563.0 Td
+68.0 584.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 563.0 Td
-(Use full range of motion.) Tj
+92.0 584.0 Td
+(Usa ROM completo.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 545.0 Td
+68.0 566.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 545.0 Td
-(Move smoothly.) Tj
+92.0 566.0 Td
+(Muevete suavemente.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 527.0 Td
+68.0 548.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 527.0 Td
-(Reach the top and bottom positions.) Tj
+92.0 548.0 Td
+(Llega a posiciones de arriba y abajo.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 509.0 Td
+68.0 530.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 509.0 Td
-(Recalibrate if ROM mapping looks wrong.) Tj
+92.0 530.0 Td
+(Recalibra si el mapeo ROM se ve mal.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 488.0 Td
-(Graph Looks Wrong) Tj
+58.0 509.0 Td
+(Grafica Incorrecta) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 467.0 Td
+68.0 488.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 467.0 Td
-(Recalibrate ROM.) Tj
+92.0 488.0 Td
+(Recalibra ROM.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 449.0 Td
+68.0 470.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 449.0 Td
-(Check the motion sensor connection.) Tj
+92.0 470.0 Td
+(Revisa conexion del sensor de movimiento.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 431.0 Td
+68.0 452.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 431.0 Td
-(Confirm the exercise machine setup did not change.) Tj
+92.0 452.0 Td
+(Confirma que no cambio la configuracion de la maquina.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 410.0 Td
-(Sync Still Running) Tj
+58.0 431.0 Td
+(Sync Sigue Corriendo) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 389.0 Td
+68.0 410.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 389.0 Td
-(Keep the device powered.) Tj
+92.0 410.0 Td
+(Mantén el dispositivo encendido.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 371.0 Td
+68.0 392.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 371.0 Td
-(Wait for "Session saved" if possible.) Tj
+92.0 392.0 Td
+(Espera "Session saved" si es posible.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 353.0 Td
+68.0 374.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 353.0 Td
-(The device may continue saving in the background.) Tj
+92.0 374.0 Td
+(El dispositivo puede seguir guardando en segundo plano.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
+58.0 353.0 Td
+(Recomendacion No Cambia Pin Load) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
 58.0 332.0 Td
-(Recommendation Does Not Change Pin Load) Tj
+(Esto es esperado. Pin load es el estado fisico de la maquina. El usuario debe mover el) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 311.0 Td
-(This is expected. The pin load is the physical machine state. The user must move the) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 296.0 Td
-(pin and update the display manually.) Tj
+58.0 317.0 Td
+(pin y actualizar pantalla manualmente.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 271.0 Td
-(Wi-Fi or Firebase Issues) Tj
+58.0 292.0 Td
+(Wi-Fi O Firebase) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 250.0 Td
+68.0 271.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 250.0 Td
-(Check Wi-Fi credentials.) Tj
+92.0 271.0 Td
+(Revisa credenciales Wi-Fi.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 232.0 Td
+68.0 253.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 232.0 Td
-(Check Firebase RTDB URL/auth configuration.) Tj
+92.0 253.0 Td
+(Revisa URL/configuracion de Firebase RTDB.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 214.0 Td
+68.0 235.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 214.0 Td
-(Confirm internet connectivity.) Tj
+92.0 235.0 Td
+(Confirma conectividad a internet.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 196.0 Td
+68.0 217.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 196.0 Td
-(Use serial logs for details.) Tj
+92.0 217.0 Td
+(Usa logs seriales para detalles.) Tj
 ET
 endstream
 endobj
@@ -1717,23 +1693,23 @@ xref
 0000000079 00000 n
 0000000154 00000 n
 0000000222 00000 n
-0000001067 00000 n
-0000001214 00000 n
-0000002059 00000 n
-0000002206 00000 n
-0000006808 00000 n
-0000006955 00000 n
-0000011319 00000 n
-0000011468 00000 n
-0000015777 00000 n
-0000015926 00000 n
-0000020853 00000 n
-0000021002 00000 n
-0000025276 00000 n
-0000025425 00000 n
-0000025525 00000 n
+0000001004 00000 n
+0000001151 00000 n
+0000001933 00000 n
+0000002080 00000 n
+0000006764 00000 n
+0000006911 00000 n
+0000011285 00000 n
+0000011434 00000 n
+0000015868 00000 n
+0000016017 00000 n
+0000020960 00000 n
+0000021109 00000 n
+0000025345 00000 n
+0000025494 00000 n
+0000025594 00000 n
 trailer
 << /Size 20 /Root 19 0 R >>
 startxref
-25576
+25645
 %%EOF

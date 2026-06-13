@@ -9,7 +9,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 692 >>
+<< /Length 695 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -27,7 +27,7 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Readme) Tj
+(Readme.Es) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -59,7 +59,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 692 >>
+<< /Length 695 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -77,7 +77,7 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Readme) Tj
+(Readme.Es) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -109,7 +109,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 4269 >>
+<< /Length 4257 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -119,7 +119,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Readme) Tj
+(Readme.Es) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -140,7 +140,7 @@ ET
 BT
 /F2 19.0 Tf
 58.0 714.0 Td
-(SmartGym Documentation) Tj
+(Documentacion SmartGym) Tj
 ET
 0.0000 0.6118 0.8078 RG
 2.0 w
@@ -149,214 +149,217 @@ ET
 BT
 /F1 10.5 Tf
 58.0 683.0 Td
-(Language: English | [Espanol]\(README.es.md\)) Tj
+(Idioma: [English]\(README.md\) | Espanol) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 658.0 Td
-(This folder contains the documentation package for the SmartGym v1.0 prototype. Each) Tj
+(Esta carpeta contiene el paquete de documentacion del prototipo SmartGym v1.0. Cada) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 643.0 Td
-(major guide is available as editable Markdown and as a formatted PDF.) Tj
+(guia importante esta disponible como Markdown editable; algunas tambien tienen PDF) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 628.0 Td
+(formateado.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 613.0 Td
-(Start Here) Tj
+58.0 598.0 Td
+(Empieza Aqui) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 589.0 Td
+68.0 574.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 589.0 Td
-([Start Here]\(START_HERE.md\)) Tj
+92.0 574.0 Td
+([Empieza Aqui]\(START_HERE.es.md\)) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 571.0 Td
+68.0 556.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 571.0 Td
-([Project README]\(../README.md\)) Tj
+92.0 556.0 Td
+([README del proyecto]\(../README.es.md\)) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 553.0 Td
+68.0 538.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 553.0 Td
-([User Manual]\(USER_MANUAL.md\) | [PDF]\(USER_MANUAL.pdf\)) Tj
+92.0 538.0 Td
+([Manual de usuario]\(USER_MANUAL.es.md\) | [PDF ingles]\(USER_MANUAL.pdf\)) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 535.0 Td
+68.0 520.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 535.0 Td
-([System Architecture]\(SYSTEM_ARCHITECTURE.md\) | [PDF]\(SYSTEM_ARCHITECTURE.pdf\)) Tj
+92.0 520.0 Td
+([Arquitectura del sistema]\(SYSTEM_ARCHITECTURE.es.md\) | [PDF) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 506.0 Td
+(ingles]\(SYSTEM_ARCHITECTURE.pdf\)) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 517.0 Td
+68.0 488.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 517.0 Td
-([Developer Guide]\(DEVELOPER_GUIDE.md\) | [PDF]\(DEVELOPER_GUIDE.pdf\)) Tj
+92.0 488.0 Td
+([Guia de desarrollador]\(DEVELOPER_GUIDE.es.md\) | [PDF ingles]\(DEVELOPER_GUIDE.pdf\)) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 499.0 Td
+68.0 470.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 499.0 Td
-([Measurement and Calibration Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\)) Tj
+92.0 470.0 Td
+([Guia de medicion y calibracion]\(MEASUREMENT_AND_CALIBRATION_GUIDE.es.md\)) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 481.0 Td
+68.0 452.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 481.0 Td
-([Firebase Guide]\(FIREBASE_GUIDE.md\) | [PDF]\(FIREBASE_GUIDE.pdf\)) Tj
+92.0 452.0 Td
+([Guia de Firebase]\(FIREBASE_GUIDE.es.md\) | [PDF ingles]\(FIREBASE_GUIDE.pdf\)) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 463.0 Td
+68.0 434.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 463.0 Td
-([Troubleshooting Guide]\(TROUBLESHOOTING.md\) | [PDF]\(TROUBLESHOOTING.pdf\)) Tj
+92.0 434.0 Td
+([Troubleshooting]\(TROUBLESHOOTING.es.md\) | [PDF ingles]\(TROUBLESHOOTING.pdf\)) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 437.0 Td
-(Reference Documents) Tj
+58.0 408.0 Td
+(Documentos De Referencia) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 389.0 496.0 30.0 re B
+58.0 360.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 401.0 Td
-(| Document | Markdown | PDF |) Tj
+70.0 372.0 Td
+(| Documento | Markdown | PDF |) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 351.0 496.0 30.0 re B
+58.0 322.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 363.0 Td
+70.0 334.0 Td
 (| --- | --- | --- |) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 313.0 496.0 30.0 re B
+58.0 284.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 325.0 Td
-(| Start Here | [Open]\(START_HERE.md\) | PDF can be generated locally |) Tj
+70.0 296.0 Td
+(| Empieza Aqui | [Abrir]\(START_HERE.es.md\) | Se puede generar localmente |) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 263.0 496.0 42.0 re B
+58.0 222.0 496.0 54.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 287.0 Td
-(| Measurement and Calibration Guide |) Tj
+70.0 258.0 Td
+(| Guia de medicion y calibracion |) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 275.0 Td
-([Open]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\) | PDF can be generated locally |) Tj
-ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 213.0 496.0 42.0 re B
-0.1216 0.1608 0.2157 rg
-BT
-/F3 8.6 Tf
-70.0 237.0 Td
-(| Firebase Dashboard Seed Guide | [Open]\(FIREBASE_DASHBOARD_SEED_GUIDE.md\) |) Tj
+70.0 246.0 Td
+([Abrir]\(MEASUREMENT_AND_CALIBRATION_GUIDE.es.md\) | Se puede generar localmente) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 225.0 Td
-([PDF]\(FIREBASE_DASHBOARD_SEED_GUIDE.pdf\) |) Tj
+70.0 234.0 Td
+(|) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 163.0 496.0 42.0 re B
+58.0 172.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 187.0 Td
-(| Firebase Dashboard Seed Guide ES |) Tj
+70.0 196.0 Td
+(| Guia de seed Firebase para dashboard |) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 175.0 Td
-([Abrir]\(FIREBASE_DASHBOARD_SEED_GUIDE.es.md\) | PDF can be generated locally |) Tj
+70.0 184.0 Td
+([Abrir]\(FIREBASE_DASHBOARD_SEED_GUIDE.es.md\) | Se puede generar localmente |) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 141.0 Td
-(Find Information By Task) Tj
+58.0 150.0 Td
+(Encontrar Informacion Por Tarea) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 93.0 496.0 30.0 re B
+58.0 102.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 105.0 Td
-(| Task | Best Document |) Tj
+70.0 114.0 Td
+(| Tarea | Mejor documento |) Tj
 ET
 endstream
 endobj
@@ -364,7 +367,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 4346 >>
+<< /Length 4423 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -374,7 +377,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Readme) Tj
+(Readme.Es) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -402,198 +405,204 @@ BT
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 660.0 496.0 30.0 re B
+58.0 648.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 672.0 Td
-(| Understand the whole project quickly | [Start Here]\(START_HERE.md\) |) Tj
+(| Entender el proyecto completo rapidamente | [Empieza Aqui]\(START_HERE.es.md\)) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 622.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 634.0 Td
-(| Operate the physical device | [User Manual]\(USER_MANUAL.md\) |) Tj
+70.0 660.0 Td
+(|) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 572.0 496.0 42.0 re B
+58.0 610.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 596.0 Td
-(| Explain ROM, calibration, formulas, noise, and errors | [Measurement and) Tj
+70.0 622.0 Td
+(| Operar el dispositivo fisico | [Manual de usuario]\(USER_MANUAL.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 560.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 584.0 Td
-(Calibration Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\) |) Tj
+(| Explicar ROM, calibracion, formulas, ruido y errores | [Guia de medicion y) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 522.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 546.0 Td
-(| Understand firmware modules and runtime flow | [System) Tj
+70.0 572.0 Td
+(calibracion]\(MEASUREMENT_AND_CALIBRATION_GUIDE.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 510.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 534.0 Td
-(Architecture]\(SYSTEM_ARCHITECTURE.md\) |) Tj
+(| Entender modulos de firmware y flujo runtime | [Arquitectura del) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 472.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 496.0 Td
-(| Build, upload, debug, or modify firmware | [Developer) Tj
+70.0 522.0 Td
+(sistema]\(SYSTEM_ARCHITECTURE.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 460.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 484.0 Td
-(Guide]\(DEVELOPER_GUIDE.md\) |) Tj
+(| Compilar, subir, depurar o modificar firmware | [Guia de) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 422.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 446.0 Td
-(| Understand Firebase paths and upload phases | [Firebase) Tj
+70.0 472.0 Td
+(desarrollador]\(DEVELOPER_GUIDE.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 410.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 434.0 Td
-(Guide]\(FIREBASE_GUIDE.md\) |) Tj
+(| Entender rutas Firebase y fases de subida | [Guia de) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 372.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 396.0 Td
-(| Understand Firebase/dashboard seed data | [Firebase Dashboard Seed) Tj
+70.0 422.0 Td
+(Firebase]\(FIREBASE_GUIDE.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 360.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 384.0 Td
-(Guide]\(FIREBASE_DASHBOARD_SEED_GUIDE.md\) |) Tj
+(| Entender datos seed/demo de Firebase y dashboard | [Guia de seed Firebase) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 322.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 346.0 Td
-(| Diagnose failed builds, RFID, ROM, sync, or dashboard issues |) Tj
+70.0 372.0 Td
+(para dashboard]\(FIREBASE_DASHBOARD_SEED_GUIDE.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 310.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 334.0 Td
-([Troubleshooting Guide]\(TROUBLESHOOTING.md\) |) Tj
+(| Diagnosticar build, RFID, ROM, sync o dashboard |) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 272.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 296.0 Td
-(| Find 3D-printable files and CAD sources | [Hardware CAD) Tj
+70.0 322.0 Td
+([Troubleshooting]\(TROUBLESHOOTING.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 260.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 284.0 Td
-(README]\(../hardware/cad/README.md\) |) Tj
+(| Encontrar archivos CAD/STL | [CAD de hardware]\(../hardware/cad/README.es.md\)) Tj
 ET
-0.9490 0.9608 0.9725 rg
-0.8627 0.8863 0.9137 RG
-58.0 234.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 246.0 Td
-(| Run the dashboard | [Dashboard README]\(../dashboard/README.md\) |) Tj
+70.0 272.0 Td
+(|) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 184.0 496.0 42.0 re B
+58.0 222.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 208.0 Td
-(| Use the standalone ToF prototype | [Weight Detection) Tj
+70.0 234.0 Td
+(| Ejecutar dashboard | [Dashboard]\(../dashboard/README.es.md\) |) Tj
 ET
+0.9490 0.9608 0.9725 rg
+0.8627 0.8863 0.9137 RG
+58.0 172.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
 70.0 196.0 Td
-(README]\(../weight_detection/README.md\) |) Tj
+(| Usar prototipo ToF independiente | [Weight) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F3 8.6 Tf
+70.0 184.0 Td
+(Detection]\(../weight_detection/README.es.md\) |) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 162.0 Td
-(Recommended Reading Order) Tj
+58.0 150.0 Td
+(Orden Recomendado) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 138.0 Td
+68.0 126.0 Td
 (1.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 138.0 Td
-(Read [Start Here]\(START_HERE.md\) for the project map.) Tj
+92.0 126.0 Td
+(Lee [Empieza Aqui]\(START_HERE.es.md\) para ver el mapa del proyecto.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 120.0 Td
+68.0 108.0 Td
 (2.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 120.0 Td
-(Read the [User Manual]\(USER_MANUAL.md\) to understand how the device is used.) Tj
+92.0 108.0 Td
+(Lee el [Manual de usuario]\(USER_MANUAL.es.md\) para entender uso del dispositivo.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 102.0 Td
+68.0 90.0 Td
 (3.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 102.0 Td
-(Read the [Measurement and Calibration Guide]\(MEASUREMENT_AND_CALIBRATION_GUIDE.md\)) Tj
+92.0 90.0 Td
+(Lee la [Guia de medicion y calibracion]\(MEASUREMENT_AND_CALIBRATION_GUIDE.es.md\)) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 88.0 Td
-(to understand ROM, rep detection, calibration, and error sources.) Tj
+92.0 76.0 Td
+(para entender ROM, reps, calibracion y errores.) Tj
 ET
 endstream
 endobj
@@ -601,7 +610,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Length 1997 >>
+<< /Length 2013 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -611,7 +620,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Readme) Tj
+(Readme.Es) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -638,85 +647,85 @@ ET
 BT
 /F1 10.2 Tf
 92.0 722.0 Td
-(Read the [System Architecture]\(SYSTEM_ARCHITECTURE.md\) for the full data flow.) Tj
+(Lee [Arquitectura del sistema]\(SYSTEM_ARCHITECTURE.es.md\) para entender el flujo) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 708.0 Td
+(completo.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 704.0 Td
+68.0 690.0 Td
 (5.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 704.0 Td
-(Read the [Developer Guide]\(DEVELOPER_GUIDE.md\) before changing firmware.) Tj
+92.0 690.0 Td
+(Lee la [Guia de desarrollador]\(DEVELOPER_GUIDE.es.md\) antes de modificar firmware.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 686.0 Td
+68.0 672.0 Td
 (6.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 686.0 Td
-(Read the [Firebase Guide]\(FIREBASE_GUIDE.md\) before importing, editing, or) Tj
+92.0 672.0 Td
+(Lee la [Guia de Firebase]\(FIREBASE_GUIDE.es.md\) antes de importar, editar o migrar) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 672.0 Td
-(migrating database data.) Tj
+92.0 658.0 Td
+(datos.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 654.0 Td
+68.0 640.0 Td
 (7.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 654.0 Td
-(Read the [Firebase Dashboard Seed Guide]\(FIREBASE_DASHBOARD_SEED_GUIDE.md\) before) Tj
+92.0 640.0 Td
+(Lee la [Guia de seed Firebase para dashboard]\(FIREBASE_DASHBOARD_SEED_GUIDE.es.md\)) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 640.0 Td
-(loading demo dashboard data.) Tj
+92.0 626.0 Td
+(antes de cargar datos demo.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 622.0 Td
+68.0 608.0 Td
 (8.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 622.0 Td
-(Use the [Troubleshooting Guide]\(TROUBLESHOOTING.md\) during demos and hardware) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
 92.0 608.0 Td
-(testing.) Tj
+(Usa [Troubleshooting]\(TROUBLESHOOTING.es.md\) durante demos y pruebas de hardware.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 582.0 Td
-(Regenerating PDFs) Tj
+(Regenerar PDFs) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 558.0 Td
-(Run this from the repository root:) Tj
+(Ejecuta esto desde la raiz del repositorio:) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
@@ -745,19 +754,19 @@ xref
 0000000079 00000 n
 0000000154 00000 n
 0000000222 00000 n
-0000000965 00000 n
-0000001112 00000 n
-0000001855 00000 n
-0000002002 00000 n
-0000006323 00000 n
-0000006470 00000 n
-0000010869 00000 n
-0000011018 00000 n
-0000013068 00000 n
-0000013217 00000 n
-0000013303 00000 n
+0000000968 00000 n
+0000001115 00000 n
+0000001861 00000 n
+0000002008 00000 n
+0000006317 00000 n
+0000006464 00000 n
+0000010940 00000 n
+0000011089 00000 n
+0000013155 00000 n
+0000013304 00000 n
+0000013390 00000 n
 trailer
 << /Size 16 /Root 15 0 R >>
 startxref
-13354
+13441
 %%EOF

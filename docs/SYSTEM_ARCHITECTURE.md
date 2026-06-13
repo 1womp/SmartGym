@@ -1,5 +1,7 @@
 # SmartGym System Architecture
 
+Language: English | [Espanol](SYSTEM_ARCHITECTURE.es.md)
+
 ## High-Level Architecture
 
 ```mermaid

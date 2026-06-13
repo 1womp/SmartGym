@@ -109,7 +109,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 3811 >>
+<< /Length 3931 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -145,217 +145,223 @@ ET
 0.0000 0.6118 0.8078 RG
 2.0 w
 58.0 704.0 m 233.0 704.0 l S
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 683.0 Td
+(Language: English | [Espanol]\(SYSTEM_ARCHITECTURE.es.md\)) Tj
+ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 678.0 Td
+58.0 653.0 Td
 (High-Level Architecture) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 510.0 496.0 150.0 re B
+58.0 485.0 496.0 150.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 642.0 Td
+70.0 617.0 Td
 (flowchart LR) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 630.0 Td
+70.0 605.0 Td
 (  Motion[Motion Sensor] --> SensorManager) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 618.0 Td
+70.0 593.0 Td
 (  SensorManager --> ROM[ROM Normalization]) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 606.0 Td
+70.0 581.0 Td
 (  ROM --> RepDetector) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 594.0 Td
+70.0 569.0 Td
 (  RepDetector --> SessionRecorder) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 582.0 Td
+70.0 557.0 Td
 (  RFID[RFID Reader] --> UserSync[User Sync]) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 570.0 Td
+70.0 545.0 Td
 (  UserSync --> Recommendation) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 558.0 Td
+70.0 533.0 Td
 (  Recommendation --> UI[LVGL UI]) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 546.0 Td
+70.0 521.0 Td
 (  SessionRecorder --> UploadQueue[NVS Upload Queue]) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 534.0 Td
+70.0 509.0 Td
 (  UploadQueue --> Firebase[Firebase RTDB]) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 522.0 Td
+70.0 497.0 Td
 (  Firebase --> Dashboard[React Dashboard]) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 493.0 Td
+58.0 468.0 Td
 (The system is split into embedded firmware, Firebase RTDB, and dashboard visualization.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 463.0 Td
+58.0 438.0 Td
 (Data Flow) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 439.0 Td
+68.0 414.0 Td
 (1.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 439.0 Td
+92.0 414.0 Td
 (Sensor is sampled every 5 ms.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 421.0 Td
+68.0 396.0 Td
 (2.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 421.0 Td
+92.0 396.0 Td
 (SensorManager filters the analog value.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 403.0 Td
+68.0 378.0 Td
 (3.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 403.0 Td
+92.0 378.0 Td
 (Firmware converts sensor reading to ROM percentage.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 385.0 Td
+68.0 360.0 Td
 (4.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 385.0 Td
+92.0 360.0 Td
 (User calibration maps raw ROM into user-normalized ROM.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 367.0 Td
+68.0 342.0 Td
 (5.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 367.0 Td
+92.0 342.0 Td
 (RepDetector identifies rep phases and completed reps.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 349.0 Td
+68.0 324.0 Td
 (6.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 349.0 Td
+92.0 324.0 Td
 (SessionRecorder stores reps, sets, weight, ROM, timing, and quality.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 331.0 Td
+68.0 306.0 Td
 (7.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 331.0 Td
+92.0 306.0 Td
 (SmartGymTouchApp computes summary/recommendation updates.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 313.0 Td
+68.0 288.0 Td
 (8.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 313.0 Td
+92.0 288.0 Td
 (Upload queue stores Firebase payloads.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 295.0 Td
+68.0 270.0 Td
 (9.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 295.0 Td
+92.0 270.0 Td
 (FirebaseService sends memory-safe writes to RTDB.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 277.0 Td
+68.0 252.0 Td
 (10.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 277.0 Td
+92.0 252.0 Td
 (Dashboard reads Firebase for charts and summaries.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 251.0 Td
+58.0 226.0 Td
 (User Login Flow) Tj
 ET
 endstream
@@ -974,15 +980,15 @@ xref
 0000001146 00000 n
 0000001923 00000 n
 0000002070 00000 n
-0000005933 00000 n
-0000006080 00000 n
-0000010493 00000 n
-0000010642 00000 n
-0000015008 00000 n
-0000015157 00000 n
-0000015243 00000 n
+0000006053 00000 n
+0000006200 00000 n
+0000010613 00000 n
+0000010762 00000 n
+0000015128 00000 n
+0000015277 00000 n
+0000015363 00000 n
 trailer
 << /Size 16 /Root 15 0 R >>
 startxref
-15294
+15414
 %%EOF

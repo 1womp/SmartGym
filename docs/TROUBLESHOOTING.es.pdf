@@ -9,7 +9,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 724 >>
+<< /Length 730 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -27,13 +27,13 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Troubleshooting Guide) Tj
+(Guia de Troubleshooting) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(Common firmware, sync, UI, and dashboard issues.) Tj
+(Problemas comunes de firmware, sync, UI y dashboard.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -59,7 +59,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 724 >>
+<< /Length 730 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -77,13 +77,13 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Troubleshooting Guide) Tj
+(Guia de Troubleshooting) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(Common firmware, sync, UI, and dashboard issues.) Tj
+(Problemas comunes de firmware, sync, UI y dashboard.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -109,7 +109,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 4101 >>
+<< /Length 4071 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -119,7 +119,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Troubleshooting Guide) Tj
+(Guia de Troubleshooting) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -140,7 +140,7 @@ ET
 BT
 /F2 19.0 Tf
 58.0 714.0 Td
-(SmartGym Troubleshooting Guide) Tj
+(Guia De Troubleshooting SmartGym) Tj
 ET
 0.0000 0.6118 0.8078 RG
 2.0 w
@@ -149,19 +149,19 @@ ET
 BT
 /F1 10.5 Tf
 58.0 683.0 Td
-(Language: English | [Espanol]\(TROUBLESHOOTING.es.md\)) Tj
+(Idioma: [English]\(TROUBLESHOOTING.md\) | Espanol) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 653.0 Td
-(Build Fails) Tj
+(Build Falla) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 629.0 Td
-(Run:) Tj
+(Ejecuta:) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
@@ -176,7 +176,7 @@ ET
 BT
 /F1 10.5 Tf
 58.0 563.0 Td
-(Check:) Tj
+(Revisa:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -188,7 +188,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 538.0 Td
-(PlatformIO is installed.) Tj
+(PlatformIO instalado.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -200,7 +200,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 520.0 Td
-(Board environment name is correct.) Tj
+(Nombre de environment correcto.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -212,7 +212,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 502.0 Td
-(Dependencies downloaded correctly.) Tj
+(Dependencias descargadas.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -224,19 +224,19 @@ ET
 BT
 /F1 10.2 Tf
 92.0 484.0 Td
-(No local syntax changes are incomplete.) Tj
+(Cambios locales completos.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 458.0 Td
-(COM Port Busy) Tj
+(Puerto COM Ocupado) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 434.0 Td
-(Symptoms:) Tj
+(Sintomas:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -248,7 +248,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 409.0 Td
-(Upload fails with access denied.) Tj
+(Upload falla con access denied.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -260,13 +260,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 391.0 Td
-(Monitor cannot open serial port.) Tj
+(Monitor serial no abre.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 370.0 Td
-(Fix:) Tj
+(Solucion:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -278,7 +278,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 345.0 Td
-(Close any open serial monitor.) Tj
+(Cierra monitores seriales.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -290,7 +290,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 327.0 Td
-(Close Arduino IDE or other terminal using the port.) Tj
+(Cierra Arduino IDE u otra terminal.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -302,7 +302,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 309.0 Td
-(Unplug/replug the ESP32.) Tj
+(Desconecta/reconecta ESP32.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -314,13 +314,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 291.0 Td
-(Retry upload.) Tj
+(Reintenta upload.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 265.0 Td
-(Upload Fails) Tj
+(Upload Falla) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -332,7 +332,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 241.0 Td
-(Confirm USB cable supports data.) Tj
+(Confirma que el cable USB soporta datos.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -344,7 +344,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 223.0 Td
-(Confirm correct board/port.) Tj
+(Confirma board/puerto correcto.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -356,7 +356,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 205.0 Td
-(Try holding BOOT if required by the board.) Tj
+(Mantén BOOT si tu board lo requiere.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -368,13 +368,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 187.0 Td
-(Lower upload speed if needed.) Tj
+(Baja velocidad de upload si hace falta.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 161.0 Td
-(Touch Not Responding) Tj
+(Touch No Responde) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -386,7 +386,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 137.0 Td
-(Confirm LVGL/display initialization succeeded.) Tj
+(Confirma inicializacion LVGL/display.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -398,7 +398,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 119.0 Td
-(Check serial boot logs.) Tj
+(Revisa logs de boot.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -410,7 +410,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 101.0 Td
-(Reboot the device.) Tj
+(Reinicia el dispositivo.) Tj
 ET
 endstream
 endobj
@@ -418,7 +418,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 4211 >>
+<< /Length 4065 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -428,7 +428,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Troubleshooting Guide) Tj
+(Guia de Troubleshooting) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -449,7 +449,7 @@ ET
 BT
 /F2 14.0 Tf
 58.0 717.0 Td
-(RFID Not Detected) Tj
+(RFID No Detectado) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -461,7 +461,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 693.0 Td
-(Confirm MFRC522 wiring.) Tj
+(Confirma cableado MFRC522.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -473,7 +473,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 675.0 Td
-(Check RFID SPI pins.) Tj
+(Revisa pines SPI RFID.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -485,7 +485,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 657.0 Td
-(Hold card close to the reader.) Tj
+(Acerca la tarjeta.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -497,13 +497,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 639.0 Td
-(Avoid scanning during active upload if firmware is blocking RFID for safety.) Tj
+(Evita escanear durante upload activo.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 613.0 Td
-(Wi-Fi Not Connected) Tj
+(Wi-Fi No Conecta) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -515,7 +515,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 589.0 Td
-(Check configured SSID/password build flags.) Tj
+(Revisa SSID/password configurados localmente.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -527,7 +527,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 571.0 Td
-(Confirm network is 2.4 GHz.) Tj
+(Confirma red 2.4 GHz.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -539,13 +539,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 553.0 Td
-(Check serial Wi-Fi logs.) Tj
+(Revisa logs Wi-Fi.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 527.0 Td
-(Firebase Read/Write Fails) Tj
+(Firebase Falla) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -557,7 +557,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 503.0 Td
-(Confirm database URL and token/config.) Tj
+(Confirma URL/token/config.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -569,7 +569,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 485.0 Td
-(Confirm Wi-Fi is connected.) Tj
+(Confirma Wi-Fi.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -581,7 +581,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 467.0 Td
-(Check Firebase RTDB rules.) Tj
+(Revisa reglas RTDB.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -593,19 +593,19 @@ ET
 BT
 /F1 10.2 Tf
 92.0 449.0 Td
-(Check serial tags `[CloudWrite]`, `[SYNC]`, and `[USER_SYNC]`.) Tj
+(Revisa logs `[CloudWrite]`, `[SYNC]`, `[USER_SYNC]`.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 423.0 Td
-(Sync Queue Stuck) Tj
+(Cola Sync Atorada) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 399.0 Td
-(Look for:) Tj
+(Busca:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -641,13 +641,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 338.0 Td
-(NVS queue count logs.) Tj
+(logs de queue count) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 317.0 Td
-(Keep the device powered until it drains the queue.) Tj
+(Mantén el dispositivo encendido hasta que drene la cola.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -659,7 +659,7 @@ ET
 BT
 /F1 10.5 Tf
 58.0 263.0 Td
-(Cause:) Tj
+(Causa:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -671,13 +671,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 238.0 Td
-(Too many queued writes or payloads.) Tj
+(demasiadas escrituras en cola o payloads) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 217.0 Td
-(Mitigation:) Tj
+(Mitigacion:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -689,7 +689,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 192.0 Td
-(Firmware uses queue capacity checks and chunking.) Tj
+(firmware usa checks de capacidad y chunking) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -701,7 +701,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 174.0 Td
-(Avoid repeatedly skipping summary during active upload if testing older builds.) Tj
+(deja drenar la cola) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -713,19 +713,19 @@ ET
 BT
 /F1 10.2 Tf
 92.0 156.0 Td
-(Let the queue drain.) Tj
+(evita saltar summary repetidamente en builds viejos) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 130.0 Td
-(repSets Upload Delayed by Heap Guard) Tj
+(repSets Retrasados Por Heap) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 106.0 Td
-(Cause:) Tj
+(Causa:) Tj
 ET
 endstream
 endobj
@@ -733,7 +733,7 @@ endobj
 << /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Length 4412 >>
+<< /Length 4245 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -743,7 +743,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Troubleshooting Guide) Tj
+(Guia de Troubleshooting) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -770,7 +770,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 722.0 Td
-(Firebase/TLS memory pressure.) Tj
+(presion de memoria Firebase/TLS) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -782,13 +782,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 704.0 Td
-(Large repSet PATCH payload.) Tj
+(PATCH grande de repSet) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 683.0 Td
-(Expected behavior:) Tj
+(Comportamiento esperado:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -800,7 +800,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 658.0 Td
-(Firmware should split repSets into smaller chunks under constrained memory.) Tj
+(firmware divide repSets bajo memoria restringida) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -812,13 +812,13 @@ ET
 BT
 /F1 10.2 Tf
 92.0 640.0 Td
-(Upload should eventually reach `webapp upload phase=complete`.) Tj
+(upload debe llegar a `webapp upload phase=complete`) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 614.0 Td
-(Graph Clipping or Wrong ROM) Tj
+(Grafica O ROM Incorrecto) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -830,7 +830,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 590.0 Td
-(Recalibrate ROM.) Tj
+(Recalibra ROM.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -842,7 +842,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 572.0 Td
-(Check sensor wiring.) Tj
+(Revisa cableado del sensor.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -854,7 +854,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 554.0 Td
-(Confirm sensor direction/inversion.) Tj
+(Confirma direccion/inversion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -866,19 +866,19 @@ ET
 BT
 /F1 10.2 Tf
 92.0 536.0 Td
-(Check whether user calibration was loaded.) Tj
+(Revisa si se cargo calibracion de usuario.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 510.0 Td
-(Rep Not Counted) Tj
+(Rep No Contada) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 486.0 Td
-(Possible causes:) Tj
+(Causas posibles:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -890,7 +890,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 461.0 Td
-(ROM too short.) Tj
+(ROM corto.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -902,7 +902,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 443.0 Td
-(Top/bottom not reached.) Tj
+(Top/bottom no alcanzado.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -914,7 +914,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 425.0 Td
-(Motion too fast/noisy.) Tj
+(Movimiento rapido o ruidoso.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -926,133 +926,127 @@ ET
 BT
 /F1 10.2 Tf
 92.0 407.0 Td
-(Calibration mismatch.) Tj
+(Calibracion incorrecta.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 386.0 Td
-(Try smooth reps through full range.) Tj
+(Haz reps suaves con rango completo.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 356.0 Td
-(Calibration Cancel Freeze) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 332.0 Td
-(If calibration does not return safely:) Tj
+(Freeze Al Cancelar Calibracion) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 307.0 Td
+68.0 332.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 307.0 Td
-(Check serial logs around `[CAL]`, `[CAL_UI]`, and UI destroy paths.) Tj
+92.0 332.0 Td
+(Revisa logs `[CAL]`, `[CAL_UI]` y destruccion de UI.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 289.0 Td
+68.0 314.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 289.0 Td
-(Reboot device if needed.) Tj
+92.0 314.0 Td
+(Reinicia si hace falta.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 271.0 Td
+68.0 296.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 271.0 Td
-(Verify no stale LVGL pointer accesses were introduced.) Tj
+92.0 296.0 Td
+(Verifica que no se hayan introducido punteros LVGL obsoletos.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 245.0 Td
-(Dashboard Missing Data) Tj
+58.0 270.0 Td
+(Dashboard Sin Datos) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 221.0 Td
-(Check:) Tj
+58.0 246.0 Td
+(Revisa:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 196.0 Td
+68.0 221.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 196.0 Td
-(Correct RFID UID selected.) Tj
+92.0 221.0 Td
+(UID RFID correcto.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 178.0 Td
+68.0 203.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 178.0 Td
-(Firebase path exists under `athleteWeeklySessions/{uid}`.) Tj
+92.0 203.0 Td
+(Ruta bajo `athleteWeeklySessions/{uid}`.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 160.0 Td
+68.0 185.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 160.0 Td
-(Session upload reached `phase=complete`.) Tj
+92.0 185.0 Td
+(Upload llego a `phase=complete`.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 142.0 Td
+68.0 167.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 142.0 Td
-(Browser console for Firebase permission errors.) Tj
+92.0 167.0 Td
+(Consola del navegador por permisos Firebase.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 124.0 Td
+68.0 149.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 124.0 Td
-(Dashboard Firebase config matches firmware database.) Tj
+92.0 149.0 Td
+(Config Firebase dashboard coincide con la base del firmware.) Tj
 ET
 endstream
 endobj
@@ -1072,19 +1066,19 @@ xref
 0000000079 00000 n
 0000000154 00000 n
 0000000222 00000 n
-0000000997 00000 n
-0000001144 00000 n
-0000001919 00000 n
-0000002066 00000 n
-0000006219 00000 n
-0000006366 00000 n
-0000010630 00000 n
-0000010779 00000 n
-0000015244 00000 n
-0000015393 00000 n
-0000015479 00000 n
+0000001003 00000 n
+0000001150 00000 n
+0000001931 00000 n
+0000002078 00000 n
+0000006201 00000 n
+0000006348 00000 n
+0000010466 00000 n
+0000010615 00000 n
+0000014913 00000 n
+0000015062 00000 n
+0000015148 00000 n
 trailer
 << /Size 16 /Root 15 0 R >>
 startxref
-15530
+15199
 %%EOF

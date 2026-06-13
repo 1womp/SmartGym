@@ -1,5 +1,7 @@
 # Firebase Dashboard Seed Guide
 
+Language: English | [Espanol](FIREBASE_DASHBOARD_SEED_GUIDE.es.md)
+
 This document explains the large dashboard seed file:
 
 - [firebase_rtdb_dashboard_seed_2026_w12_w17.json](C:/Users/chomp/OneDrive/Viejo/Documentos/PlatformIO/Projects/SmartGym_DisplayBringup/sample_data/firebase_rtdb_dashboard_seed_2026_w12_w17.json)

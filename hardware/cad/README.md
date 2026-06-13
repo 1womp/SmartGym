@@ -1,9 +1,23 @@
 # SmartGym CAD Files
 
+Language: English | [Espanol](README.es.md)
+
 This folder contains the SolidWorks part files and STL exports used for the
 prototype hardware mounts and 3D-printed enclosure pieces.
 
 ## Files
+
+## Quick Finder
+
+| Need | Use |
+| --- | --- |
+| Mount the draw-wire encoder | `encodermount.STL` |
+| Clamp hardware to the gym machine | `gymmachineclamp.STL` |
+| Print the display enclosure | `screen7inchbackplate.STL`, `screen7inchcover.STL`, `screen7inchfrontcover.STL` |
+| Mount the ToF sensor | `tof_sensor_holder_nuevo_en mm.STL`, `Fastener.stl`, `Target.stl` |
+| Edit CAD sources | `.SLDPRT` or `.step` files |
+
+## Full File List
 
 | File | Description |
 | --- | --- |

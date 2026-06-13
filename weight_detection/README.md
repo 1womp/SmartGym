@@ -1,5 +1,7 @@
 # Weight Detection Prototype
 
+Language: English | [Espanol](README.es.md)
+
 This folder contains a standalone teammate prototype for detecting the physical weight-stack position with a VL53L0X time-of-flight distance sensor.
 
 It is intentionally kept separate from the main ESP32 SmartGym firmware. The production firmware currently uses a manual machine pin load model, where the user updates the displayed pin load with the touchscreen buttons.

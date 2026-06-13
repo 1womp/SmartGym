@@ -1,5 +1,7 @@
 # SmartGym Developer Guide
 
+Language: English | [Espanol](DEVELOPER_GUIDE.es.md)
+
 ## Development Environment
 
 The firmware is a PlatformIO Arduino project for an ESP32-S3 VIEWE display board.

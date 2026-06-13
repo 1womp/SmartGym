@@ -21,12 +21,22 @@ WHITE = (255, 255, 255)
 
 
 DOC_META = {
+    "START_HERE": ("Start Here", "A quick map for finding every SmartGym subsystem and guide."),
+    "START_HERE.es": ("Empieza Aqui", "Mapa rapido para encontrar cada subsistema y guia de SmartGym."),
     "USER_MANUAL": ("User Manual", "How to operate, calibrate, and troubleshoot the SmartGym prototype."),
+    "USER_MANUAL.es": ("Manual de Usuario", "Como operar, calibrar y diagnosticar el prototipo SmartGym."),
     "DEVELOPER_GUIDE": ("Developer Guide", "Firmware architecture, build flow, modules, logs, and memory notes."),
+    "DEVELOPER_GUIDE.es": ("Guia de Desarrollador", "Arquitectura firmware, build, modulos, logs y memoria."),
+    "MEASUREMENT_AND_CALIBRATION_GUIDE": ("Measurement and Calibration Guide", "ROM math, calibration flow, signal errors, validation, and debugging."),
+    "MEASUREMENT_AND_CALIBRATION_GUIDE.es": ("Guia de Medicion y Calibracion", "ROM, calibracion, errores de senal, validacion y debugging."),
     "FIREBASE_GUIDE": ("Firebase Guide", "Realtime Database paths, upload phases, and safe import guidance."),
+    "FIREBASE_GUIDE.es": ("Guia de Firebase", "Rutas Realtime Database, fases de subida e importacion segura."),
     "SYSTEM_ARCHITECTURE": ("System Architecture", "Device, firmware, Firebase, and dashboard data flow."),
+    "SYSTEM_ARCHITECTURE.es": ("Arquitectura del Sistema", "Flujo de datos entre dispositivo, firmware, Firebase y dashboard."),
     "TROUBLESHOOTING": ("Troubleshooting Guide", "Common firmware, sync, UI, and dashboard issues."),
+    "TROUBLESHOOTING.es": ("Guia de Troubleshooting", "Problemas comunes de firmware, sync, UI y dashboard."),
     "FIREBASE_DASHBOARD_SEED_GUIDE": ("Firebase Dashboard Seed Guide", "Seed data structure and safe dashboard test imports."),
+    "FIREBASE_DASHBOARD_SEED_GUIDE.es": ("Guia De Seed Firebase Para Dashboard", "Estructura de datos de ejemplo e importacion segura para dashboard."),
 }
 
 

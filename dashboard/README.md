@@ -1,5 +1,7 @@
 # SmartGym Dashboard
 
+Language: English | [Espanol](README.es.md)
+
 This folder contains the teammate React/Vite dashboard for visualizing SmartGym Firebase data.
 
 ## Stack
@@ -36,6 +38,8 @@ Current known paths used by the dashboard include:
 - `recommendedRoutineProgress/{rfid}/{selectedDate}` for routine progress UI.
 
 The firmware writes workout data under `athleteWeeklySessions`, including day summaries, week summaries, timelines, session roots, set details, representative reps, and rep sets.
+
+For demo/test data, see [Firebase Dashboard Seed Guide](../docs/FIREBASE_DASHBOARD_SEED_GUIDE.md). It explains the generated dataset and safe import workflow.
 
 ## Notes
 

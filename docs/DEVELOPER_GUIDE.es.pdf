@@ -9,7 +9,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Courier >>
 endobj
 4 0 obj
-<< /Length 798 >>
+<< /Length 730 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -27,19 +27,13 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Developer Guide) Tj
+(Guia de Desarrollador) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(Firmware architecture, build flow, modules, logs, and memory) Tj
-ET
-0.8980 0.9686 0.9882 rg
-BT
-/F1 13.0 Tf
-58.0 614.0 Td
-(notes.) Tj
+(Arquitectura firmware, build, modulos, logs y memoria.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -62,10 +56,10 @@ ET
 endstream
 endobj
 5 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<< /Length 798 >>
+<< /Length 730 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -83,19 +77,13 @@ ET
 BT
 /F2 30.0 Tf
 58.0 664.0 Td
-(Developer Guide) Tj
+(Guia de Desarrollador) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 13.0 Tf
 58.0 632.0 Td
-(Firmware architecture, build flow, modules, logs, and memory) Tj
-ET
-0.8980 0.9686 0.9882 rg
-BT
-/F1 13.0 Tf
-58.0 614.0 Td
-(notes.) Tj
+(Arquitectura firmware, build, modulos, logs y memoria.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
@@ -118,10 +106,10 @@ ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 4023 >>
+<< /Length 3898 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -131,7 +119,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Developer Guide) Tj
+(Guia de Desarrollador) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -152,7 +140,7 @@ ET
 BT
 /F2 19.0 Tf
 58.0 714.0 Td
-(SmartGym Developer Guide) Tj
+(Guia De Desarrollador SmartGym) Tj
 ET
 0.0000 0.6118 0.8078 RG
 2.0 w
@@ -161,25 +149,25 @@ ET
 BT
 /F1 10.5 Tf
 58.0 683.0 Td
-(Language: English | [Espanol]\(DEVELOPER_GUIDE.es.md\)) Tj
+(Idioma: [English]\(DEVELOPER_GUIDE.md\) | Espanol) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
 58.0 653.0 Td
-(Development Environment) Tj
+(Entorno De Desarrollo) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 629.0 Td
-(The firmware is a PlatformIO Arduino project for an ESP32-S3 VIEWE display board.) Tj
+(El firmware es un proyecto PlatformIO Arduino para una pantalla ESP32-S3 VIEWE.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 604.0 Td
-(Required environment:) Tj
+(Environment requerido:) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
@@ -209,25 +197,25 @@ ET
 BT
 /F1 10.5 Tf
 58.0 472.0 Td
-(For local hardware builds, provide private Wi-Fi and Firebase values through PlatformIO) Tj
+(Para builds locales, proporciona Wi-Fi/Firebase privados mediante build flags o) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 457.0 Td
-(build flags or a local untracked config. Do not commit real SSIDs, passwords, Firebase) Tj
+(configuracion local no trackeada. No commitees SSID, passwords, tokens, service) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 442.0 Td
-(tokens, or private project configuration.) Tj
+(accounts ni configuracion privada.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 417.0 Td
-(Upload and monitor:) Tj
+(Upload y monitor:) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
@@ -248,135 +236,135 @@ ET
 BT
 /F2 14.0 Tf
 58.0 334.0 Td
-(Repository Layout) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 310.0 Td
-(The firmware remains at repository root to preserve existing PlatformIO build behavior:) Tj
+(Layout Del Repositorio) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 285.0 Td
+68.0 310.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 285.0 Td
-(`src/`: application code.) Tj
+92.0 310.0 Td
+(`src/`: codigo de aplicacion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 267.0 Td
+68.0 292.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 267.0 Td
-(`lib/`: firmware modules.) Tj
+92.0 292.0 Td
+(`lib/`: modulos firmware.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 249.0 Td
+68.0 274.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 249.0 Td
-(`boards/`: board configuration.) Tj
+92.0 274.0 Td
+(`boards/`: configuracion de board.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 231.0 Td
+68.0 256.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 231.0 Td
-(`dashboard/`: React dashboard.) Tj
+92.0 256.0 Td
+(`dashboard/`: dashboard React.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 213.0 Td
+68.0 238.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 213.0 Td
-(`weight_detection/`: standalone VL53L0X prototype.) Tj
+92.0 238.0 Td
+(`weight_detection/`: prototipo VL53L0X.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 195.0 Td
+68.0 220.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 195.0 Td
-(`docs/`: project documentation.) Tj
+92.0 220.0 Td
+(`docs/`: documentacion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 177.0 Td
+68.0 202.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 177.0 Td
-(`hardware/`: wiring notes.) Tj
+92.0 202.0 Td
+(`hardware/`: notas de cableado/CAD.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 159.0 Td
+68.0 184.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 159.0 Td
-(`screenshots/`: demo images.) Tj
+92.0 184.0 Td
+(`screenshots/`: imagenes de demo.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 133.0 Td
-(Main Firmware Architecture) Tj
+58.0 158.0 Td
+(Arquitectura Principal) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 109.0 Td
-(`SmartGymTouchApp` is the application orchestrator. It owns the UI state, training) Tj
+58.0 134.0 Td
+(`SmartGymTouchApp` coordina estado de UI, entrenamiento, calibracion, user sync, cola) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 119.0 Td
+(Firebase y guards de memoria.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 94.0 Td
-(state, calibration flow, user sync, Firebase queueing, and memory guards.) Tj
+(Estados principales:) Tj
 ET
 endstream
 endobj
 9 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 4503 >>
+<< /Length 4404 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -386,382 +374,13 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Developer Guide) Tj
+(Guia de Desarrollador) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
 /F1 9.0 Tf
 472.0 765.0 Td
 (Page 3) Tj
-ET
-0.9490 0.9608 0.9725 RG
-1.0 w
-58.0 40.0 m 554.0 40.0 l S
-0.3804 0.4353 0.5020 rg
-BT
-/F1 8.0 Tf
-58.0 22.0 Td
-(SmartGym Adaptive Training System) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 722.0 Td
-(Main state categories:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 697.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 697.0 Td
-(Idle/Ready.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 679.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 679.0 Td
-(Calibration.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 661.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 661.0 Td
-(Training.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 643.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 643.0 Td
-(Summary.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 622.0 Td
-(Main UI screen modes include:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 597.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 597.0 Td
-(Main.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 579.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 579.0 Td
-(Summary.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 561.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 561.0 Td
-(Idle.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 543.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 543.0 Td
-(Calibration.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 525.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 525.0 Td
-(Calibration gate.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 507.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 507.0 Td
-(Debug.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 489.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 489.0 Td
-(Profile.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 463.0 Td
-(Main Modules) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F2 11.5 Tf
-58.0 439.0 Td
-(SmartGymTouchApp) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 418.0 Td
-(Coordinates:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 393.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 393.0 Td
-(LVGL UI creation and refresh.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 375.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 375.0 Td
-(RFID scan flow.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 357.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 357.0 Td
-(User profile/calibration sync.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 339.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 339.0 Td
-(ROM normalization.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 321.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 321.0 Td
-(Rep handling.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 303.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 303.0 Td
-(Calibration state machine.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 285.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 285.0 Td
-(Session start/finish.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 267.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 267.0 Td
-(Firebase upload scheduling.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 249.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 249.0 Td
-(Memory-aware upload chunking.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F2 11.5 Tf
-58.0 228.0 Td
-(SensorManager) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 207.0 Td
-(Reads the analog motion sensor and converts it into a filtered ROM percentage. The) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 192.0 Td
-(firmware configures sampling at 5 ms, approximately 200 Hz.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F2 11.5 Tf
-58.0 167.0 Td
-(RepDetector) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 146.0 Td
-(Uses a ROM-based state machine:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 121.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 121.0 Td
-(Bottom.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 103.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 103.0 Td
-(Ascending.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 85.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 85.0 Td
-(Top.) Tj
-ET
-endstream
-endobj
-11 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
-endobj
-12 0 obj
-<< /Length 4074 >>
-stream
-1.0000 1.0000 1.0000 rg
-0.0 0.0 612.0 792.0 re f
-0.0706 0.1843 0.3490 rg
-0.0 750.0 612.0 42.0 re f
-1.0000 1.0000 1.0000 rg
-BT
-/F2 10.0 Tf
-58.0 765.0 Td
-(Developer Guide) Tj
-ET
-0.8980 0.9686 0.9882 rg
-BT
-/F1 9.0 Tf
-472.0 765.0 Td
-(Page 4) Tj
 ET
 0.9490 0.9608 0.9725 RG
 1.0 w
@@ -782,261 +401,345 @@ ET
 BT
 /F1 10.2 Tf
 92.0 722.0 Td
-(Descending.) Tj
+(Idle/Ready.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(Calibration.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(Training.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 668.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 668.0 Td
+(Summary.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 701.0 Td
-(It computes rep duration, ROM range, velocities, warnings, and invalid flags.) Tj
+58.0 647.0 Td
+(Pantallas:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 622.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 622.0 Td
+(Main.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 604.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 604.0 Td
+(Summary.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 586.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 586.0 Td
+(Idle.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 568.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 568.0 Td
+(Calibration.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 550.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 550.0 Td
+(Calibration gate.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 532.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 532.0 Td
+(Debug.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 514.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 514.0 Td
+(Profile.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 488.0 Td
+(Modulos) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 676.0 Td
-(SessionRecorder) Tj
+58.0 464.0 Td
+(SmartGymTouchApp) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 655.0 Td
-(Stores the active session, sets, reps, per-rep load, timing, ROM, quality metrics, and) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 640.0 Td
-(JSON payloads for Firebase.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 615.0 Td
-(Current limits:) Tj
+58.0 443.0 Td
+(Coordina:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 590.0 Td
+68.0 418.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 590.0 Td
-(Maximum sets per session: 8.) Tj
+92.0 418.0 Td
+(creacion/refresco LVGL) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 572.0 Td
+68.0 400.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 572.0 Td
-(Maximum reps per session: 80.) Tj
+92.0 400.0 Td
+(RFID) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 382.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 382.0 Td
+(sync de perfil/calibracion) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 364.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 364.0 Td
+(normalizacion ROM) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 346.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 346.0 Td
+(reps) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 328.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 328.0 Td
+(calibracion) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 310.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 310.0 Td
+(inicio/fin de sesion) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 292.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 292.0 Td
+(agenda de Firebase) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 274.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 274.0 Td
+(chunking por memoria) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 551.0 Td
-(FirebaseService) Tj
+58.0 253.0 Td
+(SensorManager) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 530.0 Td
-(Handles Firebase RTDB paths, JSON construction, reads, writes, and FirebaseClient) Tj
+58.0 232.0 Td
+(Lee el sensor analogico y lo convierte a ROM filtrado. Muestreo: 5 ms, aproximadamente) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 515.0 Td
-(queued transport.) Tj
+58.0 217.0 Td
+(200 Hz.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F2 11.5 Tf
-58.0 490.0 Td
-(MachineRegistry) Tj
+58.0 192.0 Td
+(RepDetector) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 469.0 Td
-(Stores the embedded machine catalog and motion target templates for goals:) Tj
+58.0 171.0 Td
+(Maquina de estados:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 444.0 Td
+68.0 146.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 444.0 Td
-(`hypertrophy`) Tj
+92.0 146.0 Td
+(Bottom) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 426.0 Td
+68.0 128.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 426.0 Td
-(`strength`) Tj
+92.0 128.0 Td
+(Ascending) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 408.0 Td
+68.0 110.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 408.0 Td
-(`endurance`) Tj
+92.0 110.0 Td
+(Top) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 390.0 Td
+68.0 92.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 390.0 Td
-(`test`) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 369.0 Td
-(The `test` goal is retained for internal/debug round-trip validation.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F2 11.5 Tf
-58.0 344.0 Td
-(UserRegistry) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 323.0 Td
-(Stores local user profiles and user-machine calibration data.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 298.0 Td
-(Current limits:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 273.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 273.0 Td
-(Maximum local profiles: 8.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 255.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 255.0 Td
-(Maximum machine calibrations per profile: 8.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F2 11.5 Tf
-58.0 234.0 Td
-(LocalPersistenceStore) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 213.0 Td
-(Uses NVS/Preferences for:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 188.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 188.0 Td
-(Local user cache.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 170.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 170.0 Td
-(Local session cache.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 152.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 152.0 Td
-(Pending upload queue.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 131.0 Td
-(The upload queue is used for retry/offline resilience.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F2 11.5 Tf
-58.0 106.0 Td
-(RfidService) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 85.0 Td
-(Reads MFRC522 cards and formats UIDs as uppercase hex groups separated by `-`.) Tj
+92.0 92.0 Td
+(Descending) Tj
 ET
 endstream
 endobj
-13 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+11 0 obj
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
 endobj
-14 0 obj
-<< /Length 4351 >>
+12 0 obj
+<< /Length 3707 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -1046,7 +749,280 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Developer Guide) Tj
+(Guia de Desarrollador) Tj
+ET
+0.8980 0.9686 0.9882 rg
+BT
+/F1 9.0 Tf
+472.0 765.0 Td
+(Page 4) Tj
+ET
+0.9490 0.9608 0.9725 RG
+1.0 w
+58.0 40.0 m 554.0 40.0 l S
+0.3804 0.4353 0.5020 rg
+BT
+/F1 8.0 Tf
+58.0 22.0 Td
+(SmartGym Adaptive Training System) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 722.0 Td
+(Calcula duracion, rango ROM, velocidades, warnings e invalid flags.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 697.0 Td
+(SessionRecorder) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 676.0 Td
+(Guarda sesion activa, sets, reps, carga por rep, tiempos, ROM, calidad y payloads JSON.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 651.0 Td
+(Limites actuales:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 626.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 626.0 Td
+(Max sets por sesion: 8.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 608.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 608.0 Td
+(Max reps por sesion: 80.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 587.0 Td
+(FirebaseService) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 566.0 Td
+(Maneja rutas RTDB, JSON, lecturas, escrituras y transporte FirebaseClient.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 541.0 Td
+(MachineRegistry) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 520.0 Td
+(Guarda catalogo embebido y templates de movimiento para:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 495.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 495.0 Td
+(`hypertrophy`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 477.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 477.0 Td
+(`strength`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 459.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 459.0 Td
+(`endurance`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 441.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 441.0 Td
+(`test`) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 420.0 Td
+(`test` se conserva para validacion device/Firebase.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 395.0 Td
+(UserRegistry) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 374.0 Td
+(Guarda perfiles locales y calibraciones usuario-maquina.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 349.0 Td
+(Limites:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 324.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 324.0 Td
+(perfiles locales: 8) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 306.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 306.0 Td
+(calibraciones por perfil: 8) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 285.0 Td
+(LocalPersistenceStore) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 264.0 Td
+(Usa NVS/Preferences para:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 239.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 239.0 Td
+(cache de usuarios) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 221.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 221.0 Td
+(cache de sesiones) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 203.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 203.0 Td
+(cola de upload pendiente) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F2 11.5 Tf
+58.0 182.0 Td
+(RfidService) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 161.0 Td
+(Lee MFRC522 y formatea UIDs en hex mayusculo separado por `-`.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 131.0 Td
+(UI) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 107.0 Td
+(El firmware usa LVGL. Refrescos:) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4246 >>
+stream
+1.0000 1.0000 1.0000 rg
+0.0 0.0 612.0 792.0 re f
+0.0706 0.1843 0.3490 rg
+0.0 750.0 612.0 42.0 re f
+1.0000 1.0000 1.0000 rg
+BT
+/F2 10.0 Tf
+58.0 765.0 Td
+(Guia de Desarrollador) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -1063,274 +1039,304 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 722.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 722.0 Td
+(tick principal: 4 ms) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 704.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 704.0 Td
+(chart: 16 ms) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 686.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 686.0 Td
+(UI lenta: 140 ms) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 668.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 668.0 Td
+(debug UI: 160 ms) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 647.0 Td
+(Todo objeto LVGL de pantalla/modal debe resetearse a `nullptr` al destruir su padre) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 632.0 Td
+(para evitar crashes por punteros obsoletos.) Tj
+ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 717.0 Td
-(UI Architecture) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 693.0 Td
-(The firmware uses LVGL. UI refresh is intentionally split into different rates to) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 678.0 Td
-(reduce CPU and memory pressure:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 653.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 653.0 Td
-(Main app tick: 4 ms.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 635.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 635.0 Td
-(Chart refresh: about 16 ms.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 617.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 617.0 Td
-(Slow UI refresh: about 140 ms.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 599.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 599.0 Td
-(Debug UI refresh: about 160 ms.) Tj
+58.0 602.0 Td
+(Calibracion) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
 58.0 578.0 Td
-(Screen-specific LVGL objects must be reset to `nullptr` when their parent screen/modal) Tj
+(La calibracion es especifica por usuario y machine type. Flujo:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 553.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 553.0 Td
+(confirmacion de carga inicial) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 535.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 535.0 Td
+(controles fisicos de pin load) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 517.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 517.0 Td
+(recoleccion de reps) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 499.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 499.0 Td
+(analisis de set) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 481.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 481.0 Td
+(siguiente carga opcional) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 463.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 463.0 Td
+(resultado y guardado) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 563.0 Td
-(is deleted. This prevents stale pointer crashes.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 533.0 Td
-(Calibration Architecture) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 509.0 Td
-(Calibration is user-specific and machine-type-specific. The flow includes:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 484.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 484.0 Td
-(Start load confirmation.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 466.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 466.0 Td
-(Physical pin-load controls.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 448.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 448.0 Td
-(Rep collection.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 430.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 430.0 Td
-(Set analysis.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 412.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 412.0 Td
-(Optional next load.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 394.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 394.0 Td
-(Result and save.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 373.0 Td
-(Calibration records valid/rejected reps, ROM, velocity, load, confidence, action, and) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 358.0 Td
-(recommendation data. Calibration is saved under:) Tj
+58.0 442.0 Td
+(Se guarda en:) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 309.0 496.0 30.0 re B
+58.0 393.0 496.0 30.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 321.0 Td
+70.0 405.0 Td
 (calibrations/{uid}/{machineTypeId}) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 287.0 Td
-(Recommendation Logic) Tj
+58.0 371.0 Td
+(Recomendacion) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 263.0 Td
-(Recommendation is separate from physical pin load.) Tj
+58.0 347.0 Td
+(Recomendacion esta separada de pin load:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 238.0 Td
+68.0 322.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 238.0 Td
-(Pin load is machine-level physical state.) Tj
+92.0 322.0 Td
+(pin load: estado fisico de maquina) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 220.0 Td
+68.0 304.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 220.0 Td
-(Recommendation is user-specific advice.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 202.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 202.0 Td
-(Recommendation must not automatically overwrite pin load.) Tj
+92.0 304.0 Td
+(recomendacion: consejo especifico por usuario) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 181.0 Td
-(The firmware resolves recommendation from the latest valid user-machine data, including) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 166.0 Td
-(session summary or calibration data where available.) Tj
+58.0 283.0 Td
+(La recomendacion no debe sobrescribir el pin load.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 136.0 Td
-(Firebase Sync Pipeline) Tj
+58.0 253.0 Td
+(Firebase Sync) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 112.0 Td
-(Session finish does not perform heavy Firebase work directly. It schedules a queued) Tj
+58.0 229.0 Td
+(El final de sesion agenda upload en cola.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 97.0 Td
-(upload.) Tj
+58.0 204.0 Td
+(Fases:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 179.0 Td
+(1.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 179.0 Td
+(Core de sesion.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 161.0 Td
+(2.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 161.0 Td
+(Day metadata.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 143.0 Td
+(3.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 143.0 Td
+(Day timeline.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 125.0 Td
+(4.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 125.0 Td
+(Day summary.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 107.0 Td
+(5.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 107.0 Td
+(Week summary.) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 89.0 Td
+(6.) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 89.0 Td
+(Representative reps.) Tj
 ET
 endstream
 endobj
 15 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
 endobj
 16 0 obj
-<< /Length 4576 >>
+<< /Length 4170 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -1340,7 +1346,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Developer Guide) Tj
+(Guia de Desarrollador) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -1357,316 +1363,304 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 722.0 Td
-(Upload phases:) Tj
-ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 697.0 Td
-(1.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 697.0 Td
-(Session root/core.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 679.0 Td
-(2.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 679.0 Td
-(Day metadata.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 661.0 Td
-(3.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 661.0 Td
-(Day timeline.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 643.0 Td
-(4.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 643.0 Td
-(Day summary.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 625.0 Td
-(5.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 625.0 Td
-(Week summary.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 607.0 Td
-(6.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 607.0 Td
-(Representative reps.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 589.0 Td
+68.0 722.0 Td
 (7.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 589.0 Td
+92.0 722.0 Td
 (Set details.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 571.0 Td
+68.0 704.0 Td
 (8.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 571.0 Td
+92.0 704.0 Td
 (Rep sets.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 550.0 Td
-(The firmware preserves final Firebase shape while splitting payloads when memory is) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 535.0 Td
-(low.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 505.0 Td
-(Queue and Chunking Behavior) Tj
+58.0 678.0 Td
+(Chunking) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 481.0 Td
-(The firmware uses memory modes:) Tj
+58.0 654.0 Td
+(Modos de memoria:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 456.0 Td
+68.0 629.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 456.0 Td
+92.0 629.0 Td
 (Normal.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 438.0 Td
+68.0 611.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 438.0 Td
+92.0 611.0 Td
 (Constrained.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 420.0 Td
+68.0 593.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 420.0 Td
+92.0 593.0 Td
 (Critical.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 399.0 Td
-(RepSet upload limits:) Tj
+58.0 572.0 Td
+(Limites de repSet:) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 374.0 Td
+68.0 547.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 374.0 Td
-(Normal: target 1900 bytes, hard max 2100 bytes, up to 6 reps per patch.) Tj
+92.0 547.0 Td
+(Normal: target 1900 bytes, max 2100, hasta 6 reps.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 356.0 Td
+68.0 529.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 356.0 Td
-(Constrained: target 900 bytes, hard max 1100 bytes, up to 3 reps per patch.) Tj
+92.0 529.0 Td
+(Constrained: target 900 bytes, max 1100, hasta 3 reps.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 338.0 Td
+68.0 511.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 338.0 Td
-(Critical: target 650 bytes, hard max 850 bytes, up to 2 reps per patch.) Tj
+92.0 511.0 Td
+(Critical: target 650 bytes, max 850, hasta 2 reps.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 317.0 Td
-(The final Firebase structure remains:) Tj
+58.0 490.0 Td
+(La forma final en Firebase se mantiene:) Tj
 ET
 0.9490 0.9608 0.9725 rg
 0.8627 0.8863 0.9137 RG
-58.0 256.0 496.0 42.0 re B
+58.0 429.0 496.0 42.0 re B
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 280.0 Td
+70.0 453.0 Td
 (repSets/set1/reps/0) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F3 8.6 Tf
-70.0 268.0 Td
+70.0 441.0 Td
 (repSets/set1/reps/1) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 239.0 Td
-(No chunk nodes are added to the final schema.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 209.0 Td
-(Adding a New Machine) Tj
+58.0 407.0 Td
+(Agregar Una Maquina) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 185.0 Td
+68.0 383.0 Td
 (1.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 185.0 Td
-(Add a machine seed in `MachineRegistry`.) Tj
+92.0 383.0 Td
+(Agregar seed en `MachineRegistry`.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 167.0 Td
+68.0 365.0 Td
 (2.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 167.0 Td
-(Define machine ID, machine type ID, display name, category, muscles, stroke length,) Tj
+92.0 365.0 Td
+(Definir id, type id, nombre, categoria, musculos, stroke, min/max/incremento y peso) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 153.0 Td
-(min/max/increment, and default calibration weight.) Tj
+92.0 351.0 Td
+(default.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 135.0 Td
+68.0 333.0 Td
 (3.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 135.0 Td
-(Confirm goal templates and timing targets.) Tj
+92.0 333.0 Td
+(Confirmar templates de metas y timing.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 117.0 Td
+68.0 315.0 Td
 (4.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 117.0 Td
-(Rebuild firmware.) Tj
+92.0 315.0 Td
+(Recompilar firmware.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 99.0 Td
+68.0 297.0 Td
 (5.) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 99.0 Td
-(Verify Firebase machine config compatibility if cloud overrides are used.) Tj
+92.0 297.0 Td
+(Verificar compatibilidad Firebase si hay overrides cloud.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 271.0 Td
+(Goals) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 247.0 Td
+(Publicos:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 222.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 222.0 Td
+(`hypertrophy`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 204.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 204.0 Td
+(`strength`) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 186.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 186.0 Td
+(`endurance`) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 165.0 Td
+(Interno/debug:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 140.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 140.0 Td
+(`test`) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.5 Tf
+58.0 119.0 Td
+(Legacy:) Tj
+ET
+0.0000 0.6118 0.8078 rg
+BT
+/F2 10.5 Tf
+68.0 94.0 Td
+(-) Tj
+ET
+0.1216 0.1608 0.2157 rg
+BT
+/F1 10.2 Tf
+92.0 94.0 Td
+(`general`, normalizado para runtime nuevo.) Tj
 ET
 endstream
 endobj
 17 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
 endobj
 18 0 obj
-<< /Length 4866 >>
+<< /Length 3032 >>
 stream
 1.0000 1.0000 1.0000 rg
 0.0 0.0 612.0 792.0 re f
@@ -1676,7 +1670,7 @@ stream
 BT
 /F2 10.0 Tf
 58.0 765.0 Td
-(Developer Guide) Tj
+(Guia de Desarrollador) Tj
 ET
 0.8980 0.9686 0.9882 rg
 BT
@@ -1693,17 +1687,17 @@ BT
 58.0 22.0 Td
 (SmartGym Adaptive Training System) Tj
 ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 717.0 Td
-(Editing Goals) Tj
-ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 693.0 Td
-(Public goals:) Tj
+58.0 722.0 Td
+(No elimines `test`; sirve para pruebas device/Firebase.) Tj
+ET
+0.0706 0.1843 0.3490 rg
+BT
+/F2 14.0 Tf
+58.0 692.0 Td
+(Tags De Logs) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -1715,7 +1709,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 668.0 Td
-(`hypertrophy`) Tj
+(`[BOOT]`: arranque.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -1727,7 +1721,7 @@ ET
 BT
 /F1 10.2 Tf
 92.0 650.0 Td
-(`strength`) Tj
+(`[BOOTMEM]`: memoria.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
@@ -1739,428 +1733,189 @@ ET
 BT
 /F1 10.2 Tf
 92.0 632.0 Td
-(`endurance`) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 611.0 Td
-(Internal/debug goal:) Tj
+(`[RFID]`: tarjetas.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 586.0 Td
+68.0 614.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 586.0 Td
-(`test`) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 565.0 Td
-(Legacy compatibility:) Tj
+92.0 614.0 Td
+(`[USER_SYNC]`: perfil/calibracion/recomendacion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 540.0 Td
+68.0 596.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 540.0 Td
-(`general`, normalized for new runtime behavior.) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.5 Tf
-58.0 519.0 Td
-(Do not remove `test`; it is used for device/Firebase testing.) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 489.0 Td
-(Common Serial Log Tags) Tj
+92.0 596.0 Td
+(`[UI_LOADING]`: popup.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 465.0 Td
+68.0 578.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 465.0 Td
-(`[BOOT]`: startup.) Tj
+92.0 578.0 Td
+(`[WEIGHT]`: pin load/recomendacion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 447.0 Td
+68.0 560.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 447.0 Td
-(`[BOOTMEM]`: memory checkpoints.) Tj
+92.0 560.0 Td
+(`[SESSION]`: sesion, reps, sets, finish.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 429.0 Td
+68.0 542.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 429.0 Td
-(`[RFID]`: card scans and user load.) Tj
+92.0 542.0 Td
+(`[CAL]`: logica calibracion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 411.0 Td
+68.0 524.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 411.0 Td
-(`[USER_SYNC]`: profile/calibration/recommendation load.) Tj
+92.0 524.0 Td
+(`[CAL_UI]`: UI calibracion.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 393.0 Td
+68.0 506.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 393.0 Td
-(`[UI_LOADING]`: loading popup.) Tj
+92.0 506.0 Td
+(`[SYNC]`: upload/cola.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 375.0 Td
+68.0 488.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 375.0 Td
-(`[WEIGHT]`: pin load and recommendation decisions.) Tj
+92.0 488.0 Td
+(`[SYNCGATE]`: scheduling cloud.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 357.0 Td
+68.0 470.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 357.0 Td
-(`[SESSION]`: session start, reps, sets, finish.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 339.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 339.0 Td
-(`[CAL]`: calibration logic.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 321.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 321.0 Td
-(`[CAL_UI]`: calibration screen updates.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 303.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 303.0 Td
-(`[SYNC]`: upload and queue behavior.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 285.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 285.0 Td
-(`[SYNCGATE]`: cloud sync scheduling.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 267.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 267.0 Td
+92.0 470.0 Td
 (`[CloudWrite]`: Firebase writes.) Tj
 ET
 0.0000 0.6118 0.8078 rg
 BT
 /F2 10.5 Tf
-68.0 249.0 Td
+68.0 452.0 Td
 (-) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.2 Tf
-92.0 249.0 Td
-(`[GRAPH]`: graph/timing display.) Tj
+92.0 452.0 Td
+(`[GRAPH]`: grafica/timing.) Tj
 ET
 0.0706 0.1843 0.3490 rg
 BT
 /F2 14.0 Tf
-58.0 223.0 Td
-(Memory Considerations) Tj
+58.0 426.0 Td
+(Memoria) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
 /F1 10.5 Tf
-58.0 199.0 Td
-(Firebase/TLS can be memory-sensitive on ESP32. The firmware:) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 174.0 Td
-(-) Tj
+58.0 402.0 Td
+(Firebase/TLS puede consumir mucha memoria. Libera UI opcional antes de entrenar/subir,) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 174.0 Td
-(Frees optional UI before training/upload.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 156.0 Td
-(-) Tj
+/F1 10.5 Tf
+58.0 387.0 Td
+(evita payloads grandes en memoria critica y no cambies la forma final de Firebase sin) Tj
 ET
 0.1216 0.1608 0.2157 rg
 BT
-/F1 10.2 Tf
-92.0 156.0 Td
-(Uses NVS queueing.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 138.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 138.0 Td
-(Limits payload sizes.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 120.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 120.0 Td
-(Splits repSet patches under low memory.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 102.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 102.0 Td
-(Avoids upload workers.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 84.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 84.0 Td
-(Avoids direct heavy upload inside `finishTraining`.) Tj
+/F1 10.5 Tf
+58.0 372.0 Td
+(actualizar dashboard.) Tj
 ET
 endstream
 endobj
 19 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 18 0 R >>
+<< /Type /Page /Parent 20 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 18 0 R >>
 endobj
 20 0 obj
-<< /Length 1247 >>
-stream
-1.0000 1.0000 1.0000 rg
-0.0 0.0 612.0 792.0 re f
-0.0706 0.1843 0.3490 rg
-0.0 750.0 612.0 42.0 re f
-1.0000 1.0000 1.0000 rg
-BT
-/F2 10.0 Tf
-58.0 765.0 Td
-(Developer Guide) Tj
-ET
-0.8980 0.9686 0.9882 rg
-BT
-/F1 9.0 Tf
-472.0 765.0 Td
-(Page 8) Tj
-ET
-0.9490 0.9608 0.9725 RG
-1.0 w
-58.0 40.0 m 554.0 40.0 l S
-0.3804 0.4353 0.5020 rg
-BT
-/F1 8.0 Tf
-58.0 22.0 Td
-(SmartGym Adaptive Training System) Tj
-ET
-0.0706 0.1843 0.3490 rg
-BT
-/F2 14.0 Tf
-58.0 717.0 Td
-(Known Limitations) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 693.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 693.0 Td
-(Physical pin load is manual in the main firmware.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 675.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 675.0 Td
-(Weight detection is a separate prototype.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 657.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 657.0 Td
-(Firebase dashboard config is environment-based; local `.env` files must remain) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 643.0 Td
-(untracked.) Tj
-ET
-0.0000 0.6118 0.8078 rg
-BT
-/F2 10.5 Tf
-68.0 625.0 Td
-(-) Tj
-ET
-0.1216 0.1608 0.2157 rg
-BT
-/F1 10.2 Tf
-92.0 625.0 Td
-(Automated test coverage is limited.) Tj
-ET
-endstream
+<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R ] /Count 8 >>
 endobj
 21 0 obj
-<< /Type /Page /Parent 22 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 20 0 R >>
-endobj
-22 0 obj
-<< /Type /Pages /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R ] /Count 9 >>
-endobj
-23 0 obj
-<< /Type /Catalog /Pages 22 0 R >>
+<< /Type /Catalog /Pages 20 0 R >>
 endobj
 xref
-0 24
+0 22
 0000000000 65535 f
 0000000009 00000 n
 0000000079 00000 n
 0000000154 00000 n
 0000000222 00000 n
-0000001071 00000 n
-0000001218 00000 n
-0000002067 00000 n
-0000002214 00000 n
-0000006289 00000 n
-0000006436 00000 n
-0000010992 00000 n
-0000011141 00000 n
-0000015268 00000 n
-0000015417 00000 n
-0000019821 00000 n
-0000019970 00000 n
-0000024599 00000 n
-0000024748 00000 n
-0000029667 00000 n
-0000029816 00000 n
-0000031116 00000 n
-0000031265 00000 n
-0000031379 00000 n
+0000001003 00000 n
+0000001150 00000 n
+0000001931 00000 n
+0000002078 00000 n
+0000006028 00000 n
+0000006175 00000 n
+0000010632 00000 n
+0000010781 00000 n
+0000014541 00000 n
+0000014690 00000 n
+0000018989 00000 n
+0000019138 00000 n
+0000023361 00000 n
+0000023510 00000 n
+0000026595 00000 n
+0000026744 00000 n
+0000026851 00000 n
 trailer
-<< /Size 24 /Root 23 0 R >>
+<< /Size 22 /Root 21 0 R >>
 startxref
-31430
+26902
 %%EOF

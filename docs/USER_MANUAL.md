@@ -1,5 +1,7 @@
 # SmartGym User Manual
 
+Language: English | [Espanol](USER_MANUAL.es.md)
+
 This manual explains how to use the SmartGym Adaptive Training System as an evaluator, athlete, or demo user.
 
 ## 1. Turning On the Device

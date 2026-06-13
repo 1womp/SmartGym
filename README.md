@@ -1,8 +1,27 @@
 # SmartGym Adaptive Training System
 
+Language: English | [Espanol](README.es.md)
+
 SmartGym is an ESP32-S3 adaptive training prototype for selectorized gym machines. It combines RFID user identification, a touchscreen LVGL interface, range-of-motion tracking, rep and set detection, guided calibration, user-specific load recommendations, Firebase Realtime Database synchronization, a React dashboard, and a separate weight-detection prototype.
 
 The current repository keeps the PlatformIO firmware project at the repository root so the existing build commands and include paths continue to work. Companion project assets are organized in `dashboard/`, `weight_detection/`, `docs/`, `hardware/`, and `screenshots/`.
+
+## Start Here
+
+If you are new to the project, start with [docs/START_HERE.md](docs/START_HERE.md). It explains what to read first, where every subsystem lives, and how the data flows from sensors to Firebase and the dashboard.
+
+Fast paths:
+
+| Goal | Open |
+| --- | --- |
+| Build and upload firmware | [Developer Guide](docs/DEVELOPER_GUIDE.md) |
+| Understand ROM, calibration, equations, and error sources | [Measurement and Calibration Guide](docs/MEASUREMENT_AND_CALIBRATION_GUIDE.md) |
+| Use the device in a demo | [User Manual](docs/USER_MANUAL.md) |
+| Configure Firebase and understand upload paths | [Firebase Guide](docs/FIREBASE_GUIDE.md) |
+| Understand dashboard seed/test data | [Firebase Dashboard Seed Guide](docs/FIREBASE_DASHBOARD_SEED_GUIDE.md) |
+| Find CAD/STL hardware files | [hardware/cad/README.md](hardware/cad/README.md) |
+| Run the web dashboard | [dashboard/README.md](dashboard/README.md) |
+| Test the VL53L0X prototype | [weight_detection/README.md](weight_detection/README.md) |
 
 ## Key Features
 
@@ -61,6 +80,7 @@ The firmware reads motion, normalizes ROM, detects reps, records sessions, compu
 |-- boards/                 PlatformIO board definition
 |-- dashboard/              Teammate React/Vite Firebase dashboard
 |-- docs/                   User, developer, Firebase, architecture, troubleshooting docs
+|-- firebase_seed/          Safe Firebase seed/import artifacts
 |-- hardware/               Wiring and sensor notes
 |-- lib/                    Firmware libraries
 |-- sample_data/            Firebase/sample data artifacts
@@ -73,6 +93,20 @@ The firmware reads motion, normalizes ROM, detects reps, records sessions, compu
 `-- README.md
 ```
 
+## What Each Folder Is For
+
+| Folder | Purpose |
+| --- | --- |
+| `src/` and `lib/` | ESP32-S3 firmware application and support modules. |
+| `docs/` | Human-readable guides for usage, architecture, calibration, Firebase, and troubleshooting. |
+| `hardware/` | Wiring notes plus CAD/STL files for mounts, enclosure parts, and ToF hardware. |
+| `dashboard/` | React/Vite dashboard that reads Firebase workout data. |
+| `firebase_seed/` | Safe Firebase seed/import artifacts and import instructions. |
+| `weight_detection/` | Standalone VL53L0X prototype sketch for weight-stack detection experiments. |
+| `sample_data/` | Firebase/sample data artifacts used for testing and dashboard demos. |
+| `screenshots/` | Demo photos, UI screenshots, dashboard captures, and wiring images. |
+| `tools/` and `scripts/` | Local generation, validation, and documentation utilities. |
+
 ## Documentation
 
 The full documentation package is indexed in [docs/README.md](docs/README.md).
@@ -82,7 +116,9 @@ Most important PDFs:
 - [User Manual](docs/USER_MANUAL.pdf)
 - [System Architecture](docs/SYSTEM_ARCHITECTURE.pdf)
 - [Developer Guide](docs/DEVELOPER_GUIDE.pdf)
+- [Measurement and Calibration Guide](docs/MEASUREMENT_AND_CALIBRATION_GUIDE.md)
 - [Firebase Guide](docs/FIREBASE_GUIDE.pdf)
+- [Firebase Dashboard Seed Guide](docs/FIREBASE_DASHBOARD_SEED_GUIDE.md)
 - [Troubleshooting Guide](docs/TROUBLESHOOTING.pdf)
 
 ## Quick Start
@@ -132,6 +168,10 @@ The VL53L0X prototype is in `weight_detection/`. It is not merged into the firmw
 ## Calibration Overview
 
 Calibration is user-specific and machine-type-specific. It records clean reps at one or more loads, estimates ROM and performance quality, and saves recommended loads under `calibrations/{uid}/{machineTypeId}`. The physical pin is never moved automatically by software; the user adjusts the machine pin and confirms the displayed pin load.
+
+For the full signal path, formulas, ROM normalization logic, calibration flow,
+error sources, and validation steps, see
+[docs/MEASUREMENT_AND_CALIBRATION_GUIDE.md](docs/MEASUREMENT_AND_CALIBRATION_GUIDE.md).
 
 ## Data Model Overview
 

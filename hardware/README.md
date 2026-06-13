@@ -1,5 +1,7 @@
 # Hardware Notes
 
+Language: English | [Espanol](README.es.md)
+
 ## Main Firmware Hardware
 
 - ESP32-S3 VIEWE 7 inch display board.
@@ -24,6 +26,10 @@ Current firmware constants:
 
 Editable SolidWorks parts and STL exports for the prototype mounts and display
 enclosure are available in [`hardware/cad`](cad/).
+
+For the full explanation of ROM measurement, signal conversion, calibration,
+error sources, and validation, see
+[`docs/MEASUREMENT_AND_CALIBRATION_GUIDE.md`](../docs/MEASUREMENT_AND_CALIBRATION_GUIDE.md).
 
 ## Weight Detection Prototype
 
